@@ -13,6 +13,7 @@
     font-size: 20px;
     font-weight: 600;
     color: #333;
+    text-align: center;
 }
 .container header::before{
     content: "";
@@ -90,4 +91,9 @@ form .fields .input-field{
 
 .nextBtn {
     background-color: orangered;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    
 }
