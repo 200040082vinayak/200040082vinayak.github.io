@@ -22,7 +22,7 @@
     height: 3px;
     width: 27px;
     border-radius: 8px;
-    background-color: #4070f4;
+    background-color: white;
 }
 .container form{
     position: relative;
@@ -86,4 +86,8 @@ form .fields .input-field{
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
+}
+
+.nextBtn {
+    background-color: orangered;
 }
