@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#disp_img {
+    width: 375px;
+    height: 210px;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+}
+
