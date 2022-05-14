@@ -13,7 +13,7 @@ body{
 
 .header_left img{
     object-fit: contain;
-    height: 30px;
+    height: 55px;
     
     margin: auto;
 }
@@ -21,7 +21,50 @@ body{
 .header{
     width: 100%;
     position: sticky;
+    display: flex;
     top: 0;
     z-index: 999;
     justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+.header_left{
+    display: flex;
+}
+
+.header_right{
+    display: flex;
+    
+}
+
+.header_search{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 20px;
+    color: grey;
+    background-color: #edeff3;
+}
+
+.header_search input{
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.header_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
+.header_icon:hover{
+    color: black;
+
 }
