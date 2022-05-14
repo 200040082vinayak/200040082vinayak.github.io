@@ -1,11 +1,13 @@
 body{
     align-items: center;
+    text-align: center;
 }
 
 .disp_img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 570px;
     gap: 10px;
     flex-direction: column;
     width: 375px;
@@ -16,7 +18,7 @@ body{
 }
 
 .container{
-    flex-direction: row;
+    flex-direction: column;
     color: red;
 }
 
