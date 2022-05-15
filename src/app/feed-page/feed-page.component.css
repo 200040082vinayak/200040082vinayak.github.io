@@ -11,12 +11,7 @@ body{
     text-align: center;
 }
 
-.header_left img{
-    object-fit: contain;
-    height: 55px;
-    
-    margin: auto;
-}
+
 
 .header{
     width: 100%;
@@ -24,20 +19,33 @@ body{
     display: flex;
     top: 0;
     z-index: 999;
-    justify-content: space-evenly;
+    
     border-bottom: 1px solid black;
-    padding: 10px;
+    padding: 2px;
     background-color: white;
 }
 
 .header_left{
     display: flex;
+    justify-content: space-evenly;
+    padding-left: 100px;
+}
+
+.header_right img{
+    object-fit: contain;
+    height: 55px;
+    
+    margin: 0;
 }
 
 .header_right{
     display: flex;
+    justify-content: space-evenly;
+    padding-left: 650px;
     
 }
+
+
 
 .header_search{
     padding: 10px;
@@ -67,4 +75,80 @@ body{
 .header_icon:hover{
     color: black;
 
+}
+
+.header_icon h3{
+          font-size: 12px;
+}
+
+ /* header component has been completed... now will be working on the actual bottom portio of the feed page. 
+    above everything has to be copied for the code of profile page  */
+
+
+    .portion_main{
+        display: flex;
+        max-width: 600px;
+    }
+
+.sidebar{
+    position: sticky;
+    
+    padding-top: 40px;
+    flex: 0.6;
+    border-radius: 10px;
+    text-align: left;
+    height: fit-content;
+    place-content: left;
+    place-items: left;
+    align-items: left;
+    
+    
+}
+
+.sidebar_top{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    background-color: lightseagreen;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+
+
+
+.sidebar_notif{
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+
+
+.sidebar_bottom{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    background-color: palevioletred;
+    margin-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+}
+
+.sidebar_connections{
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.sidebar_header{
+    text-align: center;
+    place-items: center;
+    font-size: 20px;
+    font-weight: bold;
 }
