@@ -4,6 +4,7 @@ body{
 }
 
 .disp_img{
+    background-image: url(../../assets/220px-StartupEcosystem.png);
     display: flex;
     justify-content: center;
     align-items: center;

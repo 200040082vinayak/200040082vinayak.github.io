@@ -7,6 +7,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FeedPageComponent } from './feed-page/feed-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
     LoginPageComponent,
     RegistrationPageComponent,
     FeedPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

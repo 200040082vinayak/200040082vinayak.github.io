@@ -9,91 +9,26 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 50px;
 }
 
 
-
-.header{
-    width: 100%;
-    position: sticky;
-    display: flex;
-    top: 0;
-    z-index: 999;
-    
-    border-bottom: 1px solid black;
-    padding: 2px;
-    background-color: white;
-}
-
-.header_left{
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 100px;
-}
-
-.header_right img{
-    object-fit: contain;
-    height: 55px;
-    
-    margin: 0;
-}
-
-.header_right{
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 650px;
-    
-}
-
-
-
-.header_search{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    height: 20px;
-    color: grey;
-    background-color: #edeff3;
-}
-
-.header_search input{
-    outline: none;
-    border: none;
-    background: none;
-}
-
-.header_icon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    color: blue;
-    cursor: pointer;
-}
-
-.header_icon:hover{
-    color: black;
-
-}
-
-.header_icon h3{
-          font-size: 12px;
-}
 
  /* header component has been completed... now will be working on the actual bottom portio of the feed page. 
     above everything has to be copied for the code of profile page  */
+    /* header component is a seperate component thus not seen here */
 
 
     .portion_main{
         display: flex;
         margin-left: 20px;
         margin-right: 20px;
+        justify-content: center;
         /* max-width: 600px; */
     }
 
 .sidebar{
-    position: sticky;
+    position: fixed;
     
     padding-top: 40px;
     /* padding-left: 100px; */
@@ -101,11 +36,8 @@ body{
     border-radius: 10px;
     text-align: left;
     height: fit-content;
-    
-    place-content: left;
-    place-items: left;
-    align-items: left;
 
+    left: 10vw;
     
     
 }
@@ -117,6 +49,7 @@ body{
     background-color: lightseagreen;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    max-width: 20vw;
 
 
 }
@@ -166,7 +99,7 @@ body{
       
       flex: 0.6;
       margin: 0 20px;
-      width: 1200px;
+      max-width: 40vw;
       padding-top: 40px;
 }
 
@@ -196,6 +129,15 @@ body{
 /* .feed_textbox{
     width: 900px;
 } */
+
+.feed_textbox{
+     width: 30vw;
+     height: 20vh;
+}
+.textarea{
+     width: 100%;
+     height: 100%;
+}
 
 .feed_inputicons{
     display: flex;
@@ -253,9 +195,60 @@ font-size: 15px;
 }
 
 .post_image{
-    /* background-image: url(../../assets/orange_bg.jpg); */
+    background-image: url(../../assets/220px-StartupEcosystem.png); 
 
-    object-fit: cover;
-    object-fit: contain;
-    width: 300px;
+    width: 100%;
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* right sidebar section css starts now */
+
+
+.right_sidebar{
+    position: fixed;
+    
+    padding-top: 40px;
+    /* padding-left: 100px; */
+    /* flex: 0.3; */
+    border-radius: 10px;
+    text-align: left;
+    height: fit-content;
+
+    right: 10vw;
+    
+    
+}
+
+.right_sidebar_news{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    background-color: lightseagreen;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 20vw;
+
+
+}
+
+
+
+
+
+
+.sidebar_news{
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.sidebar_header{
+    text-align: center;
+    place-items: center;
+    font-size: 20px;
+    font-weight: bold;
 }
