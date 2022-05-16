@@ -1,20 +1,28 @@
 body{
     align-items: center;
     text-align: center;
+    padding-top: 100px;
 }
 
 .disp_img{
+    background-image: url(../../assets/profile_pic.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 570px;
+    /* margin-left: 570px; */
     gap: 10px;
     flex-direction: column;
-    width: 375px;
-    height: 210px;
-    border: 2px solid black;
+    width: 200px;
+    height: 100px;
+    
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border-radius: 5px; */
+    clip-path: circle();
+    border: 2px solid black;
+    
+
 }
 
 .container{

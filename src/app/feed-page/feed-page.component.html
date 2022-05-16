@@ -9,57 +9,8 @@
     <title>Feed Page</title>
 </head>
 <body>
-    <div class="header">
-          
-          
-          <div class="header_left">
-
-            <div class="header_search">
-                <i class="material-symbols-outlined">
-                    search
-                </i>
-                  <input type="text">
-              </div>
-
-
-            <div class="header_icon">
-            <i class="material-symbols-outlined">
-                feed
-            </i>
-            <h3>Networking Feed</h3>
-            </div>
-
-            <div class="header_icon">
-                <i class="material-symbols-outlined">
-                    chat
-                </i>
-                <h3>Messages</h3>
-                </div>
-
-                <div class="header_icon">
-                <i class="material-symbols-outlined">
-                    attach_money
-                </i>
-                <h3>Funding Section</h3>
-                </div>
-
-                <div class="header_icon">
-                    <i class="material-symbols-outlined">
-                        person
-                    </i>
-                    <h3>Profile</h3>
-                    </div>
-
-
-                    <div class="header_right">
-                        <img src="../../assets/Logo.png" alt="Logo1">
-                        <img src="../../assets/startup_logo.jpg" alt="Logo2">
-          
-                        
-                    </div>
-
-          </div>
-    </div>
+    
+    <app-header> </app-header>
 
     <!-- header component has been completed... now will be working on the actual bottom portio of the feed page. 
     above everything has to be copied for the code of profile page. 
@@ -76,15 +27,15 @@
                       <div class="sidebar_header"> Notifications </div>
 
                          <div class="sidebar_notif">
-                            <span class="sidebar_arrow">=> </span>
+                            <span class="sidebar_hash">#</span>
                       <p>Mishal Ahmed viewed your page (13 min ago)</p>
                           </div>
                       <div class="sidebar_notif">
-                      <span class="sidebar_arrow">=> </span>
+                      <span class="sidebar_hash"># </span>
                       <p>Suntech wants to collaborate with you (1 hour ago)</p>
                         </div>
                       <div class="sidebar_notif">
-                      <span class="sidebar_arrow">=> </span>
+                      <span class="sidebar_hash"># </span>
                       <p>Check out the new startups in the tech sector (6 hours ago)</p>
                       </div>
                          
@@ -126,11 +77,18 @@
           the feed main section will start here -->
 
             <div class="main_feed">
+
                     <div class="feed_inputcontainer">
+
                         <div class="feed_input">
                              <form>
-                                 <div class="feed_textbox"><input type="text" placeholder="Write Something"> </div>
-                                 <button type="submit">Post</button>
+                                 <div class="feed_textbox">
+
+                                     <textarea class="textarea" type="text" placeholder="Write Something">
+                                     </textarea>
+                                    
+                                    </div>
+
                              </form>
                         </div>
 
@@ -153,6 +111,9 @@
                                  <!-- <input type="video"> 
                               remember to add functionality of image adding here-->
                         </div>
+
+                        
+                        <button class="inputbutton" type="submit">Post</button>
                      
                     </div>
                     </div>
@@ -182,6 +143,217 @@
                         </div>
 
                         <div class="post_body">
+                            <div class="post_image">
+                                 
+                               
+                            </div>
+                        </div>
+
+                        <div class="post_inputicons">
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    thumb_up
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    chat_bubble
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    share
+                                </i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="feed_post">
+
+                        <div class="post_header">
+
+                            <div class="post_headerleft">
+                               
+                            <i class="material-symbols-outlined">
+                                account_circle
+                            </i>
+                            <div class="post_info">
+                                <h3>Name</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                            </div>
+
+                            <div class="post_headerright">
+
+
+                            </div>
+                        </div>
+
+                        <div class="post_body">
+                            <div class="post_image2">
+                                 
+                               
+                            </div>
+                        </div>
+
+                        <div class="post_inputicons">
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    thumb_up
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    chat_bubble
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    share
+                                </i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="feed_post">
+
+                        <div class="post_header">
+
+                            <div class="post_headerleft">
+                               
+                            <i class="material-symbols-outlined">
+                                account_circle
+                            </i>
+                            <div class="post_info">
+                                <h3>Name</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                            </div>
+
+                            <div class="post_headerright">
+
+
+                            </div>
+                        </div>
+
+                        <div class="post_body">
+                            <div class="post_image3">
+                                 
+                               
+                            </div>
+                        </div>
+
+                        <div class="post_inputicons">
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    thumb_up
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    chat_bubble
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    share
+                                </i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="feed_post">
+
+                        <div class="post_header">
+
+                            <div class="post_headerleft">
+                               
+                            <i class="material-symbols-outlined">
+                                account_circle
+                            </i>
+                            <div class="post_info">
+                                <h3>Name</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                            </div>
+
+                            <div class="post_headerright">
+
+
+                            </div>
+                        </div>
+
+                        <div class="post_body">
+                            <div class="post_image4">
+                                 
+                               
+                            </div>
+                        </div>
+
+                        <div class="post_inputicons">
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    thumb_up
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    chat_bubble
+                                </i>
+                            </div>
+
+                            <div class="inputicon">
+                                <i class="material-symbols-outlined">
+                                    share
+                                </i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="feed_post">
+
+                        <div class="post_header">
+
+                            <div class="post_headerleft">
+                               
+                            <i class="material-symbols-outlined">
+                                account_circle
+                            </i>
+                            <div class="post_info">
+                                <h3>Name</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                            </div>
+
+                            <div class="post_headerright">
+
+
+                            </div>
+                        </div>
+
+                        <div class="post_body">
                              <p>Comment here</p>
                         </div>
 
@@ -257,56 +429,7 @@
 
 
                         </div>
-                    </div>
-
-                    <div class="feed_post">
-
-                        <div class="post_header">
-
-                            <div class="post_headerleft">
-                               
-                            <i class="material-symbols-outlined">
-                                account_circle
-                            </i>
-                            <div class="post_info">
-                                <h3>Name</h3>
-                                <h6>Starup Name/Other Info</h6>
-                            </div>
-                            </div>
-
-                            <div class="post_headerright">
-
-
-                            </div>
-                        </div>
-
-                        <div class="post_body">
-                             <p>Comment here</p>
-                        </div>
-
-                        <div class="post_inputicons">
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    thumb_up
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    chat_bubble
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    share
-                                </i>
-                            </div>
-
-
-                        </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="feed_post">
@@ -331,157 +454,10 @@
                         </div>
 
                         <div class="post_body">
-                             <p>Comment here</p>
-                        </div>
-
-                        <div class="post_inputicons">
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    thumb_up
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    chat_bubble
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    share
-                                </i>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="feed_post">
-
-                        <div class="post_header">
-
-                            <div class="post_headerleft">
-                               
-                            <i class="material-symbols-outlined">
-                                account_circle
-                            </i>
-                            <div class="post_info">
-                                <h3>Name</h3>
-                                <h6>Starup Name/Other Info</h6>
-                            </div>
-                            </div>
-
-                            <div class="post_headerright">
-
-
-                            </div>
-                        </div>
-
-                        <div class="post_body">
-                             <p>Comment here</p>
-                        </div>
-
-                        <div class="post_inputicons">
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    thumb_up
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    chat_bubble
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    share
-                                </i>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="feed_post">
-
-                        <div class="post_header">
-
-                            <div class="post_headerleft">
-                               
-                            <i class="material-symbols-outlined">
-                                account_circle
-                            </i>
-                            <div class="post_info">
-                                <h3>Name</h3>
-                                <h6>Starup Name/Other Info</h6>
-                            </div>
-                            </div>
-
-                            <div class="post_headerright">
-
-
-                            </div>
-                        </div>
-
-                        <div class="post_body">
-                             <p>Comment here</p>
-                        </div>
-
-                        <div class="post_inputicons">
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    thumb_up
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    chat_bubble
-                                </i>
-                            </div>
-
-                            <div class="inputicon">
-                                <i class="material-symbols-outlined">
-                                    share
-                                </i>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="feed_post">
-
-                        <div class="post_header">
-
-                            <div class="post_headerleft">
-                               
-                            <i class="material-symbols-outlined">
-                                account_circle
-                            </i>
-                            <div class="post_info">
-                                <h3>Name</h3>
-                                <h6>Starup Name/Other Info</h6>
-                            </div>
-                            </div>
-
-                            <div class="post_headerright">
-
-
-                            </div>
-                        </div>
-
-                        <div class="post_body">
-                             <p>Comment here</p>
+                             <p>Bank of Baroda (BOB or BoB) is an Indian nationalized banking
+                                  and financial services company headquartered in Vadodara. 
+                                  It is the fourth largest nationalised bank in India, with 132 million customers,
+                                   a total business of US$218 billion, and a global presence of 100 overseas offices.</p>
                         </div>
 
                         <div class="post_inputicons">
@@ -534,7 +510,7 @@
                              
                             <div class="post_image">
                                  
-                                <img height="300px" width="300px" src="../../assets/220px-StartupEcosystem.png" alt="">
+                               
                             </div>
                         </div>
 
@@ -562,6 +538,52 @@
                         </div>
                     </div>
             </div>
+
+            <!-- here the main feed has ended -->
+            <!-- we will be adding the news section next -->
+        
+            <div class="right_sidebar">
+
+              
+
+                <div class="right_sidebar_news">
+
+                     <div class="sidebar_header"> Important News </div>
+                        
+                     <div class="sidebar_news">
+                         <span class="sidebar_hash">#</span>
+                     <p>
+                         <a href="https://entrackr.com/2022/05/funding-and-acquisitions-in-indian-startups-this-week-09-may-14-may/">
+
+                     Funding and acquisitions in Indian startups this week </a> 
+                     </p>
+                     </div>
+
+                     <div class="sidebar_news">
+                     <span class="sidebar_hash">#</span>
+                     <p> 
+                         <a href="https://www.businessinsider.in/business/startups/news/zepto-has-been-taking-over-reliance-backed-dunzo-and-zomato-backed-blinkit-says-report/slidelist/91594636.cms">
+                         A nine-month old startup is racing past Reliance, Tata and Zomato backed startups in the 10-min delivery market
+                         </a>
+                        </p>
+                     </div>
+                     <div class="sidebar_news">
+                     <span class="sidebar_hash">#</span>
+                     <p><a href=""> News Article 3 </a></p>
+                     </div>
+                     <div class="sidebar_news">
+                     <span class="sidebar_hash">#</span>
+                     <p><a href=""> News Article 4 </a></p>
+                     </div>
+                     <div class="sidebar_news">
+                     <span class="sidebar_hash">#</span>
+                     <p><a href=""> News Article 5 </a></p>
+                    </div>
+                
+            </div>
+
+        </div>
+
 
          </div>
         </body>
