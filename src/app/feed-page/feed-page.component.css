@@ -137,7 +137,8 @@ body{
      width: 35vw;
      height: 30vh;
      background-size: cover;
-     align-items: center;
+     align-items: left;
+     text-align: left;
 }
 .textarea{
      width: 100%;
