@@ -172,8 +172,15 @@ body{
     margin-bottom: 10px;
 }
 
+.post_headerleft{
+     display: flex;
+     flex-direction: row;
+}
+
 .post_info{
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .post_info h3{
