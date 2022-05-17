@@ -1,7 +1,7 @@
-html, body{
-    display: grid;
-    height: 100vh;
-    width: 100%;
+body{
+    /* display: grid; */
+    /* height: 100vh;
+    width: 100% ; */
     place-items: center;
     background: #fff;
   }
@@ -10,9 +10,17 @@ html, body{
   
   }
 
+  
+.carousel{
+  background-image: url(../../assets/orange_bg.jpg);
+  height: 100vh;
+  width: 50vw;
+}
+
   .right_images{
     display: flex;
     flex-direction: row;
+    right: 0;
    
   }
 
@@ -24,6 +32,7 @@ html, body{
     padding: 25px 30px;
     border-radius: 5px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    right: 0;
   }
   .container form .title{
     font-size: 30px;
@@ -133,7 +142,7 @@ html, body{
     position: absolute;
     width: 100%;
   } */
-
+/* 
   html, 
 body, 
 .carousel, 
@@ -152,4 +161,5 @@ body,
 
 .item:nth-child(3) {
     background: #E46653;
-}
+} */
+
