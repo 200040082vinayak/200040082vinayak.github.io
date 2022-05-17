@@ -84,8 +84,7 @@
                              <form>
                                  <div class="feed_textbox">
 
-                                     <textarea class="textarea" type="text" placeholder="Write Something">
-                                     </textarea>
+                                     <textarea [defaultValue]="" class="textarea" type="text" placeholder="Write Something"></textarea>
                                     
                                     </div>
 
@@ -96,21 +95,12 @@
 
                     <div class="feed_inputicons">
 
-                        <!-- this is a test for how a file explorer upload should work-->
-                       
-<!-- 
-                        <input type="image" id="image_input" accept="image/png , image/jpg">
+                        <div onclick="document.getElementById('file-input1').click()" class="inputicons">
 
-                        <div class="disp_image"></div>
- -->
-
-
-                        <!-- test ends here -->
-
-                        <div class="inputicons">
+                            <input type="file" id="file-input1">
                             
                             
-                            <i style="color: orange;" class="material-symbols-outlined" > <input class="input_image" type="file">
+                            <i style="color: #5a5a59;" class="material-symbols-outlined" >
                                 image
                             </i>
                             <!-- <input type="image"> 
@@ -118,8 +108,10 @@
                               <!-- see if the style of adding input inside the i command is ok or not -->
                         </div>
 
-                        <div class="inputicons"> 
-                        <i style="color: orange;" class="material-symbols-outlined">
+                        <div onclick="document.getElementById('file-input2').click()" class="inputicons">
+
+                            <input type="file" id="file-input2">
+                        <i style="color: #5a5a59;" class="material-symbols-outlined">
                                 videocam
                             </i>
                                  <!-- <input type="video"> 

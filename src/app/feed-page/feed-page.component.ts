@@ -12,4 +12,8 @@ export class FeedPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openFile(){
+    console.log("File open")
+  }
+
 }
