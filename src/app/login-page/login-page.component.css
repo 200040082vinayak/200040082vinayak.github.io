@@ -10,29 +10,39 @@ body{
   
   }
 
+.main {
+  display: flex;
+  height: 100%;
+}
+
   
 .carousel{
   background-image: url(../../assets/orange_bg.jpg);
   height: 100vh;
   width: 50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
   .right_images{
     display: flex;
+    position: absolute;
     flex-direction: row;
-    right: 0;
+    right: 2vw;
+    top: 2vw;
+    justify-content: end;
    
   }
 
   .container{
     background: #fff;
-    max-width: 550px;
-    width: 100%;
-    height: fit-content;
-    padding: 25px 30px;
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 10vw;
     border-radius: 5px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
-    right: 0;
   }
   .container form .title{
     font-size: 30px;
@@ -101,8 +111,21 @@ body{
     padding: 10px;
     border-radius: 10px;
     display: block;
-    margin: auto;
+    margin-top: 2vw;
+    color: white;
+    border: none;
+    font-size: 1vw;
   }
+
+  .signup-link {
+    margin-top: 1vw;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+
   .container .option{
     font-size: 14px;
     text-align: center;
