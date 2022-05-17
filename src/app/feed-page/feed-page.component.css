@@ -157,6 +157,10 @@ body{
     cursor: pointer;
 }
 
+#file-input1, #file-input2 {
+    display: none;
+}
+
 /* the post area will be worked upon now */
 
 .feed_post{
