@@ -7,15 +7,21 @@ body{
     left: 0;
     background-color: #f7f5f4;
 }
+/* 
+.left_body{
+    left: 10vw;
+} */
+
 .sticky_header{
     
     display: flex;
     flex-direction: row;
-    left: 5vw;
+    /* left: 15vw; */
     padding-bottom: 50px;
     margin-top: 184px;
-    padding-left: 5vw;
+    padding-left: 15vw;
     z-index: 100;
+    
     /* margin-top: 500px; */
 }
 
@@ -24,12 +30,13 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 70vw;
+    width: 60vw;
     height: 30vh;
     /* border: 1px solid black; */
     border-radius: 5px;
      position: absolute;
      z-index: 10;
+     left: 10vw;
 }
 
 .disp_img{
@@ -64,6 +71,8 @@ body{
 .Entry{
     display: flex;
     flex-direction: row;
+    left: 10vw;
+    padding-left: 10vw;
     /* margin-top: 50px; */
 }
 
@@ -76,6 +85,8 @@ body{
 .Entry_no{
     display: flex;
     flex-direction: row;
+    left: 10vw;
+    padding-left: 10vw;
     /* margin-top: 50px; */
 }
 
