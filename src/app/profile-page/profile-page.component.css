@@ -12,6 +12,22 @@ body{
     flex-direction: row;
     left: 5vw;
     padding-bottom: 50px;
+    margin-top: 184px;
+    padding-left: 5vw;
+    /* margin-top: 500px; */
+}
+
+.rounded_rectangle{
+    background-image: url(../../assets/mountains.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70vw;
+    height: 30vh;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+     position: absolute;
+     z-index: -999;
 }
 
 .disp_img{
@@ -23,15 +39,15 @@ body{
     /* margin-left: 570px; */
     /* gap: 10px; */
     flex-direction: column;
-    width: 200px;
+    width: 100px;
     height: 100px;
     
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     /* border-radius: 5px; */
     clip-path: circle();
-    border: 2px solid black;
+    /* border: 2px solid black; */
     
 
 }
@@ -39,28 +55,33 @@ body{
 .except_image{
     display: flex;
     flex-direction: column;
+    /* padding-bottom: 20px; */
     
 }
 
 .Entry{
     display: flex;
     flex-direction: row;
+    /* margin-top: 50px; */
 }
 
 .Entry_personal{
     display: flex;
     flex-direction: row;
+    /* margin-top: 50px; */
 }
 
 .Entry_no{
     display: flex;
     flex-direction: row;
+    /* margin-top: 50px; */
 }
+
 
  #first{
      display: flex;
      flex-direction: row;
-     color: blue;
+     color: orangered;
      font-size: 20px;
      font-weight: bolder;
  }
@@ -70,7 +91,7 @@ body{
  }
 
   .startup_name{
-      color: blue;
+      color: orangered;
       font-size: 12px;
       font-weight: bold;
 
@@ -89,6 +110,7 @@ body{
     color: black;
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
 }
 
 .wrapper{
@@ -126,13 +148,14 @@ nav ul li ul{
     position: fixed;
     
     padding-top: 40px;
+    
     /* padding-left: 100px; */
     /* flex: 0.3; */
     border-radius: 10px;
     text-align: left;
     height: fit-content;
 
-    right: 10vw;
+    right: 7vw;
 }
 
 .sidebar_bottom{
@@ -140,16 +163,26 @@ nav ul li ul{
     flex-direction: column;
     border: 2px solid black;
     background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     max-width: 20vw;
+    padding: 20px;
+}
+
+.sidebar_circle{
+    /* clip-path: circle(); */
+    width: 50px;
+    height: 50px;
+    border: solid black;
+    border-radius: 100%;
 }
 
 .sidebar_connections{
     display: flex;
     cursor: pointer;
-    margin-bottom: 3px;
-    margin-top: 5px;
+    border: 2px solid black;
+    padding-bottom: 40px;
+    /* margin-bottom: 3px;
+    margin-top: 5px; */
 }
 
 .sidebar_header{

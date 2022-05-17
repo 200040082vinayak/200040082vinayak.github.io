@@ -291,3 +291,10 @@ font-size: 15px;
     font-size: 20px;
     font-weight: bold;
 }
+
+.input_image{
+    
+      background: url(../../assets/orange_bg.jpg)        right no-repeat; /*Your Image Link*/
+      padding-right: 17px;
+     
+  }
