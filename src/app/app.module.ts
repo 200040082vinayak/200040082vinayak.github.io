@@ -9,7 +9,8 @@ import { FeedPageComponent } from './feed-page/feed-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { HeaderComponent } from './header/header.component';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ConnectionsComponent } from './connections/connections.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http'
     RegistrationPageComponent,
     FeedPageComponent,
     ProfilePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConnectionsComponent
   ],
   imports: [
     BrowserModule,
