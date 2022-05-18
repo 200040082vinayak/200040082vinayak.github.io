@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
   {path: 'reg', component: RegistrationPageComponent} ,
   {path: 'feed', component: FeedPageComponent} ,
-  {path: 'profile', component: ProfilePageComponent}
+  {path: 'profile', component: ProfilePageComponent},
+  { path: '', redirectTo: 'feed', pathMatch: 'full'}
 ];
 
 @NgModule({
