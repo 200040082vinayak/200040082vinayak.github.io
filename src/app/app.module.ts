@@ -10,7 +10,9 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { HeaderComponent } from './header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ConnectionsComponent } from './connections/connections.component'
+import { ConnectionsComponent } from './connections/connections.component';
+import { MessagesPageComponent } from './messages-page/messages-page.component';
+import { MessageSidebarComponent } from './message-sidebar/message-sidebar.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ConnectionsComponent } from './connections/connections.component'
     FeedPageComponent,
     ProfilePageComponent,
     HeaderComponent,
-    ConnectionsComponent
+    ConnectionsComponent,
+    MessagesPageComponent,
+    MessageSidebarComponent
   ],
   imports: [
     BrowserModule,
