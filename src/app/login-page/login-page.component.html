@@ -24,19 +24,26 @@
     <form action="#">
       <div class="title">Login</div>
       <div class="input-box underline">
-        <input type="text" placeholder="Enter Your Username" required>
+        <input type="text" [(ngModel)]="username" placeholder="Enter Your Username" name="username" required>
 
       </div>
       <div class="input-box underline">
-        <input type="password" placeholder="Enter Your Password" required>
+        <input type="password" [(ngModel)]="password" placeholder="Enter Your Password" name="password" required>
 
       </div>
       <!-- <div class="input-box underline">
         <input type="number" placeholder="Enter OTP" required>
 
       </div> -->
-      <button class="nextBtn">
-        <span class="btnText"> <a href="feed">Continue </a></span>
+
+      <div *ngIf="employees" class="div-employee" [style.opacity]="something? opacity: opacity">
+        <div *ngFor="let employee of employees">
+          {{employee.employee_name}}
+        </div>
+      </div>
+      <button (click)="submit()" class="nextBtn">
+        <!-- <span onclick="submit()" class="btnText"> <a href="feed">Continue </a></span> -->
+        <span class="btnText">Some button</span>
         <i class="uil uil-navigator"></i>
       </button>
 
