@@ -17,6 +17,17 @@
     padding-left: 100px;
 
 
+    .image_left{
+
+        img{
+        object-fit: contain;
+    height: 55px;
+    
+    margin: 0;
+        }
+    }
+
+
     .header_search{
         padding: 10px;
         display: flex;

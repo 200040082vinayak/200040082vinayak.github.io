@@ -13,7 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConnectionsComponent } from './connections/connections.component';
 import { MessagesPageComponent } from './messages-page/messages-page.component';
-import { MessageSidebarComponent } from './message-sidebar/message-sidebar.component'
+import { MessageSidebarComponent } from './message-sidebar/message-sidebar.component';
+import { TestComponent } from './test/test.component'
+// import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MessageSidebarComponent } from './message-sidebar/message-sidebar.compo
     HeaderComponent,
     ConnectionsComponent,
     MessagesPageComponent,
-    MessageSidebarComponent
+    MessageSidebarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

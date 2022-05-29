@@ -38,7 +38,7 @@
 
       <div *ngIf="employees" class="div-employee" [style.opacity]="something? opacity: opacity">
         <div *ngFor="let employee of employees">
-          {{employee.employee_name}}
+          {{employee.username}}
         </div>
       </div>
       <button (click)="submit()" class="nextBtn">

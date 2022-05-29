@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
-import Employee  from '../models/employee';
+import Employee2  from '../models/employee';
+
 
 @Component({
   selector: 'app-login-page',
@@ -11,9 +12,9 @@ import Employee  from '../models/employee';
 export class LoginPageComponent implements OnInit {
 
 
-  employees: [Employee] | undefined;
+  employees: [Employee2] | undefined;
   opacity = 0.5;
-  username: string = "ssadfasdf";
+  username: string = "";
   password: string = "";
   something = true;
 
@@ -31,7 +32,7 @@ export class LoginPageComponent implements OnInit {
       response => {
         console.log("here comes the response");
         console.log(response);
-        this.employees = response.data;
+         this.employees = response.data;
       },
       error => {
         console.log(error);

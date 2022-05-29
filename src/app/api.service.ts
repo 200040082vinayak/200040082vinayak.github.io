@@ -8,7 +8,11 @@ import EmployeeResult from './models/employee';
 export class ApiService {
 
   // BASE_URL = "http://192.168.0.170:8080/"
+  // BASE_URL = "https://bob.anujagrawal.co.in"
+  // BASE_URL = "http://127.0.0.1:8000"
+
   BASE_URL = "https://dummy.restapiexample.com/api/v1/"
+  
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +28,7 @@ export class ApiService {
 
   login(email: string, password: string) {
     this.http.get(
-      this.BASE_URL + "/login",
+      this.BASE_URL + "/api/token",
       { params: {
         username: email,
         password: password
@@ -32,5 +36,17 @@ export class ApiService {
     )
   }
 
+  // test(username: string , password: string) {
+  //   this.http.get(
+  //     this.BASE_URL + "/users/",
+      // { params: {
+      //   username: email,
+      //   password: password
+      // }}
+    // )
+  }
+
+  // http://127.0.0.1:8000/
+
   // post
-}
+// }
