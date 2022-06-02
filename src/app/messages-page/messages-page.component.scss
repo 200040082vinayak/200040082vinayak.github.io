@@ -10,7 +10,7 @@
         width: 80vw;
         height: 80vh;
         max-width: 100%;
-        background-color: red;
+        background-color: white;
         display: flex;
         flex-direction: row;
         // padding-top: 15vh;
@@ -96,7 +96,7 @@
         .rightside {
             position: relative;
             flex: 70%;
-            background: green;
+            background: rgb(187, 186, 186);
             border-left: 2px solid black;
         }
     }

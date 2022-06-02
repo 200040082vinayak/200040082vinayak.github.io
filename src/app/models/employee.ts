@@ -1,9 +1,6 @@
  export default interface Employee2 {
-     id: number,
-     employee_name: string,
-     employee_salary: number,
-     employee_age: number,
-     profile_image: string,
+    username: string;
+    password: string;
  }
 
 export default interface Employee {
@@ -16,7 +13,7 @@ export default interface Employee {
 }
 
  export default interface EmployeeResult {
-     status: string,
-     data: [Employee2],
-     message: string
+    username: string;
+    password: string;
+
  }

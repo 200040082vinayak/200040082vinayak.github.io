@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
-import Employee2  from '../models/employee';
+// import Employee2  from '../models/employee';
 
 
 @Component({
@@ -12,41 +13,64 @@ import Employee2  from '../models/employee';
 export class LoginPageComponent implements OnInit {
 
 
-  employees: [Employee2] | undefined;
-  opacity = 0.5;
-  username: string = "";
+  // employees: [Employee2] | undefined;
+  // // opacity = 0.5;
+   username: string = "";
   password: string = "";
-  something = true;
+  // // something = true;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
     // if ((localStorage.getItem("username")))
-    this.username = localStorage.getItem("username") || "";
-    this.password = localStorage.getItem("password") || "";
+    // this.username = localStorage.getItem("username") || "";
+    // this.password = localStorage.getItem("password") || "";
 
 
-    this.api.register('asdlfk', 'asdf')
+
+  }
+
+    submitted(){
+
+      localStorage.setItem("username", this.username);
+    localStorage.setItem("password", this.password);
+     console.log(this.username);
+    
+     console.log(this.password); 
+
+    
+    this.api.login(this.username, this.password)
     .subscribe(
       response => {
         console.log("here comes the response");
-        console.log(response);
-         this.employees = response.data;
+
+        if (response['message'] == 'user doesnt exist'
+        ){
+          alert('Invalid User')
+        }
+
+
+
+        if (response.message == 'login sucessfull'
+        ) {
+          // this.router.navigate(['feed'])
+          alert('Success')
+        }
+        
+
+        
+
+        
+        // console.log(response);
+        // this.employees = [response];
       },
       error => {
         console.log(error);
       }
     )
 
-
-  }
-
-  submit(){
-    console.log(this.username);
-    localStorage.setItem("username", this.username);
-    localStorage.setItem("password", this.password);
-    console.log(this.password);
+    
   }
 
 

@@ -36,15 +36,14 @@
 
       </div> -->
 
-      <div *ngIf="employees" class="div-employee" [style.opacity]="something? opacity: opacity">
+      <!-- <div *ngIf="employees" class="div-employee" >
         <div *ngFor="let employee of employees">
-          {{employee.username}}
+          
         </div>
-      </div>
-      <button (click)="submit()" class="nextBtn">
+      </div> -->
+      <button (click)="submitted()" class="nextBtn"  >
         <!-- <span onclick="submit()" class="btnText"> <a href="feed">Continue </a></span> -->
-        <span class="btnText">Some button</span>
-        <i class="uil uil-navigator"></i>
+        Proceed
       </button>
 
 
