@@ -1,37 +1,97 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { EmployeeService } from '../services/employee.service';
+import { DatePipe } from '@angular/common';
+import Feed_get_api from '../models/feed_get_api';
 
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',
-  styleUrls: ['./feed-page.component.scss']
+  styleUrls: ['./feed-page.component.scss'],
+  
 })
 export class FeedPageComponent implements OnInit {
 
-  //  files: [File] ;
-  //  author: Employee ;
-  //  date: Date;
-  //  content: string;
+  // the below are the variables for post for feed
 
-  constructor(private api: ApiService) { }
+   content: string= "" ;
+     file: File | undefined;
+     user: string= "" ;
+    // // date!: Date;
+    
+  
+  // the below are the variables for get for feed
+
+     data: [Feed_get_api] | undefined;
+
+     
+
+  constructor(private api: ApiService, public datepipe: DatePipe) { }
 
   ngOnInit(): void {
-  }
 
-  submit(){
+    this.api.feed_get()
+    .subscribe(
+      response => {
+
+      console.log('api is working')
+      console.log(response);
+        this.data = response;
+      },
+
+      error=>{
+             console.log('Error')
+      }
+    )
+
+    
+
+    
+    
+    }
+    
+  
+
+    
+  posts(){
     // console.log(this.username);
     // localStorage.setItem("username", this.username);
     // localStorage.setItem("password", this.password);
     // console.log(this.password);
 
+    // this.date= new Date();
+    // var latest_date  = this.datepipe.transform(this.date, 'MM-dd') ;
+
+    // this.content= document.getElementById("area_text")!.innerText;
+
+    localStorage.setItem("username", this.user);
+    // localStorage.setItem("date", latest_date!.toString());
+    localStorage.setItem("content", this.content);
+    console.log(this.content);
+
+
+    if (this.content==null || this.content==undefined || this.content=="" ){
+      alert('Please provide input')
+      console.log("no data")
+      
+   
+    }
+
+    else{
+      
+      alert('Saved Successfully')
+    }
+        
     
-    this.api.login('', '')
+    
+    this.api.feed_post(this.file,this.user,this.content)
     .subscribe(
+
+      
       response => {
         console.log("here comes the response");
 
-        
+       
         // console.log(response);
         // this.employees = [response];
       },

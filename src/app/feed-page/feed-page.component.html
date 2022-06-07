@@ -46,8 +46,10 @@
                     <form>
                         <div class="feed_textbox">
 
-                            <textarea [defaultValue]="" class="textarea" type="text"
-                                placeholder="Write Something"></textarea>
+                            <textarea [defaultValue]="" [(ngModel)]="content" name="content"  class="textarea" id="area_text" type="text"
+                                placeholder="Write Something" > </textarea>
+
+                                <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
 
                         </div>
 
@@ -60,7 +62,7 @@
 
                     <div onclick="document.getElementById('file-input1').click()" class="inputicons">
 
-                        <input type="file" id="file-input1">
+                        <input onchange="" type="file" id="file-input1">
 
 
                         <i style="color: #5a5a59;" class="material-symbols-outlined">
@@ -82,7 +84,7 @@
                     </div>
 
 
-                    <button (onClick)="submit()" class="inputbutton" >Post</button>
+                    <button (click)="posts()" class="inputbutton" >Post</button>
 
                 </div>
             </div>
@@ -92,7 +94,8 @@
 
 
 
-            <div class="feed_post">
+            <div *ngIf="data">
+            <div *ngFor="let post of data" class="feed_post">
 
                 <div class="post_header">
 
@@ -104,7 +107,7 @@
                         </i>
 
                         <div class="post_info">
-                            <h3>Name</h3>
+                            <h3>{{post.user.username}}</h3>
                             <h6>Starup Name/Other Info</h6>
                         </div>
                     </div>
@@ -116,9 +119,9 @@
                 </div>
 
                 <div class="post_body">
-                    <div class="post_image">
+                    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.file + ')'}" class="post_image">
 
-
+                              
                     </div>
                 </div>
 
@@ -145,9 +148,10 @@
 
                 </div>
             </div>
+        </div>
 
 
-            <div class="feed_post">
+            <!-- <div class="feed_post">
 
                 <div class="post_header">
 
@@ -410,7 +414,7 @@
 
 
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- here the main feed has ended -->

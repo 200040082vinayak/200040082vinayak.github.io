@@ -1,78 +1,101 @@
-
-.categories{
-
+.filter_section {
+    margin-top: 40px;
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
-    // border: 1px solid black;
-    width: 302px;
-    margin-left: 100px;
-    margin-top: 100px;
+    border: 2px solid rgba(0,0,0,0.2);
+    width: 280px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    border-radius: 10px;
     position: fixed;
-    border: 1px solid black;
-    padding: 20px;
-    
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        border: 1px solid black;
+    .checkbox {
+        display: flex;
+        flex-direction: column;
+
+        .text_box {
+            display: flex;
+            flex-direction: row;
+        }
     }
-      
+}
 
-.dropbtn {
-    background-color: white;
-    color: black;
-    padding: 2px;
-    width: 300px;
-    font-size: 16px;
-    border: none;
-    text-align: left;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  
-  /* Links inside the dropdown */
-   a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
+.market {
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: orange;}
+    margin-top: 90px;
+    left: 20vw;
+    margin-left: 30vw;
+    width: 55vw;
+
+    .product {
+
+        display: flex;
+        flex-direction: row;
+        // width: 55vw;
+        border: 2px solid rgba(0,0,0,0.2);
+        margin-top: 15px;
+        padding: 6px;
+        border-radius: 10px;
+        
+
+        .prod_image {
+            width: 100px;
+            // min-height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .image1 {
+
+            background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
+        }
+
+        .image2 {
+
+            background-image: url('../../assets/download.headphones.jpg');
+        }
+
+        .image3 {
+
+            background-image: url('../../assets/headphones.jpg');
+        }
+
+        .image4 {
+
+            background-image: url('../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg');
+        }
+
+        .image5{
+                
+            background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
+            }
+
+            .image6{
+                
+                background-image: url('../../assets/headphones.jpg');
+                }
 
 
-  input{
-      border: none;
-      border-bottom: 1px solid black;
-      font-size: 15px;
-  }
+        .oneproduct {
+            display: flex;
+            flex-direction: column;
+            // border: 2px solid black;
+            // border-radius: 10px;
+            // padding: 2px;
+            // margin-top: 15px ;
+            padding-left: 50px;
+            justify-content: space-evenly;
+            flex-grow: 1;
+            width: 40vw;
 
-  .add_products{
-     
-    h2{
-        margin-bottom: 0;
+            h4,
+            h6,
+            p {
+                margin: 0;
+            }
+
+        }
     }
-  }
-   
 }

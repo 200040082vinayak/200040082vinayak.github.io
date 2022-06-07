@@ -16,6 +16,7 @@ import { MessagesPageComponent } from './messages-page/messages-page.component';
 import { MessageSidebarComponent } from './message-sidebar/message-sidebar.component';
 import { TestComponent } from './test/test.component';
 import { MarketplacePageComponent } from './marketplace-page/marketplace-page.component'
+import { DatePipe } from '@angular/common';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -38,7 +39,7 @@ import { MarketplacePageComponent } from './marketplace-page/marketplace-page.co
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

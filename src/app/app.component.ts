@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { freeApiService } from './services/websocket.service';
 
 import { Comments } from './classes/comments';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'myApp';
 
-  // constructor(private _freeApiService: freeApiService){
+  username: string = "";
+
+  constructor(private api: ApiService) {}
 
   // }
 
   // lstcomments: Comments[];
 
-  // ngOnInit() {
+ ngOnInit(): void {
 
   //   this._freeApiService.getcomments()
 
@@ -27,5 +30,6 @@ export class AppComponent {
   //               this.lstcomments = data
   //     }
   //   ) ;
-  // }
+   }
 }
+

@@ -2,27 +2,27 @@ import { Injectable } from "@angular/core";
 
 import { HttpClient ,HttpParams } from "@angular/common/http";
 import { Observable, ObservableInput } from "rxjs";
+import { TemplateBindingParseResult } from "@angular/compiler";
 
 @Injectable({
     providedIn: 'root'
 })
-export class freeApiService
-
-{
+export class freeApiService{
     constructor( private httpclient: HttpClient) {}
 
-    // var socket: WebSocket | null;
+    BASEURL = "ws://bob.anujagrawal.co.in";
+
+    // var socket: new WebSocket (BASEURL + "/chats/") ;
    
-    BASEURL = "http://127.0.0.1:8000/"
-
-    connect(id: string) {
-         const socket = new WebSocket(
-            'ws://'
-            + window.location.host
-            + '/ws/'
-            + id
-            + '/'
-        );
-    }
-
+    
 }
+    // connect(id: string) {
+    //      const socket = new WebSocket(
+    //         'ws://'
+    //         + window.location.host
+    //         + '/ws/'
+    //         + id
+    //         + '/'
+    //     );
+    // }
+
