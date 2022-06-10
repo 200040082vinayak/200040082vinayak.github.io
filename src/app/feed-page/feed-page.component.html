@@ -1,4 +1,4 @@
- <div class="whole">
+<div class="whole">
 
     <app-header> </app-header>
 
@@ -46,10 +46,10 @@
                     <form>
                         <div class="feed_textbox">
 
-                            <textarea [defaultValue]="" [(ngModel)]="content" name="content"  class="textarea" id="area_text" type="text"
-                                placeholder="Write Something" > </textarea>
+                            <textarea [defaultValue]="" [(ngModel)]="content" name="content" class="textarea"
+                                id="area_text" type="text" placeholder="Write Something"> </textarea>
 
-                                <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
+                            <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
 
                         </div>
 
@@ -84,7 +84,7 @@
                     </div>
 
 
-                    <button (click)="posts()" class="inputbutton" >Post</button>
+                    <button (click)="posts()" class="inputbutton">Post</button>
 
                 </div>
             </div>
@@ -95,62 +95,65 @@
 
 
             <div *ngIf="data">
-            <div *ngFor="let post of data" class="feed_post">
+                <div *ngFor="let post of data" class="feed_post">
 
-                <div class="post_header">
+                    <div class="post_header">
 
-                    <div class="post_headerleft">
+                        <div class="post_headerleft">
 
 
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
+                            <i class="material-symbols-outlined">
+                                account_circle
+                            </i>
 
-                        <div class="post_info">
-                            <h3>{{post.user.username}}</h3>
-                            <h6>Starup Name/Other Info</h6>
+                            <div class="post_info">
+                                <h3>{{post.user.username}}</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                        </div>
+
+                        <div class="post_headerright">
+                            <!-- <h5>{{post.date}}</h5> -->
+
                         </div>
                     </div>
 
-                    <div class="post_headerright">
+                    <div class="post_body">
+
+                        <div class="post_writeup">
+                            <p>{{post.description}} </p>
+                        </div>
+                        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.file + ')'}"
+                            class="post_image">
+
+
+                        </div>
+                    </div>
+
+                    <div class="post_inputicons">
+
+                        <div class="inputicon">
+                            <i class="material-symbols-outlined">
+                                thumb_up
+                            </i>
+                        </div>
+
+                        <div class="inputicon">
+                            <i class="material-symbols-outlined">
+                                chat_bubble
+                            </i>
+                        </div>
+
+                        <div class="inputicon">
+                            <i class="material-symbols-outlined">
+                                share
+                            </i>
+                        </div>
 
 
                     </div>
-                </div>
-
-                <div class="post_body">
-
-                    <div class="post_writeup"><p>{{post.description}} </p></div>
-                    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.file + ')'}" class="post_image">
-
-                              
-                    </div>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
                 </div>
             </div>
-        </div>
 
 
             <!-- <div class="feed_post">

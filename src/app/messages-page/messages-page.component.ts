@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import Friends_get_api from '../models/friends_get_api';
+
 
 @Component({
   selector: 'app-messages-page',
@@ -7,33 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesPageComponent implements OnInit {
 
-// user:
-// messages:
+ user:string= "";
+ picture: string= "";
+
+ data: [Friends_get_api] | undefined;
 
 
-constructor() { }
+constructor(private api: ApiService) { }
 
  ngOnInit(): void {
 
-//     const socket = new WebSocket(
-//       'ws://'
-//       + window.location.host
-//       + '/ws/'
-//       + id
-//       + '/'
-//   );
-  
-//   socket.onopen = function(e){
-//       console.log("CONNECTION ESTABLISHED");
-//   }
-  
-//   socket.onclose = function(e){
-//       console.log("CONNECTION LOST");
-//   }
-  
-//   socket.onerror = function(e){
-//       console.log("ERROR OCCURED");
-//   }
+  this.api.prof_get(this.user)
+    .subscribe(
+      response => {
+
+      console.log('api is working')
+      console.log(response);
+        this.data = response;
+      },
+
+      error=>{
+             console.log('Error')
+  }
+    )
+          
   }
 
 }

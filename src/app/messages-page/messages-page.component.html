@@ -1,36 +1,40 @@
+<app-header> </app-header>
+
+<div class="messages_body">
+
+    <div class="mssg_container">
+
+        <div class="leftside">
+
+            <div class="ls_header">
+                <h3>Messages</h3>
+            </div>
 
 
-    <app-header> </app-header>
+           
+                    <div class="chatlist">
 
-    <div class="messages_body">
+                        <div *ngIf="data">
+                            <div *ngFor="let friend of data" class="feed_post">
+            
 
-        <div class="mssg_container">
+                        <div class="chatlist_block">
 
-            <div class="leftside">
- 
-                <div class="ls_header">
-                    <h3>Messages</h3>
-                </div>
-
-                <div class="chatlist">
-
-                    <div class="chatlist_block">
-
-                        <!-- <div *ngIf="users" class="div-employee" >
+                            <!-- <div *ngIf="users" class="div-employee" >
                             <div class="except_circle" *ngFor="let user of users">
                               {{user.id}}
                             </div>
                           </div> -->
 
-                    <div class="chatlist_circle"></div>
-                    <div class="except_circle">
-                    <p class="name">Aditi Arya</p>
-                    <p class="time">10:20</p>
-                    </div>
-                    
+                            <div class="chatlist_circle"></div>
+                            <div class="except_circle">
+                                <p class="name">{{friend.username}}</p>
+                                <p class="time">10:20</p>
+                            </div>
 
-                </div>
 
+                        </div>
+                        <!-- 
                 <div class="chatlist_block">
 
                     <div class="chatlist_circle"></div>
@@ -95,17 +99,20 @@
                     <p class="name">Iris West</p>
                     <p class="time">5:50</p>
 </div>
-                </div>
+                </div> -->
 
-                   
-                </div>
+                    </div>
 
+                </div>
             </div>
 
-            <div class="rightside">
-
-
-            </div>
 
         </div>
+
+        <div class="rightside">
+
+
+        </div>
+
+    </div>
 </div>

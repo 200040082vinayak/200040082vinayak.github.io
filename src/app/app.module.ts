@@ -17,6 +17,7 @@ import { MessageSidebarComponent } from './message-sidebar/message-sidebar.compo
 import { TestComponent } from './test/test.component';
 import { MarketplacePageComponent } from './marketplace-page/marketplace-page.component'
 import { DatePipe } from '@angular/common';
+import { ProductPageComponent } from './product-page/product-page.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DatePipe } from '@angular/common';
     MessagesPageComponent,
     MessageSidebarComponent,
     TestComponent,
-    MarketplacePageComponent
+    MarketplacePageComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import Employee2 from './models/employee';
 
 import Feed_get_api from './models/feed_get_api';
+import Prof_get_api from './models/prof_get_api';
+import Friends_get_api from './models/friends_get_api';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +13,13 @@ export class ApiService {
 
 
   BASE_URL = "https://bob.anujagrawal.co.in"
-  
+
 
 
 
   constructor(private http: HttpClient) { }
 
-  
+
 
   login(username: string, password: string) {
     return this.http.post<any>(
@@ -36,45 +38,53 @@ export class ApiService {
         username: username,
         description: content,
         file: files
-  
+
 
       }
     )
 
   }
-     
-      feed_get(){
-        return this.http.get<[Feed_get_api]>(
-           this.BASE_URL + "/feed/"
-        )
+
+  feed_get() {
+    return this.http.get<[Feed_get_api]>(
+      this.BASE_URL + "/feed/"
+    )
+  }
+
+  prof_get(user: string) {
+    return this.http.get<[Prof_get_api]>(
+      this.BASE_URL + "/profile/",
+      {
+        params: {
+          username: user
+        }
       }
+    )
+  }
+
+
+  friends_get(username: string) {
+    return this.http.get<[Friends_get_api]>(
+      this.BASE_URL + "/friends/",
+
+      {
+        params: {
+          username: username
+        }
+      }
+    )
+  }
 
 
 
-  // feed_get(file: string, username: string, date: Date, description: string) {
-  //   return this.http.get<any>(
-  //     this.BASE_URL + "/feed/",
-  //     {
-  //       params: {
-  //         file: file,
-  //         user: username,
-  //         date_posted: date.toString(),
-  //         description: description
-
-
-  //       }
-  //     }
-  //   )
-  // }
-
-   messengers_get ( user: string,) {
+  messengers_get(user: string,) {
     return this.http.get<any>(
       this.BASE_URL + "/chat/",
       {
 
       }
     )
-   }
+  }
 
 
 }

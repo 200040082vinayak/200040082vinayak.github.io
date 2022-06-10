@@ -2,7 +2,11 @@
 
 <div class="profile_body">
   
+    <!-- <div *ngIf="data">
+        <div *ngFor="let prof of data" class="feed_post"> -->
 
+
+    
 
     <div class="rounded_rectangle">
            
@@ -13,15 +17,17 @@
    <div class="profile_rectangle">
 
   
-    <div class="disp_img">
+    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + picture + ')'}" class="disp_img">
 
                
     </div>
     
     <div class="except_image">
         <div class="main_info">
+
+            
         
-        <p class="startup_name">Andrew Tucker, Walmart</p>
+        <p class="startup_name">{{user}}</p>
 
         <p class="industry_name">Walmart Inc. | Retail</p>
 
@@ -139,8 +145,9 @@
             </div>
    </div>
     
- 
-
+<!--  
+        </div>
+    </div> -->
 </div>
 
     <app-connections class="connections"> </app-connections>

@@ -7,6 +7,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { MessagesPageComponent } from './messages-page/messages-page.component';
 import { TestComponent } from './test/test.component';
 import { MarketplacePageComponent } from './marketplace-page/marketplace-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path: 'mssg', component: MessagesPageComponent},
   {path: 'test', component: TestComponent},
   {path: 'market', component: MarketplacePageComponent},
+  {path: 'product', component: ProductPageComponent},
+  
 
   { path: '', redirectTo: 'profile', pathMatch: 'full'}
 ];

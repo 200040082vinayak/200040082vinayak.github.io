@@ -154,12 +154,17 @@
 
 .post_header{
     display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
 }
 
 .post_headerleft{
      display: flex;
      flex-direction: row;
+}
+
+.post_headerright{
+    
 }
 
 .post_info{
