@@ -4,70 +4,145 @@
   <div class="header_left">
 
     <div class="image_left">
-      <img src="../../assets/Logo.png" alt="Logo1">
+      <img src="../../assets/Bank_of_Baroda_logo_PNG2 3.png" alt="Logo1">
 
     </div>
 
     <div class="header_search">
-      <i class="material-symbols-outlined">
+
+      <div class="header_image">
+        <img src="../../assets/MagnifyingGlass.png" alt="">
+      <!-- <i class="material-symbols-outlined">
         search
-      </i>
+      </i> -->
+      </div>
       <input type="text">
     </div>
 
   </div>
 
+  
+   
 
+    
+
+   
   <div class="header_middle">
 
     <div class="header_icon">
+      
+      <div class="header_subicon">
+
+<!-- now i am trying to define a variable such that after clicking home page, we will have an orange backkground for it -->
+
+        
+         
+
+
+
       <a href="feed">
-        <i class="material-symbols-outlined">
+        <div class="header_image">
+          <img src="../../assets/House.jpg" alt="">
+        <!-- <i class="material-symbols-outlined">
 
           feed
-        </i>
+        </i> -->
+        </div>
       </a>
       <a href="feed">
-        <h3>Networking Feed</h3>
+        <h3>Home</h3>
       </a>
+      </div>
     </div>
 
     <div class="header_icon">
+      <div class="header_subicon">
       <a href="mssg">
-        <i class="material-symbols-outlined">
+        <div class="header_image">
+          <img src="../../assets/Chats.png" alt="">
+        <!-- <i class="material-symbols-outlined">
           chat
-        </i>
+        </i> -->
+        </div>
       </a>
       <a href="mssg">
         <h3>Messages</h3>
       </a>
+      </div>
     </div>
 
-    <div class="header_icon">
-      <a href="">
-        <i class="material-symbols-outlined">
+
+    <div class="header_hover">
+    <div class="header_icondrop">
+      <!-- <a href=""> -->
+        
+        <div class="header_image">
+        <!-- <i class="material-symbols-outlined">
           grid_view
-        </i>
-      </a> <a href="">
+        </i> -->
+               <img src="../../assets/SquaresFour.png" alt="">
+        </div>
+      <!-- </a> -->
+      <!-- </a> <a href=""> -->
+        <div class="dropdown">
+          <div class="witharrow">
         <h3>Resources</h3>
-      </a>
+        <img src="../../assets/Vector.svg" alt="">
+          </div>
+        <div class="dropdown_content">
+          <div class="onecateg">
+          <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><a href="news"> News Section </a></button>
+          </div>
+          <div class="onecateg">
+              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"> <a href="know">  Knowlege Section </a></button>
+
+        </div>
+        <div class="onecateg">
+              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><a href="vc"> VC Section </a></button>
+              </div>
+
+              <div class="onecateg">
+                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><a href="fund"> Funding Section </a></button>
+                </div>
+        </div>
+
+        
+    </div>
+  </div>
     </div>
 
+    <div class="header_hover">
     <div class="header_icondrop">
       <!-- <a href="market"> -->
-        <i class="material-symbols-outlined">
+
+        <div class="header_image">
+          <img src="../../assets/Storefront.png" alt="">
+        <!-- <i class="material-symbols-outlined">
           attach_money
-        </i>
+        </i> -->
+        </div>
 
       <!-- </a> -->
       <div class="dropdown">
         <!-- <a href="market"> -->
+          <div class="witharrow">
           <h3>Marketplace</h3>
+          <img src="../../assets/Vector.svg" alt="">
+        </div>
         <!-- </a> -->
         <div class="dropdown_content">
+
+
+          <div *ngIf="catdata">
+            <div *ngFor="let ctg of catdata" class="feed_post">
+
           <div class="onecateg">
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Agriculture</button>
+              aria-expanded="false">{{ctg.name}}</button>
             <div class="dropdown-menu">
               <!-- Dropdown menu links -->
     
@@ -88,11 +163,18 @@
             </div>
             </div>
           </div>
-          <div class="onecateg">
+
+            </div>
+          </div>
+
+
+
+          <!-- <div class="onecateg">
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Beauty</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+             
+
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -105,8 +187,7 @@
               <a href="market">Link 8</a>
               <a href="market">Link 9</a>
               <a href="market">Link 10</a>
-              <!-- <a href="market">Link 11</a>
-              <a href="market">Link 12</a> -->
+              
               </div>
             </div>
           </div>
@@ -115,7 +196,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Costruction</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+            
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -139,7 +220,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Software</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+            
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -170,7 +251,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Gaming</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+             
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -193,7 +274,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Energy</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+             
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -216,7 +297,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Motor Vehicles</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
+            
               <div class="grid">
               <a href="market">Link 1</a>
               <a href="market">Link 2</a>
@@ -238,8 +319,7 @@
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Music</button>
             <div class="dropdown-menu">
-              <!-- Dropdown menu links -->
-
+            
               <div class="grid">
               <a href="market">Headphones</a>
               <a href="market">Speakers</a>
@@ -256,9 +336,10 @@
               <a href="market">Link 12</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
+    </div>
     </div>
 
     <!-- from now on is the code for the dropdown menu
@@ -275,16 +356,18 @@
 
     <div class="header_icon">
       <a href="profile">
-        <i class="material-symbols-outlined">
-          person
-        </i>
-      </a> <a href="profile">
-        <h3>Profile</h3>
+       
+    
+
+        <div class="witharrow">
+        <h3>My Profile</h3>
+        <img src="../../assets/Vector.svg" alt="">
+      </div>
       </a>
     </div>
 
 
-    <div class="profile_circle"></div>
+    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pic + ')'}" class="profile_circle"></div>
 
     <img src="../../assets/startup_logo.jpg" alt="Logo2">
 

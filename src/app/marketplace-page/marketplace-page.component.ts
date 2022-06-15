@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+
 
 @Component({
   selector: 'app-marketplace-page',
@@ -10,6 +12,8 @@ export class MarketplacePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+   
   }
 
 }

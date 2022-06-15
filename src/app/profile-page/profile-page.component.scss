@@ -1,13 +1,14 @@
 .profile_body {
     /* align-items: center;
     text-align: center; */
-    padding-top: 90px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     // left: 0;
-    background-color: #f7f5f4;
-    padding-left: 10vw;
+    background-color: white;
+    margin-left: 10vw;
     max-width: 60vw;
+    border: 1px solid #d6d6d6;
 
 
 
@@ -113,28 +114,28 @@
             // right: 20vw;
             left: 50vw;
 
-            .icon1{
-            background-image: url(../../assets/icon1.png);
-             background-repeat: no-repeat;
-             background-size: contain;
-            width: 50px;
-            height: 50px;
-            z-index: 300;
-            // margin-left: 27vw;
-            margin-top: 25px;
-            margin-left: 35px;
+            .icon1 {
+                background-image: url(../../assets/icon1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 50px;
+                height: 50px;
+                z-index: 300;
+                // margin-left: 27vw;
+                margin-top: 25px;
+                margin-left: 35px;
             }
 
-            .icon2{
+            .icon2 {
                 background-image: url(../../assets/icon2.png);
-                
-             background-repeat: no-repeat;
-             background-size: cover;
-            width: 50px;
-            height: 50px;
-            z-index: 300;
-            margin-top: 25px;
-            
+
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                z-index: 300;
+                margin-top: 25px;
+
             }
 
 
@@ -142,17 +143,50 @@
 
     }
 
-    .about_us {
-        // margin: 0;
-        padding-top: 4vh;
-        max-width: 40vw;
 
-        p {
-            margin: 0;
+    .user_info {
+
+        display: flex;
+        flex-direction: row;
+        padding-top: 4vh;
+        padding-left: 15px;
+
+        .about_us {
+            // margin: 0;
+
+            max-width: 40vw;
+
+            p {
+                margin: 0;
+            }
+
+            h3 {
+                margin: 0;
+            }
         }
 
-        h3 {
-            margin: 0;
+        .personal_details {
+
+            display: flex;
+            flex-direction: column;
+            padding-left: 4vw;
+            justify-content: space-between;
+
+            .personal_single {
+                display: flex;
+                flex-direction: row;
+
+                p {
+                    margin: 0;
+                    padding-left: 8px;
+                }
+
+                a {
+                    text-decoration: none;
+                    margin: 0;
+                    padding-left: 8px;
+                }
+            }
         }
     }
 
@@ -163,6 +197,7 @@
         justify-content: space-between;
         max-width: 50vw;
         padding-top: 3vh;
+        margin-left: 15px;
 
         .boxes {
 
@@ -196,8 +231,8 @@
                     background-color: rgba($color: #f26522, $alpha: 0.50);
                     font-size: 12px;
                     // margin-top: 20px;
-                // padding-bottom: 0;
-                    
+                    // padding-bottom: 0;
+
                 }
             }
         }
@@ -207,6 +242,7 @@
     .keyteam {
         margin: 0;
         padding-top: 4vh;
+        padding-left: 15px;
         // padding-bottom: 10vh;
     }
 
@@ -217,6 +253,7 @@
         justify-content: space-between;
         max-width: 30vw;
         padding-bottom: 10vh;
+        margin-left: 15px;
 
         .total_member {
 
@@ -230,18 +267,18 @@
                 border-radius: 100%;
                 // background-color: rgb(187, 186, 186);
                 background-repeat: no-repeat;
-            background-size: cover;
+                background-size: cover;
             }
 
-            .image1{
-                    background-image: url('../../assets/emp1.jpg');
+            .image1 {
+                background-image: url('../../assets/emp1.jpg');
             }
 
-            .image2{
+            .image2 {
                 background-image: url('../../assets/emp2.jpg');
             }
 
-            .image3{
+            .image3 {
                 background-image: url('../../assets/emp3.jpg');
             }
 
@@ -258,14 +295,53 @@
             }
         }
     }
+
+    .prof_market {
+        display: flex;
+        flex-direction: row;
+        max-width: 48vw;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 100px;
+        margin-left: 15px;
+
+        .oneimg {
+
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #c4c4c4;
+            margin-left: 3px;
+            margin-right: 3px;
+
+            .writeup {
+
+                border-top: 1px solid #c4c4c4;
+                background-color: rgba( #f26522 , 0.15);
+
+                p {
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+
+
+            img {
+                width: 160px;
+                height: 190px;
+
+            }
+        }
+    }
 }
 
 
 
 .connections {
     position: fixed;
-    right: 7vw;
+     right: 5vw;
     // padding-bottom: 300px;
     top: 10vh;
     // bottom: 20vh;
+    
 }

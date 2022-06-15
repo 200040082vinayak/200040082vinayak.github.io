@@ -19,6 +19,8 @@
 
         .image_left {
 
+            padding-right: 30px;
+
             img {
                 object-fit: contain;
                 height: 55px;
@@ -62,8 +64,10 @@
             }
 
             h3 {
-                font-size: 12px;
+                font-size: 17px;
             }
+
+
 
         }
     }
@@ -72,37 +76,65 @@
         display: flex;
         justify-content: space-between;
         width: 45vw;
-        padding-left: 18vw;
+        padding-left: 4vw;
         padding-right: 3vw;
 
         .header_icon {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-right: 20px;
-            color: #f26522;
-            cursor: pointer;
 
+            padding-top: 14px;
 
-            :hover {
-                color: black;
-
+            :hover{
+                background-color: rgba(#f26522,0.2);
             }
 
-            h3 {
-                font-size: 12px;
-            }
+            .header_subicon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-right: 20px;
+                color: #f26522;
+                cursor: pointer;
+                border: 1px solid white;
+                border-radius: 20px;
+                padding-left: 17px;
+                padding-right: 17px;
 
+
+                :hover {
+                    color: black;
+                    // background-color: #f26522;
+
+                }
+
+                h3 {
+                    font-size: 17px;
+                }
+
+            }
         }
 
+
+        .header_hover{
+
+            padding-top: 14px;
+            
+            :hover{
+                background-color: rgba(#f26522,0.2);;
+            }
         .header_icondrop {
+
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-right: 20px;
             // color: #f26522;
             cursor: pointer;
-            color: #121b5c;
+            // color: #121b5c;
+            padding-left: 17px;
+            padding-right: 17px;
+            border: 1px solid white;
+                border-radius: 20px;
+                
 
 
             :hover {
@@ -112,9 +144,9 @@
             }
 
             h3 {
-                font-size: 12px;
+                font-size: 17px;
                 // text-underline-position: auto;
-                text-decoration: underline;
+
             }
 
 
@@ -133,6 +165,18 @@
                     .dropdown_content {
                         visibility: visible;
                     }
+                }
+
+
+                .witharrow{
+
+                    display: flex;
+                    flex-direction: row;
+                    
+                     img{
+                        width: 10px;
+                        padding-left: 7px;
+                     }
                 }
 
 
@@ -162,11 +206,11 @@
                         }
                     }
 
-                    .onecateg:hover .dropdown-menu{
+                    .onecateg:hover .dropdown-menu {
                         display: inline-block;
                     }
 
-                    .onecateg{
+                    .onecateg {
                         display: flex;
                         flex-direction: row;
                         // visibility: hidden;
@@ -174,30 +218,30 @@
 
 
 
-                        .btn{
+                        .btn {
                             text-align: left;
                             min-width: 140px;
                             max-height: 40px;
                         }
 
-                        .dropdown-menu{
-                                max-height: 500px;
-                                position: relative;
-                                display: none;
-                                // margin-left: 100px;
-                                // max-height: 40px;
-                                //  visibility: hidden;
+                        .dropdown-menu {
+                            max-height: 500px;
+                            position: relative;
+                            display: none;
+                            // margin-left: 100px;
+                            // max-height: 40px;
+                            //  visibility: hidden;
 
-                                // position: absolute;
-                                //  overflow: auto;
-                                //  overflow-wrap: normal;
-                                background-color: #edeff3;
-                                grid-auto-flow: row;
+                            // position: absolute;
+                            //  overflow: auto;
+                            //  overflow-wrap: normal;
+                            background-color: #edeff3;
+                            grid-auto-flow: row;
 
-                                .grid{
-                                    display: grid;
-                                    grid-template-columns: 100px 100px 100px;
-                                
+                            .grid {
+                                display: grid;
+                                grid-template-columns: 100px 100px 100px;
+
 
                                 a {
                                     display: block;
@@ -205,19 +249,20 @@
                                     padding: 5px;
                                     text-decoration: none;
                                 }
-                                    :hover {
-                                        color: red;
-                                        background-color: #00A4BD;
-                                    }
-                                
-                                }
-                                
-                               
-                        }
-                    
-                    
 
-                }
+                                :hover {
+                                    color: red;
+                                    background-color: #00A4BD;
+                                }
+
+                            }
+
+
+                        }
+
+
+
+                    }
 
                 }
 
@@ -226,13 +271,14 @@
 
         }
     }
+    }
 
 
     .header_right {
         display: flex;
         justify-content: space-between;
-        padding-left: 100px;
-        width: 25vw;
+        padding-left: 70px;
+        width: 30vw;
         padding-right: 40px;
 
         .header_icon {
@@ -250,7 +296,21 @@
             }
 
             h3 {
-                font-size: 12px;
+                font-size: 17px;
+                margin: 0;
+                padding-top: 17px;
+            }
+
+            .witharrow{
+
+                display: flex;
+                    flex-direction: row;
+                    
+                     img{
+                        width: 10px;
+                        padding-left: 7px;
+                     }
+
             }
 
         }
@@ -263,6 +323,8 @@
             border: solid white;
             border-radius: 100%;
             background-color: rgb(187, 186, 186);
+            background-repeat: no-repeat;
+            background-size: cover;
             // padding-right: 80px;
 
         }
@@ -280,6 +342,27 @@
 
     }
 
+    .header_image {
 
+        img {
+            height: 25px;
+            margin-right: 5px;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        // font-size: 5px;
+        color: black;
+        text-decoration: none;
+        font-weight: 200;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    // the above h3 scss is only for the ones that are in the name of the header section. change if required later
 
 }

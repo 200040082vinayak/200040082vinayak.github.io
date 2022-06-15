@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import User from '../models/feed_get_api';
 import Prof_get_api from '../models/prof_get_api';
 
 @Component({
@@ -9,24 +10,33 @@ import Prof_get_api from '../models/prof_get_api';
 })
 export class ProfilePageComponent implements OnInit {
 
-  user: string= "";
-  picture: string= "";
+  
+  pictureuser: string= "";
+  username: string= "";
 
 
-
-  data: [Prof_get_api] | undefined;
+  data: Prof_get_api | undefined;
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
 
-    this.api.prof_get(this.user)
+    this.username= localStorage.getItem("username")||'';
+
+    // if (this.username==null){
+    //   return
+    // }
+
+    this.api.prof_get(this.username)
     .subscribe(
       response => {
 
       console.log('api is working')
       console.log(response);
         this.data = response;
+
+        this.pictureuser = localStorage.getItem("profilepic")||"";
+
       },
 
       error=>{

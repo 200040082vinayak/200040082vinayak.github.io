@@ -5,6 +5,7 @@ import Employee2 from './models/employee';
 import Feed_get_api from './models/feed_get_api';
 import Prof_get_api from './models/prof_get_api';
 import Friends_get_api from './models/friends_get_api';
+import Cat from './models/category_api';
 
 @Injectable({
   providedIn: 'root'
@@ -52,7 +53,7 @@ export class ApiService {
   }
 
   prof_get(user: string) {
-    return this.http.get<[Prof_get_api]>(
+    return this.http.get<Prof_get_api>(
       this.BASE_URL + "/profile/",
       {
         params: {
@@ -86,6 +87,22 @@ export class ApiService {
     )
   }
 
+  categories(){
+    return this.http.get<[Cat]>(
+      
+      this.BASE_URL + "/categories/"
+    )
+  }
+
+
+  subcategories(category: string){
+    return this.http.get<any>(
+      
+     this.BASE_URL + "/subcategories/" + category,
+    )
+    
+  
+  }
 
 }
 

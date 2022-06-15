@@ -54,10 +54,7 @@ export class FeedPageComponent implements OnInit {
 
     
   posts(){
-    // console.log(this.username);
-    // localStorage.setItem("username", this.username);
-    // localStorage.setItem("password", this.password);
-    // console.log(this.password);
+    
 
     // this.date= new Date();
     // var latest_date  = this.datepipe.transform(this.date, 'MM-dd') ;

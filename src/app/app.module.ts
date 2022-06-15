@@ -18,6 +18,10 @@ import { TestComponent } from './test/test.component';
 import { MarketplacePageComponent } from './marketplace-page/marketplace-page.component'
 import { DatePipe } from '@angular/common';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { KnowledgePageComponent } from './knowledge-page/knowledge-page.component';
+import { VcPageComponent } from './vc-page/vc-page.component';
+import { FundingPageComponent } from './funding-page/funding-page.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -33,7 +37,11 @@ import { ProductPageComponent } from './product-page/product-page.component';
     MessageSidebarComponent,
     TestComponent,
     MarketplacePageComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    NewsPageComponent,
+    KnowledgePageComponent,
+    VcPageComponent,
+    FundingPageComponent
   ],
   imports: [
     BrowserModule,

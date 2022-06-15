@@ -13,20 +13,24 @@ export class MessagesPageComponent implements OnInit {
  user:string= "";
  picture: string= "";
 
- data: [Friends_get_api] | undefined;
+ frienddata: [Friends_get_api] | undefined;
 
 
 constructor(private api: ApiService) { }
 
  ngOnInit(): void {
 
-  this.api.prof_get(this.user)
+  this.user= localStorage.getItem("username")||'';
+
+  this.api.friends_get(this.user)
     .subscribe(
       response => {
 
       console.log('api is working')
       console.log(response);
-        this.data = response;
+        this.frienddata = response;
+
+        // this.picture = this.frienddata.profile_pic;
       },
 
       error=>{
