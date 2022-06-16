@@ -6,6 +6,7 @@ import Feed_get_api from './models/feed_get_api';
 import Prof_get_api from './models/prof_get_api';
 import Friends_get_api from './models/friends_get_api';
 import Cat from './models/category_api';
+import Subcat from './models/subcategory_api';
 
 @Injectable({
   providedIn: 'root'
@@ -96,7 +97,7 @@ export class ApiService {
 
 
   subcategories(category: string){
-    return this.http.get<any>(
+    return this.http.get<[Subcat]>(
       
      this.BASE_URL + "/subcategories/" + category,
     )

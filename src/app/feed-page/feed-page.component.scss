@@ -68,10 +68,19 @@
 
 .sidebar_notif{
     display: flex;
-    cursor: pointer;
+    // cursor: pointer;
     margin-bottom: 3px;
     margin-top: 5px;
     border: 2px solid #d6d6d6;
+    margin-bottom: 10px;
+    padding: 3px;
+    
+
+    p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
 }
 
 
@@ -115,7 +124,7 @@
 .feed_textbox{
     display: flex;
      width: 35vw;
-     height: 30vh;
+     height: 10vh;
      background-size: cover;
      align-items: left;
      text-align: left;
@@ -244,6 +253,10 @@ font-size: 15px;
     max-width: 20vw;
     padding: 10px;
 
+    .sidebar_header{
+        margin-bottom: 8px;
+    }
+
 
 }
 
@@ -258,6 +271,15 @@ font-size: 15px;
     margin-bottom: 3px;
     margin-top: 5px;
     border: 2px solid #d6d6d6;
+    padding: 3px;
+    margin-bottom: 10px;
+
+    p{
+        
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
 }
 
 .sidebar_header{

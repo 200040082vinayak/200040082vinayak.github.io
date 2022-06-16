@@ -138,7 +138,7 @@
 
 
           <div *ngIf="catdata">
-            <div *ngFor="let ctg of catdata" class="feed_post">
+            <div *ngFor="let ctg of catdata" class="cat_post">
 
           <div class="onecateg">
             <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
@@ -147,13 +147,21 @@
               <!-- Dropdown menu links -->
     
                      <div class="grid">
-               <a href="market">Bee Keeping</a>
-              <a href="market">Cashew</a>
+
+                      
+          <div *ngIf="subcatdata">
+            <div *ngFor="let subctg of subcatdata" class="subcat_post">
+
+               <a href="market">{{subctg.name}} </a>
+              <!-- <a href="market">Cashew</a>
               <a href="market">Dairy</a>
               <a href="market">Coffee</a>
               <a href="market">Pig Farming</a>
               <a href="market">Poultry</a>
-              <a href="market">Spices</a>
+              <a href="market">Spices</a> -->
+
+            </div>
+          </div>
               <!-- <a href="market">Link 8</a>
               <a href="market">Link 9</a>
               <a href="market">Link 10</a>
