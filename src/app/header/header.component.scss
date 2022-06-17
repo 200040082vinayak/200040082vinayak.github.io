@@ -186,12 +186,12 @@
                     // flex-direction: row;
                     visibility: hidden;
                     position: absolute;
-                    width: 40vw;
+                    width: 30vw;
                     height: 50vh;
                     overflow: auto;
                     box-shadow: #f26522;
-                    background-color: white;
-                    background: transparent;
+                    background-color: transparent;
+                     background: transparent;
                     text-align: left;
 
                     a {
@@ -235,7 +235,7 @@
                             // position: absolute;
                             //  overflow: auto;
                             //  overflow-wrap: normal;
-                            background-color: #edeff3;
+                            background-color: white;
                             grid-auto-flow: row;
 
                             .grid {
@@ -252,7 +252,7 @@
 
                                 :hover {
                                     color: red;
-                                    background-color: #00A4BD;
+                                    // background-color: #00A4BD;
                                 }
 
                             }

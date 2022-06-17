@@ -15,7 +15,7 @@
             <div class="chatlist">
 
                 <div *ngIf="frienddata">
-                    <div *ngFor="let friend of frienddata" class="feed_post">
+                    <div *ngFor="let friend of frienddata.friends" class="feed_post">
 
 
                         <div class="chatlist_block">
@@ -26,10 +26,10 @@
                             </div>
                           </div> -->
 
-                            <div class="chatlist_circle"></div>
+                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}" class="chatlist_circle" ></div>
                             <div class="except_circle">
                                 <p class="name">{{friend.username}}</p>
-                                <p class="time">10:20</p>
+                                <!-- <p class="time">10:20</p> -->
                             </div>
 
 
@@ -125,6 +125,25 @@
                     <h3>Schedule a Meet</h3>
                     <img src="../../assets/CalendarBlank.svg" alt="">
                 </div>
+            </div>
+
+            <div class="middle">
+
+            </div>
+
+            <div class="bottom">
+
+                <div class="txtarea">
+                <textarea type="text" placeholder="Write a Message" class="enter_chat" >
+
+                </textarea>
+                </div>
+
+                <div class="send">
+                    <img src="../../assets/bi_send.svg" alt="">
+                </div>
+
+
             </div>
 
 

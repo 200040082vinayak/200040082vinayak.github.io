@@ -7,6 +7,9 @@ import Prof_get_api from './models/prof_get_api';
 import Friends_get_api from './models/friends_get_api';
 import Cat from './models/category_api';
 import Subcat from './models/subcategory_api';
+import Friends from './models/friends_get_api';
+import market from './models/market';
+import Suggestions_get_api from './models/suggestions_get_api';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +17,8 @@ import Subcat from './models/subcategory_api';
 export class ApiService {
 
 
-  BASE_URL = "https://bob.anujagrawal.co.in"
+   BASE_URL = "https://bob.anujagrawal.co.in"
+  // BASE_URL= "http://192.168.0.170:8000"
 
 
 
@@ -66,7 +70,7 @@ export class ApiService {
 
 
   friends_get(username: string) {
-    return this.http.get<[Friends_get_api]>(
+    return this.http.get<Friends_get_api>(
       this.BASE_URL + "/friends/",
 
       {
@@ -100,10 +104,39 @@ export class ApiService {
     return this.http.get<[Subcat]>(
       
      this.BASE_URL + "/subcategories/" + category,
+
+    //  {
+    //   params: {
+    //     category : category
+    //   }
+    //  }
     )
     
   
   }
+
+  market(subcategory: string){
+    return this.http.get<[market]>(
+      
+      this.BASE_URL + "/products/" + subcategory,
+    )
+ 
+ 
+  }
+
+
+  suggestions_get(username: string) {
+    return this.http.get<[Suggestions_get_api]>(
+      this.BASE_URL + "/suggestions/",
+
+      {
+        params: {
+          username: username
+        }
+      }
+    )
+  }
+
 
 }
 

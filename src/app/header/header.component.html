@@ -149,10 +149,11 @@
                      <div class="grid">
 
                       
-          <div *ngIf="subcatdata">
-            <div *ngFor="let subctg of subcatdata" class="subcat_post">
+          <div *ngIf="subcatfetched">
+            <div *ngFor="let subctg of ctg.subcategories" class="subcat_post">
 
-               <a href="market">{{subctg.name}} </a>
+              
+               <a [href]="'market?subcategory=' + subctg" >{{subctg}} </a>
               <!-- <a href="market">Cashew</a>
               <a href="market">Dairy</a>
               <a href="market">Coffee</a>

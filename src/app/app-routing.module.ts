@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfilePageComponent},
   {path: 'mssg', component: MessagesPageComponent},
   {path: 'test', component: TestComponent},
-  {path: 'market', component: MarketplacePageComponent},
+  {path: 'market' , component: MarketplacePageComponent},
   {path: 'product', component: ProductPageComponent},
   {path: 'know', component: KnowledgePageComponent},
   {path: 'news', component: NewsPageComponent},

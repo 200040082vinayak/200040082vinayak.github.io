@@ -38,19 +38,23 @@
 
 <div class="market">
                      
+
+    <div *ngIf="marketdata">
+        <div *ngFor="let pro of marketdata" class="feed_post">
+
     <div class="product">
 
-        <div class="prod_image image1"></div>
+        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.file + ')'}" class="prod_image"></div>
          <div class="oneproduct">
-                   <h4>Headphones Model #256463</h4>
+                   <h4 class="firstline">{{pro.name}}</h4>
                    <h6>Boat</h6>
-                   <h4>Rs.5299</h4>
+                   <h4>{{pro.price}} per unit </h4>
                    
 
-                   <p>Best-quality red-colored earphones with soft padding. Also has surround sound and other premium features</p>
+                   <p>{{pro.description}} </p>
          </div>
     </div>
-   
+<!--    
     <div class="product">
 
         <div class="prod_image image2"></div>
@@ -109,8 +113,11 @@
 
             <p>Best-quality red-colored earphones with soft padding. Also has surround sound and other premium features</p>
          </div>
-    </div>
+    </div> -->
          
 </div>
 
+</div>
+
+</div>
 </div>

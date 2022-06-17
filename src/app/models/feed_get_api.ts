@@ -1,5 +1,6 @@
 export default interface User {
-    username: string
+    username: string,
+    profile_pic: string
 }
 
 

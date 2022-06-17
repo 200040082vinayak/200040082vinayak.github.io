@@ -13,7 +13,7 @@
 
         <div class="sidebar">
 
-            <div class="sidebar_top">
+            <!-- <div class="sidebar_top">
                 <div class="sidebar_header"> Notifications
                     <img src="../../assets/BellRinging.svg" alt=""> 
                 </div>
@@ -30,7 +30,7 @@
                     <p>Check out the new startups in the tech sector (6 hours ago)</p>
                 </div>
 
-            </div>
+            </div> -->
 
             <app-connections> </app-connections>
 
@@ -43,48 +43,55 @@
 
             <div class="feed_inputcontainer">
 
-                <div class="feed_input">
-                    <form>
-                        <div class="feed_textbox">
+                <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pictureuser + ')'}"
+                    class="profile_image">
 
-                            <textarea [defaultValue]="" [(ngModel)]="content" name="content" class="textarea"
-                                id="area_text" type="text" placeholder="Write Something"> </textarea>
-
-                            <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
-
-                        </div>
-
-                    </form>
                 </div>
 
+                <div class="totalinput">
+                    <div class="feed_input">
+                        <form>
+                            <div class="feed_textbox">
 
+                                <textarea [defaultValue]="" [(ngModel)]="content" name="content" class="textarea"
+                                    id="area_text" type="text" placeholder="Write Something"> </textarea>
 
-                <div class="feed_inputicons">
+                                <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
 
-                    <div onclick="document.getElementById('file-input1').click()" class="inputicons">
+                            </div>
 
-                        <input onchange="" type="file" id="file-input1">
-
-
-                        <img src="../../assets/" alt="">
-                        <!-- <input type="image"> 
-                              remember to add functionality of image adding here-->
-                        <!-- see if the style of adding input inside the i command is ok or not -->
-                    </div>
-
-                    <div onclick="document.getElementById('file-input2').click()" class="inputicons">
-
-                        <input type="file" id="file-input2">
-                        <i style="color: #5a5a59;" class="material-symbols-outlined">
-                            videocam
-                        </i>
-                        <!-- <input type="video"> 
-                              remember to add functionality of image adding here-->
+                        </form>
                     </div>
 
 
-                    <button (click)="posts()" class="inputbutton">Post</button>
 
+                    <div class="feed_inputicons">
+
+                        <div onclick="document.getElementById('file-input1').click()" class="inputicons">
+
+                            <input onchange="" type="file" id="file-input1">
+
+
+                            <img class="forimage" id="upload"
+                                src="../../assets/BoB Startup Portal (3)/Home page/Group.svg" alt="">
+                            <!-- <input type="image"> 
+                              remember to add functionality of image adding here-->
+                            <!-- see if the style of adding input inside the i command is ok or not -->
+                        </div>
+
+                        <div onclick="document.getElementById('file-input2').click()" class="inputicons">
+
+                            <input type="file" id="file-input2">
+                            <img src="../../assets/BoB Startup Portal (3)/Home page/MonitorPlay.svg" alt="">
+                            <!-- <input type="video"> 
+                              remember to add functionality of image adding here-->
+                        </div>
+
+
+                        <img src="../../assets/BoB Startup Portal (3)/Home page/bi_send.svg" (click)="posts()"
+                            class="inputicons">
+
+                    </div>
                 </div>
             </div>
 
@@ -101,12 +108,12 @@
                         <div class="post_headerleft">
 
 
-                            <i class="material-symbols-outlined">
-                                account_circle
-                            </i>
+                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}" class="image_circ">
+
+                            </div>
 
                             <div class="post_info">
-                                <h3>{{post.user.username}}</h3>
+                                <h3 class="namecapital">{{post.user.username}}</h3>
                                 <h6>Starup Name/Other Info</h6>
                             </div>
                         </div>

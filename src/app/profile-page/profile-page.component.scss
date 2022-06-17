@@ -254,7 +254,7 @@
         padding-top: 3vh;
         justify-content: space-between;
         max-width: 30vw;
-        padding-bottom: 10vh;
+        padding-bottom: 7vh;
         margin-left: 15px;
 
         .total_member {
@@ -295,6 +295,14 @@
                     padding-top: 10px;
                 }
             }
+        }
+    }
+
+    .market_header{
+        margin-left: 15px;
+
+        h3{
+            margin-top: 0;
         }
     }
 

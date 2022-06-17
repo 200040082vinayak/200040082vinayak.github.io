@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { EmployeeService } from '../services/employee.service';
 import { DatePipe } from '@angular/common';
 import Feed_get_api from '../models/feed_get_api';
+import Prof_get_api from '../models/prof_get_api';
 
 @Component({
   selector: 'app-feed-page',
@@ -19,10 +20,15 @@ export class FeedPageComponent implements OnInit {
      user: string= "" ;
     // // date!: Date;
     
+
+    pictureuser: string= "";
+    username: string= "";
+  
   
   // the below are the variables for get for feed
 
      data: [Feed_get_api] | undefined;
+     picturedata: Prof_get_api | undefined;
 
      
 
@@ -44,8 +50,24 @@ export class FeedPageComponent implements OnInit {
       }
     )
 
+    this.username= localStorage.getItem("username")||'';
     
+    this.api.prof_get(this.username)
+    .subscribe(
+      response => {
 
+      console.log('api is working')
+      console.log(response);
+        this.picturedata = response;
+
+        this.pictureuser = localStorage.getItem("profilepic")||"";
+
+      },
+
+      error=>{
+             console.log('Error')
+  }
+    )
     
     
     }

@@ -41,41 +41,45 @@
         
 
         .prod_image {
-            width: 100px;
-            // min-height: 100%;
+            width: 140px;
+            // height: 100%;
             background-repeat: no-repeat;
             background-size: contain;
+            background-position: center;
+            
+            // height: 100px;
+            
         }
 
-        .image1 {
+        // .image1 {
 
-            background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
-        }
+        //     background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
+        // }
 
-        .image2 {
+        // .image2 {
 
-            background-image: url('../../assets/download.headphones.jpg');
-        }
+        //     background-image: url('../../assets/download.headphones.jpg');
+        // }
 
-        .image3 {
+        // .image3 {
 
-            background-image: url('../../assets/headphones.jpg');
-        }
+        //     background-image: url('../../assets/headphones.jpg');
+        // }
 
-        .image4 {
+        // .image4 {
 
-            background-image: url('../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg');
-        }
+        //     background-image: url('../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg');
+        // }
 
-        .image5{
+        // .image5{
                 
-            background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
-            }
+        //     background-image: url('../../assets/bluetooth-headphones-500x500-1.jpg');
+        //     }
 
-            .image6{
+        //     .image6{
                 
-                background-image: url('../../assets/headphones.jpg');
-                }
+        //         background-image: url('../../assets/headphones.jpg');
+        //         }
 
 
         .oneproduct {
@@ -90,10 +94,22 @@
             flex-grow: 1;
             width: 40vw;
 
+
+            
+            .firstline{
+                margin-top: 10px;
+            }
+
             h4,
-            h6,
-            p {
+            h6
+             {
                 margin: 0;
+                margin-bottom: 5px;
+            }
+
+            p{
+                margin: 0;
+                margin-bottom: 15px;
             }
 
         }

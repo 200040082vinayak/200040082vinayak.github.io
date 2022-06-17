@@ -13,7 +13,7 @@ export class MessagesPageComponent implements OnInit {
  user:string= "";
  picture: string= "";
 
- frienddata: [Friends_get_api] | undefined;
+ frienddata: Friends_get_api | undefined;
 
 
 constructor(private api: ApiService) { }
@@ -30,7 +30,7 @@ constructor(private api: ApiService) { }
       console.log(response);
         this.frienddata = response;
 
-        // this.picture = this.frienddata.profile_pic;
+        //  this.picture = this.frienddata.profile_pic;
       },
 
       error=>{
