@@ -83,9 +83,9 @@ export class FeedPageComponent implements OnInit {
 
     // this.content= document.getElementById("area_text")!.innerText;
 
-    localStorage.setItem("username", this.user);
+    // localStorage.setItem("username", this.user);
     // localStorage.setItem("date", latest_date!.toString());
-    localStorage.setItem("content", this.content);
+    // localStorage.setItem("content", this.content);
     console.log(this.content);
 
 
