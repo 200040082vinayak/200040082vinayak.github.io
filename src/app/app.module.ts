@@ -22,6 +22,7 @@ import { NewsPageComponent } from './news-page/news-page.component';
 import { KnowledgePageComponent } from './knowledge-page/knowledge-page.component';
 import { VcPageComponent } from './vc-page/vc-page.component';
 import { FundingPageComponent } from './funding-page/funding-page.component';
+import { TrendingnewsComponent } from './trendingnews/trendingnews.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FundingPageComponent } from './funding-page/funding-page.component';
     NewsPageComponent,
     KnowledgePageComponent,
     VcPageComponent,
-    FundingPageComponent
+    FundingPageComponent,
+    TrendingnewsComponent
   ],
   imports: [
     BrowserModule,

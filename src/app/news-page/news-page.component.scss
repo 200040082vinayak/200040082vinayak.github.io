@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.whole {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    background-color: white;
+
+}
+
+
+
+/* header component has been completed... now will be working on the actual bottom portio of the feed page. 
+    above everything has to be copied for the code of profile page  */
+/* header component is a seperate component thus not seen here */
+
+
+.portion_main {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    /* max-width: 600px; */
+}
+
+.sidebar {
+    position: fixed;
+
+    // padding-top: 10px;
+    /* padding-left: 100px; */
+    /* flex: 0.3; */
+    border-radius: 10px;
+    text-align: left;
+    height: fit-content;
+    margin-top: 57px;
+
+    left: 8vw;
+
+    border: 1px solid #d9d9d9;
+
+    padding: 12px;
+    padding-right: 60px;
+
+
+    h4,h5{
+
+        padding: 10px;
+    }
+
+
+}
+
+
+
+.center_info{
+
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 9vw;
+
+    .onenews {
+
+        display: flex;
+        flex-direction: row;
+        // width: 55vw;
+        border: 2px solid rgba(0,0,0,0.2);
+        margin-top: 15px;
+        padding: 6px;
+        border-radius: 10px;
+        
+        
+
+        .news_image {
+            width: 140px;
+            // height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            
+            // height: 100px;
+            
+        }
+
+        
+        .onetext {
+            display: flex;
+            flex-direction: column;
+            // border: 2px solid black;
+            // border-radius: 10px;
+            // padding: 2px;
+            // margin-top: 15px ;
+            padding-left: 30px;
+            justify-content: space-evenly;
+            flex-grow: 1;
+            width: 32vw;
+            text-align: left;
+
+
+            
+            .firstline{
+                margin-top: 10px;
+            }
+
+            h4
+        
+             {
+                margin: 0;
+                margin-bottom: 5px;
+            }
+
+            p{
+                margin: 0;
+                margin-bottom: 15px;
+            }
+
+        }
+    }
+}
+
+/* right sidebar section css starts now */
+
+
+.right_sidebar {
+    position: fixed;
+
+    padding-top: 54px;
+    /* padding-left: 100px; */
+    /* flex: 0.3; */
+    border-radius: 10px;
+    text-align: left;
+    height: fit-content;
+
+    right: 8vw;
+
+
+}
+
+.right_sidebar_news {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d6d6d6;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 20vw;
+    padding: 10px;
+
+    .sidebar_header {
+        margin-bottom: 8px;
+    }
+
+
+}
+
+
+
+
+
+
+.sidebar_news {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    border: 2px solid #d6d6d6;
+    padding: 3px;
+    margin-bottom: 10px;
+
+    p {
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.sidebar_header {
+    text-align: left;
+    place-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    /* padding: 10px; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input_image {
+
+    background: url(../../assets/orange_bg.jpg) right no-repeat;
+    /*Your Image Link*/
+    padding-right: 17px;
+
+}
+
+.material-symbols-outlined {
+    color: #5a5a59;
+}
+
+/* #writeup{
+    
+} */
+
+a {
+    color: unset;
+    text-decoration: none;
+}
