@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-trendingnews',
@@ -9,7 +9,14 @@ export class TrendingnewsComponent implements OnInit {
 
   constructor() { }
 
+
+  @Input() topic: string | undefined;
+
   ngOnInit(): void {
+
+      
   }
+
+  
 
 }

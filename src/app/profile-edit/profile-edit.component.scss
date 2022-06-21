@@ -90,28 +90,16 @@
                     font-size: 18px;
                     font-weight: 550;
                     margin: 0;
-                    // margin-right: 10px;
+                    width: 220px;
                 }
 
-                .edit{
-                    display: flex;
-                    flex-direction: row;
                 
 
                 .industry_name {
                     font-size: 15px;
                     margin: 0;
-                    margin-right: 10px;
+                    width: 160px;
                 }
-
-                .editing{
-                    border-radius: 20px;
-                    background-color: #f26522;
-                    border: white;
-                    padding: 6px;
-                }
-
-            }
 
             }
         }

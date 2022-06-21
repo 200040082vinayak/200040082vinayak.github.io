@@ -35,7 +35,7 @@
 
         .con_connections {
             display: flex;
-            cursor: pointer;
+            // cursor: pointer;
             border: 2px solid white;
             padding-bottom: 20px;
             border-bottom: 2px solid rgb(187, 186, 186);
@@ -80,6 +80,7 @@
                 background-color: rgb(187, 186, 186);
 
                 background-size: contain;
+                background-repeat: no-repeat;
             }
 
         }

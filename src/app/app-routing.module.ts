@@ -12,6 +12,7 @@ import { KnowledgePageComponent } from './knowledge-page/knowledge-page.componen
 import { NewsPageComponent } from './news-page/news-page.component';
 import { VcPageComponent } from './vc-page/vc-page.component';
 import { FundingPageComponent } from './funding-page/funding-page.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'news', component: NewsPageComponent},
   {path: 'vc', component:VcPageComponent},
   {path: 'fund', component: FundingPageComponent},
+  {path: 'edit', component: ProfileEditComponent},
   
 
   { path: '', redirectTo: 'profile', pathMatch: 'full'}

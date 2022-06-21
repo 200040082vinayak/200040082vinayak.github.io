@@ -10,6 +10,7 @@ import Subcat from './models/subcategory_api';
 import Friends from './models/friends_get_api';
 import market from './models/market';
 import Suggestions_get_api from './models/suggestions_get_api';
+import Connectsend from './models/connectsend';
 
 @Injectable({
   providedIn: 'root'
@@ -135,6 +136,21 @@ export class ApiService {
         }
       }
     )
+  }
+
+  sendconreq(username: string, otherid: string) {
+    
+    return this.http.get<Connectsend>(
+      this.BASE_URL + "/send_friend_request/" + otherid,
+
+      {
+        params: {
+          username: username
+        }
+      }
+    )
+
+    
   }
 
 

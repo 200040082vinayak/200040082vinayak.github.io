@@ -19,7 +19,7 @@
             </div>
             <div  class="connect_button">
                 <!-- <input type="button" id="btn" value="Connect" onclick="confirm()"/> -->
-                <input type="button" id="btn" class="conbut" value="Connect" (click)="change()">
+                <input type="button" [id]="suggest.id" class="conbut" value="Connect" (click)="change($event.target)">
             </div>
         </div>
         <br>
