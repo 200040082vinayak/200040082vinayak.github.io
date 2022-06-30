@@ -67,10 +67,12 @@
 
                     <div class="feed_inputicons">
 
-                        <div onclick="document.getElementById('file-input1').click()" class="inputicons">
+                        <div onclick="document.getElementById('file-input1').click()" class="inputicons_show">
 
-                            <input onchange="" type="file" id="file-input1">
+                            <input  type="file" id="file-input1"  [(ngModel)]="file"   accept="image/jpg, image/jpeg, image/png"
+                            >
 
+                            <!-- (change)="handleFileInput($event.target.files)"  -->
 
                             <img class="forimage" id="upload"
                                 src="../../assets/BoB Startup Portal (3)/Home page/Group.svg" alt="">
@@ -138,7 +140,11 @@
 
                     <div class="post_inputicons">
 
-                        <div class="inputicon">
+                        <div class="inputicon" (click)="retrieve(post.id)" >
+                            <!-- [style.color]="content.isSelected ? '#3DA2DA' : 'FFFFFF'"   -->
+
+                            <!-- onclick="localStorage.setItem(post.id,post_id)" -->
+                            
                             <i class="material-symbols-outlined">
                                 thumb_up
                             </i>
@@ -162,271 +168,7 @@
             </div>
 
 
-            <!-- <div class="feed_post">
-
-                <div class="post_header">
-
-                    <div class="post_headerleft">
-
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
-                        <div class="post_info">
-                            <h3>Name</h3>
-                            <h6>Starup Name/Other Info</h6>
-                        </div>
-                    </div>
-
-                    <div class="post_headerright">
-
-
-                    </div>
-                </div>
-
-                <div class="post_body">
-                    <div class="post_image2">
-
-
-                    </div>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="feed_post">
-
-                <div class="post_header">
-
-                    <div class="post_headerleft">
-
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
-                        <div class="post_info">
-                            <h3>Name</h3>
-                            <h6>Starup Name/Other Info</h6>
-                        </div>
-                    </div>
-
-                    <div class="post_headerright">
-
-
-                    </div>
-                </div>
-
-                <div class="post_body">
-                    <div class="post_image3">
-
-
-                    </div>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-            <div class="feed_post">
-
-                <div class="post_header">
-
-                    <div class="post_headerleft">
-
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
-                        <div class="post_info">
-                            <h3>Name</h3>
-                            <h6>Starup Name/Other Info</h6>
-                        </div>
-                    </div>
-
-                    <div class="post_headerright">
-
-
-                    </div>
-                </div>
-
-                <div class="post_body">
-                    <div class="post_image4">
-
-
-                    </div>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-
-            <div class="feed_post">
-
-                <div class="post_header">
-
-                    <div class="post_headerleft">
-
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
-                        <div class="post_info">
-                            <h3>Name</h3>
-                            <h6>Starup Name/Other Info</h6>
-                        </div>
-                    </div>
-
-                    <div class="post_headerright">
-
-
-                    </div>
-                </div>
-
-                <div class="post_body" id="writeup">
-                    <p>Bank of Baroda (BOB or BoB) is an Indian nationalized banking
-                        and financial services company headquartered in Vadodara.
-                        It is the fourth largest nationalised bank in India, with 132 million customers,
-                        a total business of US$218 billion, and a global presence of 100 overseas offices.</p>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-            <div class="feed_post">
-
-                <div class="post_header">
-
-                    <div class="post_headerleft">
-
-                        <i class="material-symbols-outlined">
-                            account_circle
-                        </i>
-                        <div class="post_info">
-                            <h3>Name</h3>
-                            <h6>Starup Name/Other Info</h6>
-                        </div>
-                    </div>
-
-                    <div class="post_headerright">
-
-
-                    </div>
-                </div>
-
-                <div class="post_body">
-
-                    <div class="post_image">
-
-
-                    </div>
-                </div>
-
-                <div class="post_inputicons">
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            thumb_up
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            chat_bubble
-                        </i>
-                    </div>
-
-                    <div class="inputicon">
-                        <i class="material-symbols-outlined">
-                            share
-                        </i>
-                    </div>
-
-
-                </div>
-            </div> -->
-        </div>
+             </div>
 
         <!-- here the main feed has ended -->
         <!-- we will be adding the news section next -->

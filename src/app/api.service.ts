@@ -52,6 +52,35 @@ export class ApiService {
 
   }
 
+  addprod(files: File | undefined, username: string, content: string, price: string, prodname: string, long: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/createproduct/",
+      {
+        username: username,
+        name: prodname,
+        description: content,
+        price: price,
+        file: files,
+        long_description: long
+
+
+      }
+    )
+
+  }
+
+  like_post(username: string, post_id: string){
+
+    return this.http.post<any>(
+      this.BASE_URL + "/likes/" + post_id + "/",
+      {
+        username: username,
+
+      }
+    )
+
+  }
+
   feed_get() {
     return this.http.get<[Feed_get_api]>(
       this.BASE_URL + "/feed/"

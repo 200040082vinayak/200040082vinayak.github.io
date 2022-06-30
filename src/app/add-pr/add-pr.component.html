@@ -1,0 +1,42 @@
+
+
+<div class="product_body">
+    
+
+    <div class="content">
+
+        <div class="leftside">
+            <div class="product_info">
+
+                <div onclick="document.getElementById('file-input1').click()" class="prod_image">
+
+                    <input [(ngModel)]="file" onchange="" class="choosefile" type="file" id="file-input1" accept="image/jpg, image/jpeg, image/png">
+
+                </div>
+                <div class="prod_text">
+
+                    <h4><input type="text" [(ngModel)]="prname" placeholder="Product Name"></h4>
+                    <h6><input type="text" placeholder="Company Name"></h6>
+                    <h4><input type="text" [(ngModel)]="price" placeholder="Price"></h4>
+                    <h6><input type="text"  placeholder="Minimum No. of Units"></h6>
+
+                    <textarea placeholder="Product Description (max 250 words)" [(ngModel)]="content" name="" id="" cols="65" rows="7"></textarea>
+
+                </div>
+            </div>
+
+            <div class="prod_rest">
+                <textarea placeholder="Product Detailed Description" [(ngModel)]="long" name="" id="" cols="90" rows="10"></textarea>
+            </div>
+
+
+            <div class="upload">
+
+                <button type="button" (click)="posts()">Upload Product</button>
+            </div>
+        </div>
+
+
+       
+    </div>
+</div>

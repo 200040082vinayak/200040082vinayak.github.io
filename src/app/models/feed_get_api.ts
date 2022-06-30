@@ -9,4 +9,7 @@ export default interface Feed_get_api{
     user: User,
     date_posted: Date,
     description: string,
+    id: string,
+    likes_count: string,
+    comments_count: string
 }

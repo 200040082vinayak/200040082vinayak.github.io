@@ -31,7 +31,7 @@
                     <p class="startup_name">{{username}}</p>
 
                     <div class="edit">
-                    <p class="industry_name">Walmart Inc. | Retail</p>
+                    <p class="industry_name" [(ngModel)]="indusname" >Walmart Inc. | Retail</p>
                     <a href="edit"><button class="editing"  type="input">Edit Profile</button></a>
                     </div>
 
@@ -213,7 +213,13 @@
 
         <div class="oneimg">
             <div class="plus">
-            <img src="../../assets/Plus.png" alt="">
+                <!-- <a href="addpr"> -->
+            <img  src="../../assets/Plus.png" alt="">
+            <!-- <iframe src="addpr">
+            </iframe> -->
+                <!-- </a> -->
+            
+            <!-- <input onchange="" type="file" class="choosefile" id="file-input1" accept="image/jpg, image/jpeg, image/png"> -->
             </div>
         </div>
 

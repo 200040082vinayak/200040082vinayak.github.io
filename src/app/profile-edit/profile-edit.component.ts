@@ -9,7 +9,12 @@ export class ProfileEditComponent implements OnInit {
 
   constructor() { }
 
+
+  industryname: string="";
+
   ngOnInit(): void {
+
+    this.industryname= localStorage.getItem("industry")||'';
   }
 
 }

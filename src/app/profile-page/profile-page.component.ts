@@ -13,6 +13,7 @@ export class ProfilePageComponent implements OnInit {
   
   pictureuser: string= "";
   username: string= "";
+  indusname: string= "";
 
 
   data: Prof_get_api | undefined;
@@ -23,6 +24,8 @@ export class ProfilePageComponent implements OnInit {
 
     this.username= localStorage.getItem("username")||'';
 
+    
+
     // if (this.username==null){
     //   return
     // }
@@ -31,9 +34,16 @@ export class ProfilePageComponent implements OnInit {
     .subscribe(
       response => {
 
-      console.log('api is working')
+        
+
+      console.log('api is working');
+      
       console.log(response);
+      
         this.data = response;
+        localStorage.setItem("industry", this.indusname);
+
+        console.log(localStorage.getItem("industry"));
 
         this.pictureuser = localStorage.getItem("profilepic")||"";
 
@@ -45,6 +55,8 @@ export class ProfilePageComponent implements OnInit {
     )
 
 }
+
+
 
 
 }

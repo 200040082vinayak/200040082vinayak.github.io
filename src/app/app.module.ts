@@ -24,6 +24,9 @@ import { VcPageComponent } from './vc-page/vc-page.component';
 import { FundingPageComponent } from './funding-page/funding-page.component';
 import { TrendingnewsComponent } from './trendingnews/trendingnews.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { GloginPageComponent } from './glogin-page/glogin-page.component';
+import { GooglebuttonComponent } from './googlebutton/googlebutton.component';
+import { AddPrComponent } from './add-pr/add-pr.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -45,7 +48,10 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
     VcPageComponent,
     FundingPageComponent,
     TrendingnewsComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    GloginPageComponent,
+    GooglebuttonComponent,
+    AddPrComponent
   ],
   imports: [
     BrowserModule,

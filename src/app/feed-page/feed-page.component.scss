@@ -178,12 +178,19 @@
 }
 
 
+
+.inputicons_show{
+    display: flex;
+    padding: 2px;
+    cursor: pointer;
+
+}
+
 .inputicons {
     display: flex;
     padding: 2px;
     cursor: pointer;
 }
-
 
 #file-input1,
 #file-input2 {
@@ -269,6 +276,11 @@
 
     .inputicon{
     cursor: pointer;
+
+
+    :after{
+        background-color: blue;
+    }
     }
 }
 
