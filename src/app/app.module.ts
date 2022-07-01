@@ -27,6 +27,10 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { GloginPageComponent } from './glogin-page/glogin-page.component';
 import { GooglebuttonComponent } from './googlebutton/googlebutton.component';
 import { AddPrComponent } from './add-pr/add-pr.component';
+import { NotifComponent } from './notif/notif.component';
+import { UserStoreComponent } from './user-store/user-store.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
+import { SettingsComponent } from './settings/settings.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -51,7 +55,11 @@ import { AddPrComponent } from './add-pr/add-pr.component';
     ProfileEditComponent,
     GloginPageComponent,
     GooglebuttonComponent,
-    AddPrComponent
+    AddPrComponent,
+    NotifComponent,
+    UserStoreComponent,
+    UserPostsComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

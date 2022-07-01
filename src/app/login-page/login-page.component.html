@@ -4,6 +4,7 @@
 
   <div class="carousel">
     <!-- <img src="../../assets/orange_bg.jpg" alt=""> -->
+    <img src="../../assets/Bank_of_Baroda_logo_PNG2 1.svg" alt="">
   </div>
 
 
@@ -15,14 +16,23 @@
       <img src="../../assets/startup_logo.jpg" alt="BoB 1" height="100">
     </div>
 
-    <div class="image2">
+    <!-- <div class="image2">
       <img src="../../assets/Logo.png" alt="BoB 2" height="100">
-    </div>
+    </div> -->
 
 
   </div>
     <form action="#">
-      <div class="title">Login</div>
+
+
+      <div class="gsignin">
+      <img src="../../assets/google-signin-button-1024x260.png" alt="">
+      </div>
+      <!-- <div class="title">Login</div> -->
+
+
+      <p class="or">OR</p>
+
       <div class="input-box underline">
         <input type="text" [(ngModel)]="username" placeholder="Enter Your Username" name="username" required>
 
@@ -36,6 +46,10 @@
 
       </div> -->
 
+      <div class="forgot">
+        <p>Forgot password?</p>
+      </div>
+
       <!-- <div *ngIf="employees" class="div-employee" >
         <div *ngFor="let employee of employees">
           
@@ -43,11 +57,13 @@
       </div> -->
       <button (click)="submitted()" class="nextBtn"  >
         <!-- <span onclick="submit()" class="btnText"> <a href="feed">Continue </a></span> -->
-        Proceed
+        Login
       </button>
 
+      <br>
+      
 
-      <div class="signup-link">Not a member? <a href="reg">Signup now</a></div>
+      <div class="signup-link">Not a member? <a class="underliner" href="reg">Signup now</a></div>
     </form>
   </div>
 

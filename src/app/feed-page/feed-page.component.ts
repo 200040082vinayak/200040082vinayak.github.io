@@ -20,6 +20,7 @@ export class FeedPageComponent implements OnInit {
   user: string = "";
   // // date!: Date;
 
+  comment: string= "";
 
   pictureuser: string = "";
   username: string = "";
@@ -138,6 +139,34 @@ export class FeedPageComponent implements OnInit {
 
   }
 
+  obtain(id: string) {
+
+    console.log(id)
+    // localStorage.setItem("post_id", id)
+
+    this.api.comment(this.username,id, this.comment)
+      .subscribe(
+        response => {
+
+          console.log('api is working')
+          console.log(response);
+          console.log(this.comment);
+
+
+        },
+
+        error => {
+          console.log('Error')
+        }
+      )
+
+
+    // console.log(post.id)
+
+    // localStorage.setItem(object.id,"post_id")
+
+  }
+
 
 
 
@@ -154,11 +183,17 @@ export class FeedPageComponent implements OnInit {
     // localStorage.setItem("content", this.content);
 
 
+    if (this.content == null || this.content == undefined || this.content == "") {
+      alert('Please provide input')
+      console.log("no data")
 
-    console.log("here comes the response");
-    console.log(this.content);
-    console.log(this.file);
+      return;
+    }
 
+    else {
+
+      alert('Saved Successfully')
+      
     this.user = localStorage.getItem("username") || '';
 
     console.log(this.user);
@@ -179,27 +214,25 @@ export class FeedPageComponent implements OnInit {
 
           console.log(response);
           // this.employees = [response];
+
+        
+      
         },
         error => {
           console.log(error);
         }
       )
+    }
+
+    console.log("here comes the response");
+    console.log(this.content);
+    console.log(this.file);
+
 
     console.log(this.content);
 
 
-    if (this.content == null || this.content == undefined || this.content == "") {
-      alert('Please provide input')
-      console.log("no data")
-
-
-    }
-
-    else {
-
-      alert('Saved Successfully')
-    }
-
+    
   }
 
   openFile() {

@@ -3,17 +3,17 @@
     <div class="con_bottom">
 
 
-        <div class="con_header"> Connection Suggestions </div>
+        <div class="con_header"> People who want to Connect with you </div>
 
 
-        <div *ngIf="connectdata">
-            <div *ngFor="let suggest of connectdata" class="feed_post">
+        <div *ngIf="data">
+            <div *ngFor="let suggest of data" class="feed_post">
 
         <div class="con_connections">
 
-            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + suggest.profile_pic + ')'}" class="sidebar_circle"></div>
+            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + suggest.from_user.profile_pic + ')'}" class="sidebar_circle"></div>
             <div class="sidebar_info">
-                <p> {{suggest.username}} </p>
+                <p> {{suggest.from_user.username}} </p>
                 <p> Name of startup</p>
                 <p> Industry</p>
                 <div  class="connect_button">
@@ -60,3 +60,6 @@
 
     </div>
 </div>
+
+
+

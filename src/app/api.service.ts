@@ -11,6 +11,7 @@ import Friends from './models/friends_get_api';
 import market from './models/market';
 import Suggestions_get_api from './models/suggestions_get_api';
 import Connectsend from './models/connectsend';
+import fr_req from './models/fr_req';
 
 @Injectable({
   providedIn: 'root'
@@ -81,6 +82,19 @@ export class ApiService {
 
   }
 
+  
+  comment(username: string, post_id: string, comment: string){
+
+    return this.http.post<any>(
+      this.BASE_URL + "/comments/" + post_id + "/",
+      {
+        username: username,
+        comment: comment,
+      }
+    )
+
+  }
+
   feed_get() {
     return this.http.get<[Feed_get_api]>(
       this.BASE_URL + "/feed/"
@@ -93,6 +107,18 @@ export class ApiService {
       {
         params: {
           username: user
+        }
+      }
+    )
+  }
+
+  requests_get(username: string){
+    return this.http.get<[fr_req]>(
+      this.BASE_URL + "/friend_requests/",
+
+      {
+        params: {
+          username: username
         }
       }
     )

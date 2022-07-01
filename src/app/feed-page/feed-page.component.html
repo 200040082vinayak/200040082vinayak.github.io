@@ -150,10 +150,11 @@
                             </i>
                         </div>
 
-                        <div class="inputicon">
+                        <div class="inputicon" (click)="obtain(post.id)">
                             <i class="material-symbols-outlined">
                                 chat_bubble
                             </i>
+                            
                         </div>
 
                         <div class="inputicon">
@@ -162,6 +163,9 @@
                             </i>
                         </div>
 
+
+                        <textarea [defaultValue]="" [(ngModel)]="comment" name="content" class="textarea"
+                        id="com_area" type="text" placeholder="Write Something"> </textarea>
 
                     </div>
                 </div>
