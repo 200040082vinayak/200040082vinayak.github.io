@@ -101,6 +101,8 @@
 </div>
                 </div> -->
 
+
+                
                     </div>
 
                 </div>
@@ -109,15 +111,22 @@
 
         </div>
 
+
+        <div *ngIf="frienddata">
+            <div *ngFor="let friend of frienddata.friends" class="feed_post">
+
+
         <div class="rightside">
 
 
             <div class="top">
 
                 <div class="user">
-                <div class="imageuser"></div>
+                <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}"  class="imageuser">
+                    
+                </div>
                 <div class="text">
-                <h3>Name</h3>
+                <h3> {{friend.username}} </h3>
                 <h6>Startup Name</h6>
                 </div>
                 </div>
@@ -150,6 +159,9 @@
 
 
         </div>
+
+    </div>
+</div>
 
     </div>
 </div>
