@@ -56,7 +56,9 @@ export class RegistrationPageComponent implements OnInit{
 
           if (response.message == 'login sucessfull'
           ) {
+            alert('Registered successfully')
             this.router.navigate(['google'])
+
             // alert('Success')
           }
 
