@@ -332,6 +332,70 @@
     }
 
     
+.prof_market {
+    display: grid;
+    flex-wrap: nowrap;
+    
+   
+    margin-top: 20px;
+    padding-bottom: 20px;
+    // margin-bottom: 3px;
+    margin-right: 10vw;
+    margin-left: 20px;
+    
+    grid-template-columns: auto auto auto auto;
+
+
+    .oneimg {
+
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #c4c4c4;
+        margin-left: 3px;
+        margin-right: 10px;
+
+        margin-bottom: 20px;
+
+        width: 198px;
+        align-items: center;
+
+            img{
+                height: 224px;
+                align-items: center;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .choosefile{
+                display: none;
+            }
+        }
+
+        
+
+        .writeup {
+
+            border-top: 1px solid #c4c4c4;
+            background-color: rgba( #f26522 , 0.15);
+            width: 198px;
+
+            p {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+
+        img {
+            width: 160px;
+            height: 190px;
+
+        }
+
+    }
+
+    
 }
 
 

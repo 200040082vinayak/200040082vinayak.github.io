@@ -22,8 +22,8 @@ import Chats_get_api from './models/chats_get_api';
 export class ApiService {
 
 
-   BASE_URL = "https://bob.anujagrawal.co.in"
-  //  BASE_URL= "http://172.20.10.3:8000"
+  //  BASE_URL = "https://bob.anujagrawal.co.in"
+  BASE_URL= "http://172.20.10.3:8000"
   //  BASE_URL = "http://192.168.12.115:8000"
 
 
