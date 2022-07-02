@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+
+    a{
+        text-decoration: none;
+        color: unset;
+    }
 }
 
 .whole {
@@ -80,10 +85,15 @@
 
         .news_image {
             width: 140px;
+            // height: 100px;
             // height: 100%;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
+
+            img{
+                width: 140px;
+            }
             
             // height: 100px;
             

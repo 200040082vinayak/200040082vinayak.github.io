@@ -279,6 +279,10 @@
     .inputicon{
     cursor: pointer;
 
+    img{
+        height: 24px;
+    }
+
 
     :after{
         background-color: blue;
@@ -294,6 +298,35 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+
+.numberlc{
+    display: flex;
+    flex-direction: row;
+     margin-left: 300px;
+    
+    // width: 140px;
+
+    p{
+        margin-left: 20px;
+    }
+
+   
+}
+
+.seperatebox{
+
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    height: 25px;
+    
+
+p{
+    margin-left: 20px;
+    text-align: left;
+}
+
 }
 
 

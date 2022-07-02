@@ -69,7 +69,7 @@
 
                         <div onclick="document.getElementById('file-input1').click()" class="inputicons_show">
 
-                            <input  type="file" id="file-input1"  [(ngModel)]="file"   accept="image/jpg, image/jpeg, image/png"
+                            <input  type="file" (change)="changed($event)" id="file-input1" accept="image/jpg, image/jpeg, image/png"
                             >
 
                             <!-- (change)="handleFileInput($event.target.files)"  -->
@@ -145,29 +145,57 @@
 
                             <!-- onclick="localStorage.setItem(post.id,post_id)" -->
                             
-                            <i class="material-symbols-outlined">
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt="">
+                            <!-- <i class="material-symbols-outlined">
                                 thumb_up
-                            </i>
+                            </i> -->
                         </div>
 
-                        <div class="inputicon" (click)="obtain(post.id)">
-                            <i class="material-symbols-outlined">
-                                chat_bubble
-                            </i>
+                        
+                        <textarea [defaultValue]="" [(ngModel)]="post.mycomment" name="content" class="textarea"
+                        id="com_area" type="text" placeholder="Comment...">
+                    
+                    
+                    </textarea>
+
+                        <div class="inputicon" (click)="obtain(post.id, post.mycomment)">
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/fa_comment-o.svg" alt="">
                             
                         </div>
 
                         <div class="inputicon">
-                            <i class="material-symbols-outlined">
-                                share
-                            </i>
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/ci_share-outline.svg" alt="">
                         </div>
 
 
-                        <textarea [defaultValue]="" [(ngModel)]="comment" name="content" class="textarea"
-                        id="com_area" type="text" placeholder="Write Something"> </textarea>
+
 
                     </div>
+
+
+                    <div class="numberlc">
+                    <div class="view_com" (click)="comments_get(post.id)">
+
+                        {{post.comments_count}} Comments
+
+                        
+                      
+                    </div>
+                    
+
+                 <p>   {{post.likes_count}} Likes </p>
+
+                    </div>
+
+                    <div *ngIf="post.comments">
+                        <div *ngFor="let comment of post.comments">
+               
+                            <div class="seperatebox">
+                          <p>  {{comment.comment}} </p>
+                        </div>
+                </div>
+                    </div>
+
                 </div>
             </div>
 

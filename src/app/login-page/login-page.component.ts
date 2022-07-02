@@ -56,7 +56,7 @@ export class LoginPageComponent implements OnInit {
 
           if (response.message == 'login sucessfull'
           ) {
-            this.router.navigate(['google'])
+            this.router.navigate(['profile'])
             // alert('Success')
           }
 

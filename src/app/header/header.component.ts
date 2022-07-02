@@ -23,6 +23,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(private api: ApiService) { }
 
+
+  clear(){
+    localStorage.clear();
+  }
+
   ngOnInit(): void {
 
     this.username = localStorage.getItem("username") || '';

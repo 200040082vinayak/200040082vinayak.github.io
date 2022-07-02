@@ -62,7 +62,7 @@ export class NotifComponent implements OnInit {
       el.value = "Request Sent"
       console.log(el.id)
 
-      this.api.sendconreq(this.username, el.id)
+      this.api.accconreq(this.username, el.id)
         .subscribe(
           response => {
 

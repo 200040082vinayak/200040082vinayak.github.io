@@ -54,7 +54,7 @@
 
 
             .disp_img {
-                // background-image: url(../../assets/profile_pic.jpg);
+                // background-image: url(../../assets/Camera.svg);
                 display: flex;
                 /* position: fixed; */
                 justify-content: center;
@@ -71,6 +71,10 @@
                 /* border-radius: 5px; */
                 // clip-path: circle();
                 /* border: 2px solid black; */
+
+                img{
+                    width: 50px;
+                }
 
 
             }
@@ -277,18 +281,20 @@
             }
 
             .image1 {
-                background-image: url('../../assets/emp1.jpg');
+                background-image: url('../../assets/Group\ 21.svg');
             }
 
             .image2 {
-                background-image: url('../../assets/emp2.jpg');
+                background-image: url('../../assets/Group\ 21.svg');
             }
 
             .image3 {
-                background-image: url('../../assets/emp3.jpg');
+                background-image: url('../../assets/Group\ 21.svg');
             }
 
             .text_member {
+
+                // margin-left: 40px;
 
                 p {
                     margin: 0;
@@ -296,7 +302,12 @@
                 }
 
                 .member_name {
-                    padding-top: 10px;
+                    margin-top: 7px;
+                    width: 70px;
+                }
+
+                .member_post{
+                    width: 80px;
                 }
             }
         }
@@ -444,4 +455,9 @@
     top: 10vh;
     // bottom: 20vh;
     
+}
+
+a{
+    text-decoration: none;
+    color: unset;
 }

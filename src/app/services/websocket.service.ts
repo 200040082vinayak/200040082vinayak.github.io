@@ -10,7 +10,8 @@ import { TemplateBindingParseResult } from "@angular/compiler";
 export class freeApiService {
     constructor(private httpclient: HttpClient) { }
 
-    BASEURL = "ws://bob.anujagrawal.co.in";
+// BASEURL = "ws://bob.anujagrawal.co.in";
+    BASEURL = "ws://192.168.12.115:8000";
 
     // idusers= 
     // idfriend= 
@@ -18,9 +19,16 @@ export class freeApiService {
     // var socket: new WebSocket (BASEURL + "/chats/") ;
 
 
- socket= new WebSocket(this.BASEURL + "/chats")
+    connect(uid1: string, uid2: string){
+        var socket= new WebSocket(this.BASEURL + "/ws/" + uid1 + "/" + uid2 + "/")
+        socket.onopen = function(e){
+            console.log("Websocket connected")
+        }
+        return socket
+    }
+    
 
-
+}
     
 // socket.onmessage = function(e){
 //     const data = JSON.parse(e.data);
@@ -62,7 +70,7 @@ export class freeApiService {
     // );
 
 
-}
+
     // connect(id: string) {
     //      const socket = new WebSocket(
     //         'ws://'

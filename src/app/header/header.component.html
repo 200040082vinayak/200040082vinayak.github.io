@@ -87,26 +87,26 @@
         <div class="dropdown">
           <div class="witharrow">
         <h3>Resources</h3>
-        <img src="../../assets/Vector.svg" alt="">
+        <img class="vector" src="../../assets/Vector.svg" alt="">
           </div>
         <div class="dropdown_content">
           <div class="onecateg">
-          <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false"><a href="news"> News Section </a></button>
+          <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><a href="news"> News Section </a></div>
           </div>
           <div class="onecateg">
-              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false"> <a href="know">  Knowlege Section </a></button>
+              <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"> <a href="know">  Knowlege Section </a></div>
 
         </div>
         <div class="onecateg">
-              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false"><a href="vc"> VC Section </a></button>
+              <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><a href="vc"> VC Section </a></div>
               </div>
 
               <div class="onecateg">
-                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"><a href="fund"> Funding Section </a></button>
+                <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><a href="fund"> Funding Section </a></div>
                 </div>
         </div>
 
@@ -141,8 +141,8 @@
             <div *ngFor="let ctg of catdata" class="cat_post">
 
           <div class="onecateg">
-            <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">{{ctg.name}}</button>
+            <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">{{ctg.name}}</div>
             <div class="dropdown-menu">
               <!-- Dropdown menu links -->
     
@@ -188,13 +188,77 @@
       the one below till the add product option is dropdown for marketplace -->
 
 
-
+      <div class="header_hover">
+        <div class="header_icondrop">
+          <!-- <a href=""> -->
+            
+            <div class="header_image">
+            <!-- <i class="material-symbols-outlined">
+              grid_view
+            </i> -->
+                  
+            </div>
+          <!-- </a> -->
+          <!-- </a> <a href=""> -->
+            <div class="dropdown">
+              <div class="witharrow">
+            <h3>Profile</h3>
+            <img src="../../assets/Vector.svg" alt="">
+              </div>
+            <div class="dropdown_content">
+              <div class="onecateg">
+              <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"><a href="profile"> Profile </a></div>
+              </div>
+              <div class="onecateg">
+                  <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"> <a href="store"> Store </a></div>
+    
+            </div>
+            <div class="onecateg">
+                  <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"><a href="vc"> Posts </a></div>
+                  </div>
+    
+                  <div class="onecateg">
+                    <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><a href="https://www.bankofbaroda.in/contact-us" target="_blank"> Contact Us </a></div>
+                    </div>
+  
+                    
+    
+                  <div class="onecateg">
+                    <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><a href="settings"> Settings </a></div>
+                    </div>
+  
+                    
+    
+                  <div class="onecateg">
+                    <div type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" (click)="clear()" ><a href="login"> Signout </a></div>
+                    </div>
+            </div>
+    
+            
+        </div>
+      </div>
+        </div>
+  
+  
+      <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pic + ')'}" class="profile_circle"></div>
+  
+      <img src="../../assets/startup_logo.jpg" alt="Logo2">
+  
+  
+    <!-- </div> -->
+  
 
 
 
   </div>
 
-  <div class="header_right">
+  <!-- <div class="header_right"> -->
 <!-- 
     <div class="header_icon">
       <a href="profile">
@@ -210,69 +274,5 @@
  -->
 
     
-    <div class="header_hover">
-      <div class="header_icondrop">
-        <!-- <a href=""> -->
-          
-          <div class="header_image">
-          <!-- <i class="material-symbols-outlined">
-            grid_view
-          </i> -->
-                
-          </div>
-        <!-- </a> -->
-        <!-- </a> <a href=""> -->
-          <div class="dropdown">
-            <div class="witharrow">
-          <h3>My Profile</h3>
-          <img src="../../assets/Vector.svg" alt="">
-            </div>
-          <div class="dropdown_content">
-            <div class="onecateg">
-            <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"><a href="profile"> Profile </a></button>
-            </div>
-            <div class="onecateg">
-                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"> <a href="know"> Store </a></button>
-  
-          </div>
-          <div class="onecateg">
-                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"><a href="vc"> Posts </a></button>
-                </div>
-  
-                <div class="onecateg">
-                  <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false"><a href="fund"> Contact Us </a></button>
-                  </div>
-
-                  
-  
-                <div class="onecateg">
-                  <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false"><a href="fund"> Settings </a></button>
-                  </div>
-
-                  
-  
-                <div class="onecateg">
-                  <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false"><a href="fund"> Signout </a></button>
-                  </div>
-          </div>
-  
-          
-      </div>
-    </div>
-      </div>
-
-
-    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pic + ')'}" class="profile_circle"></div>
-
-    <img src="../../assets/startup_logo.jpg" alt="Logo2">
-
-
-  </div>
-
+   
 </div>

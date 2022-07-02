@@ -12,6 +12,9 @@ import market from './models/market';
 import Suggestions_get_api from './models/suggestions_get_api';
 import Connectsend from './models/connectsend';
 import fr_req from './models/fr_req';
+import Comments_get_api from './models/comments_get_api';
+import News_get_api from './models/news_get_api';
+import Chats_get_api from './models/chats_get_api';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +23,8 @@ export class ApiService {
 
 
    BASE_URL = "https://bob.anujagrawal.co.in"
-  // BASE_URL= "http://192.168.0.170:8000"
+  //  BASE_URL= "http://172.20.10.3:8000"
+  //  BASE_URL = "http://192.168.12.115:8000"
 
 
 
@@ -40,15 +44,18 @@ export class ApiService {
   }
 
   feed_post(files: File | undefined, username: string, content: string) {
+    // console.log(files);
+    // console.log(username)
+
+    const formdata: FormData= new FormData()
+    if (files!= undefined){
+    formdata.append('file', files)
+    }
+    formdata.append('description', content)
+    formdata.append('username', username)
     return this.http.post<any>(
       this.BASE_URL + "/feed/",
-      {
-        username: username,
-        description: content,
-        file: files
-
-
-      }
+      formdata
     )
 
   }
@@ -95,9 +102,27 @@ export class ApiService {
 
   }
 
+  comments_get(post_id: string){
+    return this.http.get<[Comments_get_api]>(
+      this.BASE_URL + "/comments/" + post_id + "/"
+    )
+  }
+
   feed_get() {
     return this.http.get<[Feed_get_api]>(
       this.BASE_URL + "/feed/"
+    )
+  }
+
+  previous_chats(username: string, friendname: string) {
+    return this.http.get<Array<Chats_get_api>>(
+      this.BASE_URL + "/chat/" + username + "/" + friendname + "/"
+    )
+  }
+
+  news_get() {
+    return this.http.get<[News_get_api]>(
+      this.BASE_URL + "/news/"
     )
   }
 
@@ -208,6 +233,20 @@ export class ApiService {
     
   }
 
+  accconreq(username: string, otherid: string) {
+    
+    return this.http.get<Connectsend>(
+      this.BASE_URL + "/accept_friend_request/" + otherid,
+
+      {
+        params: {
+          username: username
+        }
+      }
+    )
+
+    
+  }
 
 }
 

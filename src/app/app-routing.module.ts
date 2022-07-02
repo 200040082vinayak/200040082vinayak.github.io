@@ -16,6 +16,7 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { GloginPageComponent } from './glogin-page/glogin-page.component';
 import { AddPrComponent } from './add-pr/add-pr.component';
 import { NotifComponent } from './notif/notif.component';
+import { UserStoreComponent } from './user-store/user-store.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'google', component: GloginPageComponent},
   {path: 'addpr', component: AddPrComponent},
   {path: 'notif', component: NotifComponent},
+  {path: 'store', component: UserStoreComponent},
   
 
   { path: '', redirectTo: 'profile', pathMatch: 'full'}

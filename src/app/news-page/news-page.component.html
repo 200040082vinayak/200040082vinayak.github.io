@@ -1,47 +1,54 @@
-
-
 <div class="whole">
 
     <app-header> </app-header>
 
-   
+
 
 
     <div class="portion_main">
 
-        
+
 
         <div class="sidebar">
 
-           <h4>News Categories</h4>
+            <h4>News Categories</h4>
 
-           <h5>Business</h5>
-           <h5>Finance</h5>
-           <h5>International</h5>
-           <h5>Entertainment</h5>
-           <h5>Health</h5>
+            <h5>Business</h5>
+            <h5>Finance</h5>
+            <h5>International</h5>
+            <h5>Entertainment</h5>
+            <h5>Health</h5>
 
         </div>
 
-       <div class="center_info">
+        <div class="center_info">
 
-        <div class="onenews">
+            <div *ngIf="newsdata">
+                <div *ngFor="let news of newsdata" class="feed_post">
 
-            <div class="news_image">
-                <img src="../../assets/download 3.png" alt="">
+
+                    <a href="{{news.link}}" target="_blank">
+                        <div class="onenews">
+
+
+                            <div class="news_image">
+
+                                <img src="{{news.img}}" alt="">
+
+                            </div>
+                            <div class="onetext">
+                                <h4 class="firstline"> {{news.title}} </h4>
+                            </div>
+
+
+                        </div>
+                    </a>
+
+                </div>
             </div>
-             <div class="onetext">
-                       <h4 class="firstline">news headline</h4>
-                       
-                       <h4>more about the news </h4>
-                       
-    
-                       <p>source</p>
-             </div>
-        </div>
 
-        
-        <div class="onenews">
+
+            <!-- <div class="onenews">
 
             <div class="news_image">
                 <img src="../../assets/download (1) 1.png" alt="">
@@ -54,9 +61,9 @@
     
                        <p>source</p>
              </div>
-        </div>
+        </div> -->
 
-       </div>
+        </div>
 
 
 
@@ -64,4 +71,3 @@
 
 
     </div>
-

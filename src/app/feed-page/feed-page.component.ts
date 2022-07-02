@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { EmployeeService } from '../services/employee.service';
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgIf } from '@angular/common';
 import Feed_get_api from '../models/feed_get_api';
 import Prof_get_api from '../models/prof_get_api';
+import Comments_get_api from '../models/comments_get_api';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-feed-page',
@@ -30,6 +32,7 @@ export class FeedPageComponent implements OnInit {
 
   data: [Feed_get_api] | undefined;
   picturedata: Prof_get_api | undefined;
+  comments: [Comments_get_api] | undefined;
 
 
 
@@ -139,18 +142,18 @@ export class FeedPageComponent implements OnInit {
 
   }
 
-  obtain(id: string) {
+  obtain(id: string, comment: string) {
 
     console.log(id)
     // localStorage.setItem("post_id", id)
 
-    this.api.comment(this.username,id, this.comment)
+    this.api.comment(this.username,id, comment)
       .subscribe(
         response => {
 
           console.log('api is working')
           console.log(response);
-          console.log(this.comment);
+          console.log(comment);
 
 
         },
@@ -159,6 +162,11 @@ export class FeedPageComponent implements OnInit {
           console.log('Error')
         }
       )
+      var com_find=  this.data?.find(item => item.id == id );
+
+        if(com_find != undefined){
+         com_find.mycomment = "";
+        }
 
 
     // console.log(post.id)
@@ -167,7 +175,37 @@ export class FeedPageComponent implements OnInit {
 
   }
 
+  comments_get(id: string){
 
+    this.api.comments_get(id)
+      .subscribe(
+        response => {
+
+          console.log('api is working')
+          console.log(response);
+          console.log(this.comment);
+
+
+          
+        var com_find=  this.data?.find(item => item.id == id );
+
+        if(com_find != undefined){
+         com_find.comments = response;
+        }
+        },
+
+        error => {
+          console.log('Error')
+        }
+      )
+
+  }
+
+
+  changed(e: any){
+    console.log(e.target.files[0])
+    this.file = e.target.files[0];
+  }
 
 
   posts() {

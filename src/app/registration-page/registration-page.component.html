@@ -1,108 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- the carousel class for now is just a single image  -->
+<!-- it will later on be changed and turned into a carousel. this is just for 17 May presentation -->
+<div class="main">
 
-    <link rel="stylesheet" href="registration-page.component.scss">
-
-    <title>Reg Form</title>
-</head>
-<body>
-    <div class="container">
-        <header>Registration</header>
-
-        <form action="#">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">Personal Details</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Full Name</label>
-                            <input type="text"  placeholder="Enter your name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date"  placeholder="Enter birth date" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Email</label>
-                            <input type="text" placeholder="Enter your email" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter mobile number" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Gender</label>
-                            <select required>
-                                <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Business Name</label>
-                            <input type="text" placeholder="Name of business" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="details ID">
-                    <span class="title">User ID Details</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Username</label>
-                            <input type="text" placeholder="Enter Username" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Password</label>
-                            <input type="password" placeholder="Enter password" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Password confirmation</label>
-                            <input type="password" placeholder="Re-enter password" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Undecided 1</label>
-                            <input type="text" placeholder="." required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Undecided 2</label>
-                            <input type="text" placeholder="." required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Undecided 3</label>
-                            <input type="text" placeholder="." required>
-                        </div>
-                    </div>
-
-                    
-                    <button class="nextBtn"> 
-                        <span class="btnText"> <a href="login">Get Started </a></span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-            
-                </div> 
-            </div>
-
-            
-               
-        </form>
+    <div class="carousel">
+      <!-- <img src="../../assets/orange_bg.jpg" alt=""> -->
+      <img src="../../assets/Bank_of_Baroda_logo_PNG2 1.svg" alt="">
     </div>
-</body>
-</html>
+  
+  
+    <div class="container">
+  
+    <div class="right_images">
+  
+      <div class="image1">
+        <img src="../../assets/startup_logo.jpg" alt="BoB 1" height="100">
+      </div>
+  
+      <!-- <div class="image2">
+        <img src="../../assets/Logo.png" alt="BoB 2" height="100">
+      </div> -->
+  
+  
+    </div>
+      <form action="#">
+  
+  
+        <div class="titletext">
+            <h2>Register Here</h2>
+        </div>
+        <!-- <div class="gsignin">
+        <img src="../../assets/google-signin-button-1024x260.png" alt="">
+        </div>
+        <div class="title">Login</div>
+  
+  
+        <p class="or">OR</p> -->
+  
+
+        <div class="input-box underline">
+            <input type="text"placeholder="Full Name" name="fullname" required>
+    
+          </div>
+          <div class="input-box underline">
+            <input type="text" placeholder="Company Name" name="companyname" required>
+    
+          </div>
+
+          <div class="input-box underline">
+            <input type="text" placeholder="Company Website (if any)" name="companywebsite">
+    
+          </div>
+
+          <div class="input-box underline">
+            <input type="text"  placeholder="Email" name="email" required>
+    
+          </div>
+
+          <div class="input-box underline">
+            <input type="number" placeholder="Phone Number" name="phonenumber" required>
+    
+          </div>
+
+        <div class="input-box underline">
+          <input type="text" [(ngModel)]="username" placeholder="Username" name="username" required>
+  
+        </div>
+        
+        <div class="input-box underline">
+            <input type="password" [(ngModel)]="password" placeholder="Password" name="password1" required>
+    
+          </div>
+          <div class="input-box underline">
+            <input type="password" placeholder="Re-type Password" name="password2" required>
+    
+          </div>
+         
+  
+        <div class="forgot">
+          <p>Forgot password?</p>
+        </div>
+  
+        <!-- <div *ngIf="employees" class="div-employee" >
+          <div *ngFor="let employee of employees">
+            
+          </div>
+        </div> -->
+        <button (click)="submitted()" class="nextBtn"  >
+          <!-- <span onclick="submit()" class="btnText"> <a href="feed">Continue </a></span> -->
+          Get Started !
+        </button>
+  
+        <br>
+        
+  
+     
+      </form>
+    </div>
+  
+  </div>
