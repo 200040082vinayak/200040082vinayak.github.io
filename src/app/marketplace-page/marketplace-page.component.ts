@@ -39,28 +39,28 @@ export class MarketplacePageComponent implements OnInit {
 
 
    
-    // this.api.market()
-    // .subscribe(
-    //   response => {
+    //  this.api.market()
+    //  .subscribe(
+      //  response => {
 
-    //     console.log('api is correct')
-    //     console.log(response);
-        // for (let sub of response) {
-          // item.subcategories.push(sub.name)
-        // }
-        // item.subcategories = response;
-        // console.log(this.catdata);
+        //  console.log('api is correct')
+        //  console.log(response);
+        //  for (let sub of response) {
+          //  item.subcategories.push(sub.name)
+        //  }
+        //  item.subcategories = response;
+        //  console.log(this.catdata);
         
         
         
 
 
-  //     },
+      //  },
 
-  //     error => {
-  //       console.log('Error')
-  //     }
-  //   )
+      //  error => {
+        //  console.log('Error')
+      //  }
+    //  )
    }
 
 }

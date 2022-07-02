@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import Chats_get_api from '../models/chats_get_api';
 import Friends_get_api from '../models/friends_get_api';
 import { freeApiService } from '../services/websocket.service';
 
@@ -15,6 +16,8 @@ export class MessagesPageComponent implements OnInit {
  picture: string= "";
 
  frienddata: Friends_get_api | undefined;
+
+ chatdata: [Chats_get_api] | undefined;
 
  message: string= "";
 
@@ -64,6 +67,7 @@ socket: any;
 
         console.log('api is working')
         console.log(response);
+        // this.chatdata = response;
         response = [{
           message: "This is some message",
           sender: 'anuj',
