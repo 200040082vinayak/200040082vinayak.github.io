@@ -40,27 +40,30 @@ export class RegistrationPageComponent implements OnInit{
     console.log(this.password);
 
 
-    this.api.login(this.username, this.password)
-      .subscribe(
-        response => {
-          console.log("here comes the response");
+    alert('Registered successfully')
+            this.router.navigate(['login'])
 
-           if (response.message == 'username or password doesnt exist'
-           ) {
-             alert('Invalid User')
-           }
+    // this.api.login(this.username, this.password)
+    //   .subscribe(
+    //     response => {
+    //       console.log("here comes the response");
 
-          else 
-            {console.log("ghost")}
+    //        if (response.message == 'username or password doesnt exist'
+    //        ) {
+    //          alert('Invalid User')
+    //        }
+
+    //       else 
+    //         {console.log("ghost")}
           
 
-          if (response.message == 'login sucessfull'
-          ) {
-            alert('Registered successfully')
-            this.router.navigate(['google'])
+          // if (response.message == 'login sucessfull'
+          // ) {
+          //   alert('Registered successfully')
+          //   this.router.navigate(['google'])
 
-            // alert('Success')
-          }
+          //   // alert('Success')
+          // }
 
 
 
@@ -68,12 +71,12 @@ export class RegistrationPageComponent implements OnInit{
 
           // console.log(response);
           // this.employees = [response];
-        },
-        error => {
-          console.log(error);
+      //   },
+      //   error => {
+      //     console.log(error);
           
-        }
-      )
+      //   }
+      // )
 
 
   }
