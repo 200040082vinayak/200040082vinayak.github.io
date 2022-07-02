@@ -149,22 +149,22 @@
                             <!-- <i class="material-symbols-outlined">
                                 thumb_up
                             </i> -->
+                            <p>Like</p>
                         </div>
 
-                        
-                        <textarea [defaultValue]="" [(ngModel)]="post.mycomment" name="content" class="textarea"
-                        id="com_area" type="text" placeholder="Comment...">
-                    
-                    
-                    </textarea>
-
-                        <div class="inputicon" (click)="obtain(post.id, post.mycomment)">
-                            <img src="../../assets/BoB Startup Portal (1)/Home page/fa_comment-o.svg" alt="">
-                            
-                        </div>
 
                         <div class="inputicon">
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/fa_comment-o.svg" alt="">
+                            <p>Comment</p>
+                        </div>
+                        
+
+                        
+
+                        <div class="inputicon">
+                            
                             <img src="../../assets/BoB Startup Portal (1)/Home page/ci_share-outline.svg" alt="">
+                            <p>Share</p>
                         </div>
 
 
@@ -172,6 +172,11 @@
 
                     </div>
 
+                    <textarea [defaultValue]="" [(ngModel)]="post.mycomment" name="content" class="textarea_new"
+                        id="com_area" type="text" placeholder="Comment...">
+                    
+                    
+                    </textarea>
 
                     <div class="numberlc">
                     <div class="view_com" (click)="comments_get(post.id)">

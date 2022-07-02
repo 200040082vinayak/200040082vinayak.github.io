@@ -275,9 +275,14 @@
     padding-top: 10px;
     justify-content: space-evenly;
     max-width: 200px;
+    margin-left: 75px;
 
     .inputicon{
     cursor: pointer;
+    margin-left: 130px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 
     img{
         height: 24px;
@@ -288,7 +293,26 @@
         background-color: blue;
     }
     }
+
+
 }
+
+.textarea_new{
+    width: 100%;
+}
+
+// .inputicon{
+//     cursor: pointer;
+
+//     img{
+//         height: 24px;
+//     }
+
+
+//     :after{
+//         background-color: blue;
+//     }
+//     }
 
 .post_image {
     // background-image: url(../../assets/photo1.jpg); 
