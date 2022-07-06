@@ -64,6 +64,9 @@
                 flex-direction: column;
                 width: 100px;
                 height: 13vh;
+                position: absolute;
+
+                opacity: 0.3;
 
                 background-position: center;
                 background-size: cover;
@@ -72,12 +75,25 @@
                 // clip-path: circle();
                 /* border: 2px solid black; */
 
+                
+
                 img{
                     width: 50px;
                 }
 
-
             }
+
+                .disp_img_other{
+
+                    opacity: 1;
+                    // margin-right: -100%;
+                    position: relative;
+                    margin-top: 13px;
+                    margin-left: 13px;
+                }
+
+
+            
 
             .except_image {
                 display: flex;

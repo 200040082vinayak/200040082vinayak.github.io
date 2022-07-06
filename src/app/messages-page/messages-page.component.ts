@@ -21,6 +21,11 @@ export class MessagesPageComponent implements OnInit {
 
  message: string= "";
 
+
+ chatter: string=""
+ chatter_pic: string= ""
+ chatter_id: string= ""
+
  
 
 
@@ -61,30 +66,40 @@ socket: any;
   }
     )
 
-    this.api.previous_chats(this.user, "roma")
+          
+  }
+
+  
+
+
+  open_right(othername: string, otherimg: string, otherid: string ){
+
+    localStorage.setItem("messenger", othername)
+    localStorage.setItem("messenger_pic", otherimg)
+    localStorage.setItem("messenger_id", otherid)
+
+
+    this.chatter = localStorage.getItem("messenger") || ""
+    this.chatter_id = localStorage.getItem("messenger_id") || ""
+    this.chatter_pic = localStorage.getItem("messenger_pic") || ""
+
+
+    this.api.previous_chats(this.user, this.chatter)
     .subscribe(
       response => {
 
         console.log('api is working')
         console.log(response);
-        // this.chatdata = response;
-        response = [{
-          message: "This is some message",
-          sender: 'anuj',
-          timestamp: "2022-06-27T21:26:10.238056Z"
-        },
-        {
-          message: "This is some messlkjlage",
-          sender: 'roma',
-          timestamp: "2022-06-27T21:36:10.238056Z"
-        },
-        {
-          message: "This is sjlkome message",
-          sender: 'anuj',
-          timestamp: "2022-06-27T21:16:10.238056Z"
-        }
-      ]
-          // this.frienddata = response;
+        console.log(this.user)
+        console.log(this.chatter)
+         this.chatdata = response;
+       
+          // this.chatdata.forEach(element => {
+          //   if(element.sender= this.chatter){
+
+              
+          //   }
+          // });
   
           //  this.picture = this.frienddata.profile_pic;
         },
@@ -93,8 +108,12 @@ socket: any;
                console.log('Error')
     }
     )
-          
+    
+   
   }
+
+
+
   
 
   share(){
@@ -106,6 +125,25 @@ socket: any;
     );
 
     console.log(this.message);
+  }
+
+
+  alignclass(chat: Chats_get_api): string{
+    console.log(chat)
+      
+    if(chat.sender= this.chatter){
+      console.log("something")
+      console.log(chat.sender)
+      console.log(this.chatter)
+      return("left")
+      
+    }
+
+    else{
+      console.log("no")
+      return("right")
+    }
+    
   }
 
 }

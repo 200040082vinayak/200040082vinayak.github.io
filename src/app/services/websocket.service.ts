@@ -10,8 +10,8 @@ import { TemplateBindingParseResult } from "@angular/compiler";
 export class freeApiService {
     constructor(private httpclient: HttpClient) { }
 
-// BASEURL = "ws://bob.anujagrawal.co.in";
-    BASEURL = "ws://192.168.12.115:8000";
+ BASEURL = "ws://bob.anujagrawal.co.in";
+    // BASEURL = "ws://192.168.12.115:8000";
 
     // idusers= 
     // idfriend= 

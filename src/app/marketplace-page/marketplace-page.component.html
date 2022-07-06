@@ -42,9 +42,9 @@
     <div *ngIf="marketdata">
         <div *ngFor="let pro of marketdata" class="feed_post">
 
-    <div class="product">
+    <div class="product" (click)="redirect(pro.id, pro.price, pro.file, pro.name, pro.description, pro.long_description, pro.user.username, pro.user.profile_pic, pro.subcategory.name, pro.subcategory.category.name)">
 
-        <div [ngStyle]="{backgroundImage: 'url(http://192.168.149.115:8000' + pro.file + ')'}" class="prod_image"></div>
+        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.file + ')'}" class="prod_image"></div>
          <div class="oneproduct">
                    <h4 class="firstline">{{pro.name}}</h4>
                    <h6>Boat</h6>

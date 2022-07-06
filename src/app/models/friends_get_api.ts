@@ -1,5 +1,5 @@
 export default interface Friends{
-    id: BigInteger,
+    id: string,
     username: string,
     profile_pic: string
 }

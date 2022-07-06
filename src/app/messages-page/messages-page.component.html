@@ -18,7 +18,7 @@
                     <div *ngFor="let friend of frienddata.friends" class="feed_post">
 
 
-                        <div class="chatlist_block">
+                        <div class="chatlist_block" (click)="open_right(friend.username, friend.profile_pic,friend.id)" >
 
                             <!-- <div *ngIf="users" class="div-employee" >
                             <div class="except_circle" *ngFor="let user of users">
@@ -112,8 +112,8 @@
         </div>
 
 
-        <div *ngIf="frienddata">
-            <div *ngFor="let friend of frienddata.friends" class="feed_post">
+        <!-- <div *ngIf="frienddata">
+            <div *ngFor="let friend of frienddata.friends" class="feed_post"> -->
 
 
         <div class="rightside">
@@ -122,11 +122,11 @@
             <div class="top">
 
                 <div class="user">
-                <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}"  class="imageuser">
+                <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + chatter_pic + ')'}"  class="imageuser">
                     
                 </div>
                 <div class="text">
-                <h3> {{friend.username}} </h3>
+                <h3> {{chatter}} </h3>
                 <h6>Startup Name</h6>
                 </div>
                 </div>
@@ -139,6 +139,14 @@
 
             <div class="middle">
 
+                <div *ngIf="chatdata">
+                    <div *ngFor="let mssg of chatdata" [class]="alignclass(mssg)">
+
+
+
+                         <p>  {{mssg.message}} </p>
+                    </div>
+                </div>
                 
             </div>
 
@@ -160,8 +168,8 @@
 
         </div>
 
-    </div>
-</div>
+    <!-- </div>
+</div> -->
 
     </div>
 </div>

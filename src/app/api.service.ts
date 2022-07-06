@@ -132,7 +132,7 @@ export class ApiService {
   }
 
   previous_chats(username: string, friendname: string) {
-    return this.http.get<Array<Chats_get_api>>(
+    return this.http.get<[Chats_get_api]>(
       this.BASE_URL + "/chat/" + username + "/" + friendname + "/"
     )
   }
@@ -217,6 +217,21 @@ export class ApiService {
     return this.http.get<[market]>(
       
       this.BASE_URL + "/products/" + subcategory,
+    )
+ 
+ 
+  }
+
+  product(id: string){
+    return this.http.get<[market]>(
+      
+      this.BASE_URL + "/products/",
+
+      {
+        params: {
+          id: id
+        }
+      }
     )
  
  

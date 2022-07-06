@@ -24,7 +24,8 @@ export class ProfilePageComponent implements OnInit {
 
     this.username= localStorage.getItem("username")||'';
 
-    
+
+    // localStorage.setItem("industry", this.indusname);
 
     // if (this.username==null){
     //   return
@@ -41,7 +42,7 @@ export class ProfilePageComponent implements OnInit {
       console.log(response);
       
         this.data = response;
-        localStorage.setItem("industry", this.indusname);
+        
 
         console.log(localStorage.getItem("industry"));
 

@@ -2,42 +2,70 @@
 
 <div class="product_body">
     <div class="product_title">
-        <h4>Marketplace>Category>Subcategory</h4>
+        <h4>Marketplace>{{category}}>{{subcategory}}</h4>
     </div>
 
     <div class="content">
 
+
+        <div *ngIf="marketdata">
         <div class="leftside">
             <div class="product_info">
 
-                <div class="prod_image">
+                <div  [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + img + ')'}" class="prod_image">
 
                 </div>
                 <div class="prod_text">
 
-                    <h4>Headphones Model #256463</h4>
-                    <h6>Boat</h6>
-                    <h4>Rs.5299</h4>
-                    <h6>Minimum 20 units</h6>
+                    <h4>{{name}}</h4>
+                    <h6 class="firstline">Boat</h6>
+                    <!-- <h4>1499 per unit</h4> -->
+                    <h4>  ₹{{price}}/unit </h4>
+                    <h6 class="secondline">Minimum order 20 units</h6>
 
-                    <p>Best-quality red-colored earphones with soft padding. Also has surround sound and other premium
-                        features. The latest model in the Boat line of products</p>
+                    <h6>Description</h6>
+                    <p class="thirdline">{{descrip}}</p>
 
+                    <input type="button" class="cart" value="Add to Cart" (click)="change($event.target)">
+
+                    <input type="button" class="buy_now" value="Buy Now">
                 </div>
             </div>
 
             <div class="prod_rest">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas nam fugiat, eum quam placeat
-                    mollitia provident eligendi sed aspernatur numquam vel fuga, delectus ex! Veritatis, voluptatum.
-                    Reiciendis, harum iusto.</p>
+                <p>{{long}}</p>
+            </div>
+
+            <div class="reviews">
+
+                <h3>Customer Reviews</h3>
             </div>
 
         </div>
-
+        </div>
 
         <div class="seller_info">
 
               <h3>Seller Info</h3>
+
+              <div class="row">
+                <div  [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + sellerimg + ')'}" class="imgseller">
+                     
+                </div>
+
+                <div class="seller">
+                
+                          <p>    {{seller}} </p>
+                </div>
+
+                <div class="connect">
+
+                    <input type="button" class="conbut" value="Connect">
+                </div>
+
+              </div>
+
+              <p style="margin-left: 20px;">Contact Information</p>
         </div>
     </div>
 </div>
