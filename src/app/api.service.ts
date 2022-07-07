@@ -15,6 +15,7 @@ import fr_req from './models/fr_req';
 import Comments_get_api from './models/comments_get_api';
 import News_get_api from './models/news_get_api';
 import Chats_get_api from './models/chats_get_api';
+import Bprofile from './models/bprofile';
 
 @Injectable({
   providedIn: 'root'
@@ -131,6 +132,24 @@ export class ApiService {
     )
   }
 
+  user_posts(username: string){
+    return this.http.get<[Feed_get_api]>(
+      this.BASE_URL + "/posts/" + username + "/"
+    )
+  }
+
+  cart_get(id: string){
+    return this.http.get<any>(
+      this.BASE_URL + "/cart/" + id + "/"
+    )
+  }
+
+  user_store(username: string){
+    return this.http.get<[market]>(
+      this.BASE_URL + "/userproducts/" + username + "/"
+    )
+  }
+
   previous_chats(username: string, friendname: string) {
     return this.http.get<[Chats_get_api]>(
       this.BASE_URL + "/chat/" + username + "/" + friendname + "/"
@@ -146,6 +165,17 @@ export class ApiService {
   prof_get(user: string) {
     return this.http.get<Prof_get_api>(
       this.BASE_URL + "/profile/",
+      {
+        params: {
+          username: user
+        }
+      }
+    )
+  }
+
+  bprofile(user: string) {
+    return this.http.get<Bprofile>(
+      this.BASE_URL + "/bprofile/",
       {
         params: {
           username: user

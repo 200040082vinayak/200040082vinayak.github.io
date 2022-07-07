@@ -17,6 +17,9 @@ import { GloginPageComponent } from './glogin-page/glogin-page.component';
 import { AddPrComponent } from './add-pr/add-pr.component';
 import { NotifComponent } from './notif/notif.component';
 import { UserStoreComponent } from './user-store/user-store.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
+import { SettingsComponent } from './settings/settings.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
@@ -36,6 +39,10 @@ const routes: Routes = [
   {path: 'addpr', component: AddPrComponent},
   {path: 'notif', component: NotifComponent},
   {path: 'store', component: UserStoreComponent},
+  {path:'posts', component: UserPostsComponent},
+  {path:'settings', component: SettingsComponent},
+  {path: 'cart', component: CartComponent},
+
   
 
   { path: '', redirectTo: 'profile', pathMatch: 'full'}

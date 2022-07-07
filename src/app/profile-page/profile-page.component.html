@@ -31,8 +31,8 @@
                     <p class="startup_name">{{username}}</p>
 
                     <div class="edit">
-                    <p class="industry_name">Walmart Inc. | Retail</p>
-                    <a href="edit"><button class="editing"  type="input">Edit Profile</button></a>
+                        <p class="industry_name">{{startup_name}}</p>
+                        <a href="edit"><button class="editing" type="input">Edit Profile</button></a>
                     </div>
 
                     <!-- above we have mentioned user name, startup name, legal name of company, industry which company belongs to -->
@@ -57,31 +57,27 @@
     <div class="user_info">
 
         <div class="about_us">
-            
+
             <h3>About us</h3>
             <br>
-            <p>Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets,
-                discount department stores, and grocery stores from the United States, headquartered in Bentonville,
-                Arkansas. Walmart is the world's largest company by revenue, with about US$570 billion in annual
-                revenue, according to the Fortune Global 500 list in May 2022. It is also the largest private employer
-                in the world with 2.2 million employees. </p>
+            <p>{{aboutus}} </p>
         </div>
 
         <div class="personal_details">
 
             <div class="personal_single">
                 <img src="../../assets/Phone.svg" alt="">
-                <p>+91 9567934528</p>
+                <p>+91 {{phone}}</p>
             </div>
 
             <div class="personal_single">
                 <img src="../../assets/Group 2.svg" alt="">
-                <p>anujagrawal@walmart.in</p>
+                <p>{{email}}</p>
             </div>
 
             <div class="personal_single">
                 <img src="../../assets/Globe.svg" alt="">
-                <a href="https://www.walmart.com/" target="_blank">www.walmart.com</a>
+                <a href={{website}} target="_blank">{{website}}</a>
             </div>
 
 
@@ -91,27 +87,27 @@
 
     <div class="extrainfo">
         <div class="onefield">
-    <h5>Areas of Interest</h5>
-    
-           
+            <h5>Areas of Interest</h5>
+
+
         </div>
 
-    <div class="onefield">
-    <h5>Operational Since</h5>
+        <div class="onefield">
+            <h5>Operational Since</h5>
+
+        </div>
+
+        <div class="onefield">
+            <h5>Employees</h5>
+
+        </div>
+
+
+        <h5>Are you associated with any incubators or investors?</h5>
+
 
     </div>
 
-    <div class="onefield">
-    <h5>Employees</h5>
-    
-    </div>
-
-    
-    <h5>Are you associated with any incubators or investors?</h5>
-    
-
-    </div>
-   
 
     <!-- <div class="info_boxes">
 
@@ -180,6 +176,7 @@
             <div class="text_member">
                 <p class="member_name">Jatin Sharma</p>
                 <p class="member_post">CFO</p>
+                <p>Linkedin connect</p>
             </div>
 
         </div>
@@ -189,6 +186,7 @@
             <div class="text_member">
                 <p class="member_name">Smita Anup</p>
                 <p class="member_post">Sales Head</p>
+                <p>Linkedin connect</p>
             </div>
 
         </div>
@@ -198,6 +196,7 @@
             <div class="text_member">
                 <p class="member_name">Robert Jackson</p>
                 <p class="member_post">Marketing Head</p>
+                <p>Linkedin connect</p>
             </div>
 
         </div>
@@ -208,64 +207,66 @@
         <h3> <a href="store">Take me to My Store </a> </h3>
     </div>
 
-    
-<div class="prof_market">
 
-    
-    <div class="oneimg">
-             <img src="../../assets/bluetooth-headphones-500x500-1.jpg" alt="">
-             <div class="writeup">
-             <p>Product Name</p>
-             <p>Info/price</p>
+    <div class="prof_market">
+
+
+        <div *ngIf="marketdata">
+            <div *ngFor="let prod of marketdata">
+
+                <div class="oneimg" (click)="redirect(prod.id, prod.price, prod.file, prod.name, prod.description, prod.long_description, prod.user.username, prod.user.profile_pic, prod.subcategory.name, prod.subcategory.category.name)">
+                    <div class="img" [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + prod.file + ')'}"> 
+                    <div class="writeup">
+                        <p>{{prod.name}}</p>
+                        <p>₹{{prod.price}}/unit</p>
+                    </div>
+                </div>
+
             </div>
-    </div>
-    <div class="oneimg">
-        <img src="../../assets/download.headphones.jpg" alt="">
-        <div class="writeup">
-        <p>Product Name</p>
-        <p>Info/price</p>
-    </div>
-    </div>
-    <div class="oneimg">
-        <img src="../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg" alt="">
-        <div class="writeup">
-            <p>Product Name</p>
-            <p>Info/price</p>
         </div>
+        </div>
+        <!-- <div class="oneimg">
+            <img src="../../assets/download.headphones.jpg" alt="">
+            <div class="writeup">
+                <p>Product Name</p>
+                <p>Info/price</p>
+            </div>
+        </div>
+        <div class="oneimg">
+            <img src="../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg" alt="">
+            <div class="writeup">
+                <p>Product Name</p>
+                <p>Info/price</p>
+            </div>
+        </div>
+
+        <div class="oneimg">
+            <img src="../../assets/bluetooth-headphones-500x500-1.jpg" alt="">
+            <div class="writeup">
+                <p>Product Name</p>
+                <p>Info/price</p>
+            </div>
+        </div>
+        <div class="oneimg">
+            <img src="../../assets/download.headphones.jpg" alt="">
+            <div class="writeup">
+                <p>Product Name</p>
+                <p>Info/price</p>
+            </div>
+        </div>
+        <div class="oneimg">
+            <img src="../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg" alt="">
+            <div class="writeup">
+                <p>Product Name</p>
+                <p>Info/price</p>
+            </div>
+        </div> -->
+
+
+
     </div>
 
-    <div class="oneimg">
-        <img src="../../assets/bluetooth-headphones-500x500-1.jpg" alt="">
-        <div class="writeup">
-        <p>Product Name</p>
-        <p>Info/price</p>
-       </div>
-</div>
-<div class="oneimg">
-   <img src="../../assets/download.headphones.jpg" alt="">
-   <div class="writeup">
-   <p>Product Name</p>
-   <p>Info/price</p>
-</div>
-</div>
-<div class="oneimg">
-   <img src="../../assets/JBL-Free-WFH-Headphones-and-Headsets-492338532-i-1-1200Wx1200H-300Wx300H.jpg" alt="">
-   <div class="writeup">
-       <p>Product Name</p>
-       <p>Info/price</p>
-   </div>
-</div>
 
-
-   
-</div>
-  
-
-
-
-    <!--  
-        </div>
-    </div> -->
 </div>
 
 <app-connections class="connections"> </app-connections>

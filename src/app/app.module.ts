@@ -31,6 +31,7 @@ import { NotifComponent } from './notif/notif.component';
 import { UserStoreComponent } from './user-store/user-store.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { SettingsComponent } from './settings/settings.component';
+import { CartComponent } from './cart/cart.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -59,7 +60,8 @@ import { SettingsComponent } from './settings/settings.component';
     NotifComponent,
     UserStoreComponent,
     UserPostsComponent,
-    SettingsComponent
+    SettingsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

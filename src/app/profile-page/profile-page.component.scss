@@ -110,6 +110,7 @@
                     border: white;
                     padding: 6px;
                     color: white;
+                    cursor: pointer;
                 }
 
             }
@@ -174,6 +175,7 @@
             // margin: 0;
 
             max-width: 40vw;
+            min-width: 40vw;
 
             p {
                 margin: 0;
@@ -337,7 +339,7 @@
                 }
 
                 .member_name {
-                    padding-top: 10px;
+                    padding-top: 3px;
                 }
             }
         }
@@ -381,15 +383,20 @@
         margin-right: 10px;
 
         margin-bottom: 20px;
+        cursor: pointer;
 
         width: 198px;
         align-items: center;
 
-            img{
+            .img{
                 height: 224px;
-                align-items: center;
+                width: 198px;
+                // position: relative;
+                // align-items: center;
                 justify-self: center;
                 align-self: center;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
 
             .choosefile{
@@ -404,6 +411,7 @@
             border-top: 1px solid #c4c4c4;
             background-color: rgba( #f26522 , 0.15);
             width: 198px;
+            margin-top: 188px;
 
             p {
                 margin: 0;

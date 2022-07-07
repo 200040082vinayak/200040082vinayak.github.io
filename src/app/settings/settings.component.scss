@@ -1,0 +1,41 @@
+.allsettings{
+
+    margin-left: 10vw;
+
+    margin-top: 100px;
+
+    .resetpwd{
+        display: flex;
+        flex-direction: column;
+
+
+        .onecomponent{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+
+            p{
+                margin: 0;
+                width: 200px;
+            }
+
+            input{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .show{
+        display: flex;
+        flex-direction: row;
+
+        h5{
+          margin-right: 40vw;
+          width: 150px;
+        }
+
+        h6{
+            color: blue;
+        }
+    }
+}

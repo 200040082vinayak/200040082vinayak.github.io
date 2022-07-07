@@ -1,1 +1,159 @@
-<p>user-posts works!</p>
+<div class="whole">
+
+    <app-header> </app-header>
+
+    <!-- header component has been completed... now will be working on the actual bottom portio of the feed page. 
+    above everything has to be copied for the code of profile page. 
+    We will also have to hyperlink everything in the sidebar section -->
+
+
+    <div class="portion_main">
+
+        <!-- left section first -->
+
+        <div class="sidebar">
+
+            <!-- <div class="sidebar_top">
+                <div class="sidebar_header"> Notifications
+                    <img src="../../assets/BellRinging.svg" alt=""> 
+                </div>
+
+
+                <div class="sidebar_notif">
+                    
+                    <p>Mishal Ahmed viewed your page (13 min ago)</p>
+                </div>
+                <div class="sidebar_notif">
+                    <p>Suntech wants to collaborate with you on your latest project (1 hour ago)</p>
+                </div>
+                <div class="sidebar_notif">
+                    <p>Check out the new startups in the tech sector (6 hours ago)</p>
+                </div>
+
+            </div> -->
+
+            <app-connections> </app-connections>
+
+        </div>
+
+        <!-- sidebar section has ended
+          the feed main section will start here -->
+
+        <div class="main_feed">
+
+
+
+
+            <div *ngIf="data">
+                <div *ngFor="let post of data" class="feed_post">
+
+                    <div class="post_header">
+
+                        <div class="post_headerleft">
+
+
+                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}" class="image_circ">
+
+                            </div>
+
+                            <div class="post_info">
+                                <h3 class="namecapital">{{post.user.username}}</h3>
+                                <h6>Starup Name/Other Info</h6>
+                            </div>
+                        </div>
+
+                        <div class="post_headerright">
+                            <!-- <h5>{{post.date}}</h5> -->
+
+                        </div>
+                    </div>
+
+                    <div class="post_body">
+
+                        <div class="post_writeup">
+                            <p>{{post.description}} </p>
+                        </div>
+                        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.file + ')'}"
+                            class="post_image">
+
+
+                        </div>
+                    </div>
+
+                    <div class="post_inputicons">
+
+                        <div class="inputicon" (click)="retrieve(post.id)" >
+                            <!-- [style.color]="content.isSelected ? '#3DA2DA' : 'FFFFFF'"   -->
+
+                            <!-- onclick="localStorage.setItem(post.id,post_id)" -->
+                            
+                           <img class="imagelike" src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt="">
+                            <!-- <i class="material-symbols-outlined">
+                                thumb_up
+                            </i> -->
+                            <p>Like</p>
+                        </div>
+
+
+                        <div class="inputicon" (click)="obtain(post.id, post.mycomment)" >
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/fa_comment-o.svg" alt="">
+                            <p>Comment</p>
+                        </div>
+                        
+
+                        
+
+                        <div class="inputicon">
+                            
+                            <img src="../../assets/BoB Startup Portal (1)/Home page/ci_share-outline.svg" alt="">
+                            <p>Share</p>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <textarea [defaultValue]="" [(ngModel)]="post.mycomment" name="content" class="textarea_new"
+                        id="com_area" type="text" placeholder="Comment...">
+                    
+                    
+                    </textarea>
+
+                    <div class="numberlc">
+                    <div class="view_com" (click)="comments_get(post.id)">
+
+                        {{post.comments_count}} Comments
+
+                        
+                      
+                    </div>
+                    
+
+                 <p>   {{post.likes_count}} Likes </p>
+
+                    </div>
+
+                    <div *ngIf="post.comments">
+                        <div *ngFor="let comment of post.comments">
+               
+                            <div class="seperatebox">
+                          <p>  {{comment.comment}} </p>
+                        </div>
+                </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+             </div>
+
+        <!-- here the main feed has ended -->
+        <!-- we will be adding the news section next -->
+
+       <app-trendingnews topic="News"></app-trendingnews>
+
+
+    </div>
+</div>

@@ -15,5 +15,6 @@ export default interface Feed_get_api{
     likes_count: string,
     comments_count: string,
     mycomment: string,
-    comments: [Comments_get_api]
+    comments: [Comments_get_api],
+    has_liked: boolean
 }

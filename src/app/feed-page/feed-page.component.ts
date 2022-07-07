@@ -22,10 +22,14 @@ export class FeedPageComponent implements OnInit {
   user: string = "";
   // // date!: Date;
 
-  comment: string= "";
+  comment: string = "";
+  likes: string="";
 
   pictureuser: string = "";
   username: string = "";
+  newi: boolean = false;
+    // the below are the variables for get for feed
+    
 
 
   // the below are the variables for get for feed
@@ -40,7 +44,7 @@ export class FeedPageComponent implements OnInit {
   //      target: HTMLInputElement & EventTarget;
   //  }
 
-  
+
   //     handleFileInput(files: File) {
   //       if()
   //      this.file = (e.target as HTMLInputElement).files[0];
@@ -119,6 +123,8 @@ export class FeedPageComponent implements OnInit {
 
     console.log(id)
     localStorage.setItem("post_id", id)
+    this.data?.find(item => item.has_liked= this.newi)
+    this.newi= true;
 
     this.api.like_post(this.username, localStorage.getItem("post_id") || "")
       .subscribe(
@@ -147,7 +153,7 @@ export class FeedPageComponent implements OnInit {
     console.log(id)
     // localStorage.setItem("post_id", id)
 
-    this.api.comment(this.username,id, comment)
+    this.api.comment(this.username, id, comment)
       .subscribe(
         response => {
 
@@ -162,11 +168,11 @@ export class FeedPageComponent implements OnInit {
           console.log('Error')
         }
       )
-      var com_find=  this.data?.find(item => item.id == id );
+    var com_find = this.data?.find(item => item.id == id);
 
-        if(com_find != undefined){
-         com_find.mycomment = "";
-        }
+    if (com_find != undefined) {
+      com_find.mycomment = "";
+    }
 
 
     // console.log(post.id)
@@ -175,7 +181,7 @@ export class FeedPageComponent implements OnInit {
 
   }
 
-  comments_get(id: string){
+  comments_get(id: string) {
 
     this.api.comments_get(id)
       .subscribe(
@@ -186,12 +192,12 @@ export class FeedPageComponent implements OnInit {
           console.log(this.comment);
 
 
-          
-        var com_find=  this.data?.find(item => item.id == id );
 
-        if(com_find != undefined){
-         com_find.comments = response;
-        }
+          var com_find = this.data?.find(item => item.id == id);
+
+          if (com_find != undefined) {
+            com_find.comments = response;
+          }
         },
 
         error => {
@@ -202,7 +208,7 @@ export class FeedPageComponent implements OnInit {
   }
 
 
-  changed(e: any){
+  changed(e: any) {
     console.log(e.target.files[0])
     this.file = e.target.files[0];
   }
@@ -231,35 +237,35 @@ export class FeedPageComponent implements OnInit {
     else {
 
       alert('Saved Successfully')
-      
-    this.user = localStorage.getItem("username") || '';
 
-    console.log(this.user);
+      this.user = localStorage.getItem("username") || '';
 
-
-    this.api.feed_post(this.file, this.user, this.content)
-      .subscribe(
+      console.log(this.user);
 
 
-        response => {
-          console.log("here comes the response");
-          console.log(this.content);
-          console.log(this.file);
+      this.api.feed_post(this.file, this.user, this.content)
+        .subscribe(
 
-          this.user = localStorage.getItem("username") || '';
 
-          //     console.log(this.user);
+          response => {
+            console.log("here comes the response");
+            console.log(this.content);
+            console.log(this.file);
 
-          console.log(response);
-          // this.employees = [response];
+            this.user = localStorage.getItem("username") || '';
 
-        
-      
-        },
-        error => {
-          console.log(error);
-        }
-      )
+            //     console.log(this.user);
+
+            console.log(response);
+            // this.employees = [response];
+
+
+
+          },
+          error => {
+            console.log(error);
+          }
+        )
     }
 
     console.log("here comes the response");
@@ -270,11 +276,26 @@ export class FeedPageComponent implements OnInit {
     console.log(this.content);
 
 
-    
+
   }
 
   openFile() {
     console.log("File open")
+  }
+
+
+  
+
+  likestate(){
+
+  if(this.newi= false){
+    return("imagelike")
+
+  }
+
+  else{
+    return("filledlike")
+  }
   }
 
 }

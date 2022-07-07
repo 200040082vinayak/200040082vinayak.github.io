@@ -90,7 +90,7 @@
                         </div>
 
 
-                        <img src="../../assets/BoB Startup Portal (3)/Home page/bi_send.svg" (click)="posts()"
+                        <img style="width: 70px;" src="../../assets/BoB Startup Portal (2)/Home page/Frame 25.svg" (click)="posts()"
                             class="inputicons">
 
                     </div>
@@ -145,11 +145,13 @@
 
                             <!-- onclick="localStorage.setItem(post.id,post_id)" -->
                             
-                           <img class="imagelike" src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt="">
+                           <!-- <img class="imagelike" src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt=""> -->
+                           <div [class]="likestate()">
                             <!-- <i class="material-symbols-outlined">
                                 thumb_up
                             </i> -->
                             <p>Like</p>
+                        </div>
                         </div>
 
 
@@ -196,7 +198,9 @@
                         <div *ngFor="let comment of post.comments">
                
                             <div class="seperatebox">
-                          <p>  {{comment.comment}} </p>
+                          <h5 style="color: blue; margin-top: 3px; width: 90px;"> {{comment.username}} : </h5>
+                           <p style="margin-top: 1px;">  {{comment.comment}} </p>
+                           <!-- <h6> {{comment.comment_date}} </h6> -->
                         </div>
                 </div>
                     </div>

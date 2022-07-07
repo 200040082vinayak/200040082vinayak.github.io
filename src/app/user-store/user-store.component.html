@@ -13,15 +13,25 @@
 
 <div class="prof_market">
 
+
+    <div *ngIf="marketdata">
+        <div *ngFor="let prod of marketdata" class="feed_post">
+    <div class="oneimg" (click)="redirect(prod.id, prod.price, prod.file, prod.name, prod.description, prod.long_description, prod.user.username, prod.user.profile_pic, prod.subcategory.name, prod.subcategory.category.name)">
     
-    <div class="oneimg">
-             <img src="../../assets/bluetooth-headphones-500x500-1.jpg" alt="">
+    
+             <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + prod.file + ')'}" class="img" >
              <div class="writeup">
-             <p>Product Name</p>
-             <p>Info/price</p>
+             <p>{{prod.name}}</p>
+             <p>₹{{prod.price}}/unit</p>
             </div>
     </div>
-    <div class="oneimg">
+
+        </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- <div class="oneimg">
         <img src="../../assets/download.headphones.jpg" alt="">
         <div class="writeup">
         <p>Product Name</p>
@@ -42,8 +52,8 @@
         <p>Product Name</p>
         <p>Info/price</p>
        </div>
-</div>
-<div class="oneimg">
+</div> -->
+<!-- <div class="oneimg">
    <img src="../../assets/download.headphones.jpg" alt="">
    <div class="writeup">
    <p>Product Name</p>
@@ -56,8 +66,8 @@
        <p>Product Name</p>
        <p>Info/price</p>
    </div>
-</div>
+</div> -->
 
 
    
-</div>
+

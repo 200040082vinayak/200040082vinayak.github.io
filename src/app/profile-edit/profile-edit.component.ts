@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import Bprofile from '../models/bprofile';
 import Prof_get_api from '../models/prof_get_api';
 
 @Component({
@@ -18,6 +19,17 @@ export class ProfileEditComponent implements OnInit {
 
 
   data: Prof_get_api | undefined;
+  businessdata: Bprofile | undefined;
+
+
+  
+  aboutus: string= "";
+  phone: string= "";
+  email: string= "";
+  website: string= "";
+  employee_count: string= "";
+  interest: string= "";
+  startup_name: string= "";
 
   ngOnInit(): void {
 
@@ -58,6 +70,35 @@ export class ProfileEditComponent implements OnInit {
              console.log('Error')
   }
     )
+
+
+    this.api.bprofile(this.username)
+    .subscribe(
+      response => {
+
+      console.log('api is working');
+      
+      console.log(response);
+      
+        this.businessdata = response;
+        
+        this.aboutus=this.businessdata.desc
+        this.employee_count=this.businessdata.employee_count 
+        this.interest=this.businessdata.intrest 
+
+        this.startup_name=this.businessdata.legal_name_of_startup 
+        this.phone=this.businessdata.mobile
+        this.email=this.businessdata.startup_email 
+        this.website=this.businessdata.website 
+
+
+      },
+
+      error=>{
+             console.log('Error')
+  }
+    )
+
   }
 
 }

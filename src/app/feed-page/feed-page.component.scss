@@ -279,7 +279,7 @@
 
     .inputicon{
     cursor: pointer;
-    margin-left: 130px;
+    margin-left: 115px;
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
@@ -349,6 +349,8 @@
     padding: 5px;
     margin-bottom: 10px;
     background-color: #d6d6d6;
+    display: flex;
+    flex-direction: row;
     
 
 p{
@@ -358,4 +360,21 @@ p{
 
 }
 
+.imagelike{
+    background-image: url('../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg');
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+}
+
+.filledlike{
+    
+    background-image: url('../../assets/youtube-like-button-png-11.png');
+    
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+}
 
