@@ -131,7 +131,7 @@ socket: any;
   alignclass(chat: Chats_get_api): string{
     console.log(chat)
       
-    if(chat.sender= this.chatter){
+    if(chat.sender== this.chatter){
       console.log("something")
       console.log(chat.sender)
       console.log(this.chatter)

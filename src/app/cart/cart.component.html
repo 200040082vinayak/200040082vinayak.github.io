@@ -1,1 +1,40 @@
-<p>cart works!</p>
+<app-header></app-header>
+
+<div class="whole">
+<h3>My Cart</h3>
+
+<div class="market">
+                     
+
+    <div *ngIf="cart_product_data">
+        <div *ngFor="let pro of cart_product_data" class="feed_post">
+
+    <div class="product" >
+
+        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.product.file + ')'}" class="prod_image"></div>
+         <div class="oneproduct">
+                   <h4 class="firstline">{{pro.product.name}}</h4>
+                   <h6>Boat</h6>
+
+
+                   <div class="inrow">
+
+                    <h4>Qty: {{pro.quantity}}</h4>
+                   <h4>{{pro.product.price}} per unit </h4>
+
+<!-- 
+
+                   </div>
+
+                   <h3>      </h3>
+                   
+
+         </div> -->
+    </div>
+   
+</div>
+
+</div>
+
+</div>
+</div>

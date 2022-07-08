@@ -22,11 +22,18 @@ export class ProductPageComponent implements OnInit {
    category: string= "";
 
   
+   cartid: string="";
+   username: string="";
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
     
+    this.cartid = localStorage.getItem("cartid") || '';
+    this.username = localStorage.getItem("username") || '';
+
+
+
 
     this.api.product(localStorage.getItem("prodid") || "")
     .subscribe(
@@ -74,6 +81,21 @@ change(el: EventTarget | null) {
   if (el == null) return;
   if (el instanceof HTMLInputElement) {
     el.value = "Added to Cart!"
+
+    this.api.addcart(this.username, localStorage.getItem("prodid") || "", "5", this.cartid)
+        .subscribe(
+          response => {
+
+            console.log('api is working')
+            console.log(response);
+            // this.sendcondata = response;
+
+          },
+
+          error => {
+            console.log('Error')
+          }
+        )
 }
 
 }

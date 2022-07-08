@@ -55,6 +55,10 @@ export class FeedPageComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+    console.log(this.newi)
+    console.log("oninit")
+
     this.api.feed_get()
       .subscribe(
         response => {
@@ -123,8 +127,10 @@ export class FeedPageComponent implements OnInit {
 
     console.log(id)
     localStorage.setItem("post_id", id)
-    this.data?.find(item => item.has_liked= this.newi)
+    
     this.newi= true;
+    console.log("onclick")
+    console.log(this.newi)
 
     this.api.like_post(this.username, localStorage.getItem("post_id") || "")
       .subscribe(
@@ -288,13 +294,15 @@ export class FeedPageComponent implements OnInit {
 
   likestate(){
 
-  if(this.newi= false){
+  if(this.newi== false){
     return("imagelike")
 
   }
 
   else{
+    console.log(this.newi)
     return("filledlike")
+    
   }
   }
 

@@ -1,0 +1,6 @@
+1)		createcart/		GET		params:"username"		function:creates a cart for a user		
+2)		usercarts/		GET		params:"username"		function:returns all the carts of a user		Keys:'id','owner','created','updated' 
+3)cart/clear/<int:cartid>/	GET		params:"username"		function:clears all the items in a cart
+4)cart/delete/<int:cartid>/	GET		params:"username"		function:deletes the cart
+5)	cart/list/<int:cartid>/	GET		params:"username"		function:list the cart items with given cartid		Keys:'id','product','quantity','cart'
+6)	cart/update/<int:cartid>/	POST		body:"username","pid","quantity"		function:updates the cart items with given product id, quantity and cartid

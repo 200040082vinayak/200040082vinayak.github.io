@@ -6,7 +6,7 @@ export default interface Bprofile{
     //  "startup_type": "MF", "city": "mumbai",
     //   "startup_logo": null, 
     //   "dpiit": "DPIITBOB", 
-    //   "vc": "N",
+       vc: string
     //    "associated_vc": null, 
     //    "operational_since": 
     //    "2022-07-07T10:55:48.566681Z", 

@@ -95,6 +95,22 @@ export class ApiService {
 
   }
 
+
+  addcart(username: string, pid: string, quantity: string, id:string){
+
+    return this.http.post<any>(
+      this.BASE_URL + "/cart/update/" + id + "/",
+      {
+        username: username,
+        pid: pid,
+        quantity: quantity
+
+      }
+    )
+
+
+  }
+
   like_post(username: string, post_id: string){
 
     return this.http.post<any>(
@@ -138,9 +154,25 @@ export class ApiService {
     )
   }
 
-  cart_get(id: string){
+  cart_get(username: string){
     return this.http.get<any>(
-      this.BASE_URL + "/cart/" + id + "/"
+      this.BASE_URL + "/usercarts/",
+      {
+        params: {
+          username: username
+        }
+      }
+    )
+  }
+
+  cart_products(id: string){
+    return this.http.get<any>(
+      this.BASE_URL + "/cart/list/" + id + "/",
+      {
+        params: {
+          cartid: id
+        }
+      }
     )
   }
 
@@ -253,7 +285,7 @@ export class ApiService {
   }
 
   product(id: string){
-    return this.http.get<[market]>(
+    return this.http.get<any>(
       
       this.BASE_URL + "/products/",
 

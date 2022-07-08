@@ -33,6 +33,7 @@ export class ProfilePageComponent implements OnInit {
   employee_count: string= "";
   interest: string= "";
   startup_name: string= "";
+  vc: string="";
 
   constructor(private api: ApiService, private router: Router) { }
 
@@ -88,6 +89,7 @@ export class ProfilePageComponent implements OnInit {
         this.phone=this.businessdata.mobile
         this.email=this.businessdata.startup_email 
         this.website=this.businessdata.website 
+        this.vc= this.businessdata.vc
 
 
       },
