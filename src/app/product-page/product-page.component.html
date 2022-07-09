@@ -58,14 +58,14 @@
 
         <div class="seller_info">
 
-              <h3>Seller Info</h3>
+              <h3 style="cursor: pointer;" (click)="taketouser(seller)">Seller Info</h3>
 
               <div class="row">
-                <div  [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + sellerimg + ')'}" class="imgseller">
+                <div  [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + sellerimg + ')'}" (click)="taketouser(seller)" class="imgseller">
                      
                 </div>
 
-                <div class="seller">
+                <div (click)="taketouser(seller)" style="cursor: pointer ;" class="seller">
                 
                           <p>    {{seller}} </p>
                 </div>

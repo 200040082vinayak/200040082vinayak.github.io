@@ -12,27 +12,11 @@ import { Observable } from 'rxjs';
 })
 export class TestComponent  {
 
-  employees: [Employee] | undefined;
-
+  
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
-     this.employeeService.getAllEmployees().subscribe(
-
-      response => {
-        console.log("here comes the response");
-        console.log(response);
-         this.employees = response;
-      },
-      error => {
-        console.log(error);
-      }
-
-      
-      // catchError(error => {
-      //   this.errorMessage = error;
-      // });
-    );
+     
   }
 }
   

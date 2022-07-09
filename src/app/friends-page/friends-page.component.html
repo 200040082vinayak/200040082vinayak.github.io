@@ -51,8 +51,10 @@
 
                        
 
-                        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}" class="chatlist_circle" ></div>
-                        <div class="except_circle">
+                        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}" class="chatlist_circle" (click)="taketouser(friend.username)">
+
+                        </div>
+                        <div class="except_circle" (click)="taketouser(friend.username)">
                             <p class="name">{{friend.username}}</p>
                             <p>Name of startup</p>
                             <p>Industry</p>

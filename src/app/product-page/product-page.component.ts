@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import market from '../models/market';
 
@@ -25,7 +26,7 @@ export class ProductPageComponent implements OnInit {
    cartid: string="";
    username: string="";
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -98,6 +99,12 @@ change(el: EventTarget | null) {
         )
 }
 
+}
+
+taketouser(user: string){
+
+  localStorage.setItem("otheruser", user);
+  this.router.navigate (['user/profile'])
 }
 
 }

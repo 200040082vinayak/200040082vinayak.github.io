@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import Connectsend from '../models/connectsend';
 import Suggestions_get_api from '../models/suggestions_get_api';
@@ -20,7 +21,7 @@ export class ConnectionsComponent implements OnInit {
   sendcondata: Connectsend | undefined;
 
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -112,7 +113,11 @@ export class ConnectionsComponent implements OnInit {
     //   }
   }
 
+  taketouser(user: string){
 
+    localStorage.setItem("otheruser", user);
+    this.router.navigate (['user/profile'])
+  }
 
 
   //  change() {

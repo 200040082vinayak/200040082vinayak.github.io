@@ -1,4 +1,5 @@
 export default interface Bprofile{
+    profile_pic: string
     legal_name_of_startup: string
     // "trade_name": "trade_name_bob", 
     mobile: string

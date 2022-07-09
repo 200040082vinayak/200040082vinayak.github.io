@@ -81,13 +81,12 @@
                             <!-- see if the style of adding input inside the i command is ok or not -->
                         </div>
 
-                        <div onclick="document.getElementById('file-input2').click()" class="inputicons">
+                        <!-- <div onclick="document.getElementById('file-input2').click()" class="inputicons">
 
                             <input type="file" id="file-input2">
                             <img src="../../assets/BoB Startup Portal (3)/Home page/MonitorPlay.svg" alt="">
-                            <!-- <input type="video"> 
-                              remember to add functionality of image adding here-->
-                        </div>
+                           
+                        </div> -->
 
 
                         <img style="width: 70px;" src="../../assets/BoB Startup Portal (2)/Home page/Frame 25.svg" (click)="posts()"
@@ -110,11 +109,11 @@
                         <div class="post_headerleft">
 
 
-                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}" class="image_circ">
+                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}" class="image_circ" (click)="taketouser(post.user.username)" >
 
                             </div>
 
-                            <div class="post_info">
+                            <div class="post_info" style="cursor: pointer;" (click)="taketouser(post.user.username)">
                                 <h3 class="namecapital">{{post.user.username}}</h3>
                                 <h6>Starup Name/Other Info</h6>
                             </div>

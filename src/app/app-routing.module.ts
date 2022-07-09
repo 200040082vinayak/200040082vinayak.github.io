@@ -23,6 +23,7 @@ import { CartComponent } from './cart/cart.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
+import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent} , 
@@ -48,6 +49,7 @@ const routes: Routes = [
   {path: 'confirm', component: ConfirmPageComponent},
   {path: 'placed', component: OrderplacedPageComponent},
   {path: 'friends', component: FriendsPageComponent},
+  {path: 'user/profile', component: OtherprofilePageComponent},
 
 
   

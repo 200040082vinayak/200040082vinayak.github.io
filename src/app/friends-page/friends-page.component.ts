@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import Friends_get_api from '../models/friends_get_api';
 
@@ -13,7 +14,7 @@ export class FriendsPageComponent implements OnInit {
   user: string= "";
   frienddata: Friends_get_api | undefined;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -36,4 +37,9 @@ export class FriendsPageComponent implements OnInit {
     )
   }
 
+  taketouser(user: string){
+
+    localStorage.setItem("otheruser", user);
+    this.router.navigate (['user/profile'])
+  }
 }

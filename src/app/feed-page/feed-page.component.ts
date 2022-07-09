@@ -6,6 +6,7 @@ import Feed_get_api from '../models/feed_get_api';
 import Prof_get_api from '../models/prof_get_api';
 import Comments_get_api from '../models/comments_get_api';
 import { isNgTemplate } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed-page',
@@ -51,7 +52,7 @@ export class FeedPageComponent implements OnInit {
   //  }
 
 
-  constructor(private api: ApiService, public datepipe: DatePipe) { }
+  constructor(private api: ApiService, public datepipe: DatePipe, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -306,4 +307,9 @@ export class FeedPageComponent implements OnInit {
   }
   }
 
+  taketouser(user: string){
+
+    localStorage.setItem("otheruser", user);
+    this.router.navigate (['user/profile'])
+  }
 }

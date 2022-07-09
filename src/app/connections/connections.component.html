@@ -11,11 +11,13 @@
 
         <div class="con_connections">
 
-            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + suggest.profile_pic + ')'}" class="sidebar_circle"></div>
+            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + suggest.profile_pic + ')'}" class="sidebar_circle" (click)="taketouser(suggest.username)"  >
+
+            </div>
             <div class="sidebar_info">
-                <p> {{suggest.username}} </p>
-                <p> Name of startup</p>
-                <p> Industry</p>
+                <p style="cursor: pointer;" (click)="taketouser(suggest.username)"> {{suggest.username}} </p>
+                <p style="cursor: pointer;" (click)="taketouser(suggest.username)"> Name of startup</p>
+                <p style="cursor: pointer;" (click)="taketouser(suggest.username)"> Industry</p>
                 <div  class="connect_button">
                     <!-- <input type="button" id="btn" value="Connect" onclick="confirm()"/> -->
                     <input type="button" [id]="suggest.id" class="conbut" value="Connect" (click)="change($event.target)">

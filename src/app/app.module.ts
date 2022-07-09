@@ -36,6 +36,7 @@ import { AdsComponent } from './ads/ads.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
+import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -69,7 +70,8 @@ import { FriendsPageComponent } from './friends-page/friends-page.component';
     AdsComponent,
     ConfirmPageComponent,
     OrderplacedPageComponent,
-    FriendsPageComponent
+    FriendsPageComponent,
+    OtherprofilePageComponent
   ],
   imports: [
     BrowserModule,
