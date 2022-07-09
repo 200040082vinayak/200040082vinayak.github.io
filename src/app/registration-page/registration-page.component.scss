@@ -25,9 +25,16 @@ body{
   background-size: cover;
   border-radius: 0 2vw 0 0 ;
 
+  .illus{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
    img{
-    margin-left: 18px;
+    margin-left: 12px;
    }
+  }
 }
 
   .right_images{
@@ -35,13 +42,13 @@ body{
     position: absolute;
     flex-direction: row;
     right: 2vw;
-    top: 2vw;
+    top: 1vw;
     justify-content: end;
    
      .image1{
 
       img{
-        height: 124px;
+        height: 84px;
         // width: 124px;
       }
      }

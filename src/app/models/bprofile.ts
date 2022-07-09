@@ -3,12 +3,13 @@ export default interface Bprofile{
     // "trade_name": "trade_name_bob", 
     mobile: string
      startup_email: string 
-    //  "startup_type": "MF", "city": "mumbai",
+    //  "startup_type": "MF",
+     city: string
     //   "startup_logo": null, 
     //   "dpiit": "DPIITBOB", 
        vc: string
     //    "associated_vc": null, 
-    //    "operational_since": 
+        "operational_since": string
     //    "2022-07-07T10:55:48.566681Z", 
        
     //    "turnover": "20", 
@@ -17,5 +18,5 @@ export default interface Bprofile{
     website: string
         //  "GST": "111111111111111",
           employee_count: string
-          intrest: string
+          interest: string
 }

@@ -30,6 +30,8 @@ export class ProfileEditComponent implements OnInit {
   employee_count: string= "";
   interest: string= "";
   startup_name: string= "";
+  operational: string= "";
+  city: string= ""
 
   ngOnInit(): void {
 
@@ -84,12 +86,16 @@ export class ProfileEditComponent implements OnInit {
         
         this.aboutus=this.businessdata.desc
         this.employee_count=this.businessdata.employee_count 
-        this.interest=this.businessdata.intrest 
+        this.interest=this.businessdata.interest 
 
         this.startup_name=this.businessdata.legal_name_of_startup 
         this.phone=this.businessdata.mobile
         this.email=this.businessdata.startup_email 
         this.website=this.businessdata.website 
+
+        this.operational = this.businessdata.operational_since.split('T')[0]
+
+        this.city = this.businessdata.city
 
 
       },

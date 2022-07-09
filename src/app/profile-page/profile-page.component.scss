@@ -176,6 +176,8 @@
 
             max-width: 40vw;
             min-width: 40vw;
+            min-height: 60px;
+
 
             p {
                 margin: 0;
@@ -192,6 +194,8 @@
             flex-direction: column;
             padding-left: 4vw;
             justify-content: space-between;
+            max-height: 150px;
+            
 
             .personal_single {
                 display: flex;
@@ -283,6 +287,8 @@
             margin: 0;
             // margin-top: 8px;
             margin-right: 70px;
+            justify-content: right;
+            width: 125px;
         }
 
         h6{

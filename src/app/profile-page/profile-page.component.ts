@@ -34,6 +34,8 @@ export class ProfilePageComponent implements OnInit {
   interest: string= "";
   startup_name: string= "";
   vc: string="";
+  operational: string= "";
+  city: string= "";
 
   constructor(private api: ApiService, private router: Router) { }
 
@@ -83,7 +85,7 @@ export class ProfilePageComponent implements OnInit {
         
         this.aboutus=this.businessdata.desc
         this.employee_count=this.businessdata.employee_count 
-        this.interest=this.businessdata.intrest 
+        this.interest=this.businessdata.interest 
 
         this.startup_name=this.businessdata.legal_name_of_startup 
         this.phone=this.businessdata.mobile
@@ -91,6 +93,8 @@ export class ProfilePageComponent implements OnInit {
         this.website=this.businessdata.website 
         this.vc= this.businessdata.vc
 
+        this.operational = this.businessdata.operational_since.split('T')[0]
+        this.city = this.businessdata.city
 
       },
 

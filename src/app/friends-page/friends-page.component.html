@@ -1,0 +1,145 @@
+<div class="whole">
+
+    <app-header> </app-header>
+
+    <!-- header component has been completed... now will be working on the actual bottom portio of the feed page. 
+    above everything has to be copied for the code of profile page. 
+    We will also have to hyperlink everything in the sidebar section -->
+
+
+    <div class="portion_main">
+
+        <!-- left section first -->
+
+        <div class="sidebar">
+
+            <!-- <div class="sidebar_top">
+                <div class="sidebar_header"> Notifications
+                    <img src="../../assets/BellRinging.svg" alt=""> 
+                </div>
+
+
+                <div class="sidebar_notif">
+                    
+                    <p>Mishal Ahmed viewed your page (13 min ago)</p>
+                </div>
+                <div class="sidebar_notif">
+                    <p>Suntech wants to collaborate with you on your latest project (1 hour ago)</p>
+                </div>
+                <div class="sidebar_notif">
+                    <p>Check out the new startups in the tech sector (6 hours ago)</p>
+                </div>
+
+            </div> -->
+
+            <app-connections> </app-connections>
+
+        </div>
+
+        <!-- sidebar section has ended
+          the feed main section will start here -->
+
+        <div class="main_feed">
+
+            <h3>Existing Connections</h3>
+
+            <div *ngIf="frienddata">
+                <div *ngFor="let friend of frienddata.friends" class="feed_post">
+
+
+                    <div class="chatlist_block" >
+
+                       
+
+                        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + friend.profile_pic + ')'}" class="chatlist_circle" ></div>
+                        <div class="except_circle">
+                            <p class="name">{{friend.username}}</p>
+                            <p>Name of startup</p>
+                            <p>Industry</p>
+                            <!-- <p class="time">10:20</p> -->
+                        </div>
+
+
+                    </div>
+                    <!-- 
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">Spencer Reid</p>
+                <p class="time">10:18</p>
+                </div>
+
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">Jason Bourne</p>
+                <p class="time">9:20</p>
+                </div>
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">Aditya Kumar</p>
+                <p class="time">9:19</p>
+</div>
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+
+                
+                <p class="name">Vishal Meena</p>
+                <p class="time">8:48</p>
+                </div>
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">Patty Jones</p>
+                <p class="time">8:20</p>
+</div>
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">JJ</p>
+                <p class="time">7:11</p>
+                </div>
+            </div>
+
+            <div class="chatlist_block">
+
+                <div class="chatlist_circle"></div>
+                <div class="except_circle">
+                <p class="name">Iris West</p>
+                <p class="time">5:50</p>
+</div>
+            </div> -->
+
+
+            
+                </div>
+
+            </div>
+             </div>
+
+        <!-- here the main feed has ended -->
+        <!-- we will be adding the news section next -->
+
+       <app-trendingnews topic="News"></app-trendingnews>
+
+
+    </div>
+</div>

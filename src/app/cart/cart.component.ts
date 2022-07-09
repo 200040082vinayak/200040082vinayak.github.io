@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ApiService } from '../api.service';
 import Cart_product_api from '../models/Cart_product_api';
@@ -12,14 +13,16 @@ export class CartComponent implements OnInit {
 
 
   cartid: string= "";
+  username: string="";
 
   cart_product_data: [Cart_product_api] | undefined;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.cartid = localStorage.getItem("cartid") || '';
+    this.username = localStorage.getItem("username") || '';
 
     this.api.cart_products(this.cartid)
 
@@ -52,6 +55,15 @@ export class CartComponent implements OnInit {
 
 
     
+  }
+
+  delete(){
+    
+  }
+
+  redirect(){
+
+    this.router.navigate(['confirm'])
   }
 
 }

@@ -13,7 +13,10 @@
 
         <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.product.file + ')'}" class="prod_image"></div>
          <div class="oneproduct">
-                   <h4 class="firstline">{{pro.product.name}}</h4>
+            <div class="firsthead">
+                   <h4 style="width: 200px;" class="firstline">{{pro.product.name}}</h4>
+                   <img style="margin-left: 300px; cursor:pointer;" src="../../assets/Trash.svg" alt=""  (click)="delete()" >
+         </div>
                    <h6>Boat</h6>
 
 
@@ -21,6 +24,8 @@
 
                     <h4>Qty: {{pro.quantity}}</h4>
                    <h4>{{pro.product.price}} per unit </h4>
+
+                   
 
 <!-- 
 
@@ -36,5 +41,13 @@
 
 </div>
 
+
 </div>
+</div>
+
+
+<div class="checkout">
+    <h4>Cart Subtotal:</h4>
+    
+    <img style="cursor: pointer;" (click)="redirect()" class="picture" src="../../assets/Frame 18.svg" alt="">
 </div>

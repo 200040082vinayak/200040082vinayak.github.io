@@ -32,6 +32,10 @@ import { UserStoreComponent } from './user-store/user-store.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { SettingsComponent } from './settings/settings.component';
 import { CartComponent } from './cart/cart.component';
+import { AdsComponent } from './ads/ads.component';
+import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
+import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.component';
+import { FriendsPageComponent } from './friends-page/friends-page.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -61,7 +65,11 @@ import { CartComponent } from './cart/cart.component';
     UserStoreComponent,
     UserPostsComponent,
     SettingsComponent,
-    CartComponent
+    CartComponent,
+    AdsComponent,
+    ConfirmPageComponent,
+    OrderplacedPageComponent,
+    FriendsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
 .grid_container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     margin-top: 100px;
     margin-left: 10vw;
     margin-right: 10vw;
-    height: 360px;
+    height: 460px;
 
     .item {
 
@@ -12,6 +12,9 @@
         border: 1px solid #d9d9d9;
         margin-right: 18px;
         margin-bottom: 14px;
+        height: 350px;
+        cursor: pointer;
+        
 
 
         .image{
@@ -19,7 +22,8 @@
              z-index: -10;
              background-repeat: no-repeat;
              background-size: contain;
-             width: 300px;
+             width: 400px;
+             height: 900px;
              
              align-items: center;
              place-content: center;
@@ -30,7 +34,8 @@
              align-items: center;
              place-content: center;
              place-items: center;
-            //  width: 294px;
+            width: 394px;
+            height: 354px;
             //  height: 230px;
              
              }
