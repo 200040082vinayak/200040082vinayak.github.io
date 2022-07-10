@@ -1,33 +1,35 @@
 <app-header></app-header>
 
 <div class="whole">
-<h3>My Cart</h3>
+    <h3>My Cart</h3>
 
-<div class="market">
-                     
-
-    <div *ngIf="cart_product_data">
-        <div *ngFor="let pro of cart_product_data" class="feed_post">
-
-    <div class="product" >
-
-        <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.product.file + ')'}" class="prod_image"></div>
-         <div class="oneproduct">
-            <div class="firsthead">
-                   <h4 style="width: 200px;" class="firstline">{{pro.product.name}}</h4>
-                   <img style="margin-left: 300px; cursor:pointer;" src="../../assets/Trash.svg" alt=""  (click)="delete()" >
-         </div>
-                   <h6>Boat</h6>
+    <div class="market">
 
 
-                   <div class="inrow">
+        <div *ngIf="cart_product_data">
+            <div *ngFor="let pro of cart_product_data" class="feed_post">
 
-                    <h4>Qty: {{pro.quantity}}</h4>
-                   <h4>{{pro.product.price}} per unit </h4>
+                <div class="product">
 
-                   
+                    <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + pro.product.file + ')'}"
+                        class="prod_image"></div>
+                    <div class="oneproduct">
+                        <div class="firsthead">
+                            <h4 style="width: 200px;" class="firstline">{{pro.product.name}}</h4>
+                            <img style="margin-left: 300px; cursor:pointer;" src="../../assets/Trash.svg" alt=""
+                                (click)="delete()">
+                        </div>
+                        <h6>Boat</h6>
 
-<!-- 
+
+                        <div class="inrow">
+
+                            <h4>Qty: {{pro.quantity}}</h4>
+                            <h4>{{pro.product.price}} per unit </h4>
+
+
+
+                            <!-- 
 
                    </div>
 
@@ -35,19 +37,24 @@
                    
 
          </div> -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="checkout">
+            <h4>Cart Subtotal:</h4>
+
+            <img style="cursor: pointer;" (click)="redirect()" class="picture" src="../../assets/Frame 18.svg" alt="">
+        </div>
+
     </div>
-   
 </div>
 
-</div>
-
-
-</div>
-</div>
-
-
-<div class="checkout">
-    <h4>Cart Subtotal:</h4>
-    
-    <img style="cursor: pointer;" (click)="redirect()" class="picture" src="../../assets/Frame 18.svg" alt="">
-</div>
+    <app-footer></app-footer>

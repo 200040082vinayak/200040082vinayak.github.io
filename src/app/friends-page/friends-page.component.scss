@@ -11,6 +11,7 @@
     text-align: center;
     padding-top: 50px;
     background-color: rgb(242, 242, 242);
+    min-height: calc(66vh + 5px) ;
 
 }
 
@@ -420,3 +421,7 @@ p{
     margin-left: 20px;
 }
 
+.footer{
+    
+    margin-top: 100vh;
+}

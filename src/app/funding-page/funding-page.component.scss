@@ -4,7 +4,8 @@
     margin-top: 100px;
     margin-left: 10vw;
     margin-right: 10vw;
-    height: 460px;
+    
+    
 
     .item {
 
@@ -23,7 +24,7 @@
              background-repeat: no-repeat;
              background-size: contain;
              width: 400px;
-             height: 900px;
+            //  height: 900px;
              
              align-items: center;
              place-content: center;
@@ -62,4 +63,9 @@
             }
         }
     }
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
 }

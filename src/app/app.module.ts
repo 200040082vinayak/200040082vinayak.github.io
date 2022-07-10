@@ -37,6 +37,7 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
+import { FooterComponent } from './footer/footer.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -71,7 +72,8 @@ import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page
     ConfirmPageComponent,
     OrderplacedPageComponent,
     FriendsPageComponent,
-    OtherprofilePageComponent
+    OtherprofilePageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

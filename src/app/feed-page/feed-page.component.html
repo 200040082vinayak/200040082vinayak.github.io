@@ -180,7 +180,7 @@
                     </textarea>
 
                     <div class="numberlc">
-                    <div class="view_com" (click)="comments_get(post.id)">
+                    <div class="view_com" style="cursor:pointer ;" (click)="comments_get(post.id)">
 
                         {{post.comments_count}} Comments
 
@@ -197,7 +197,7 @@
                         <div *ngFor="let comment of post.comments">
                
                             <div class="seperatebox">
-                          <h5 style="color: blue; margin-top: 3px; width: 90px;"> {{comment.username}} : </h5>
+                          <h5 style="color: blue; margin-top: 3px; width: 100px;"> {{comment.username}}: </h5>
                            <p style="margin-top: 1px;">  {{comment.comment}} </p>
                            <!-- <h6> {{comment.comment_date}} </h6> -->
                         </div>
@@ -218,3 +218,5 @@
 
     </div>
 </div>
+
+<app-footer></app-footer>

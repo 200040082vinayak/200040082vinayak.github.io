@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { freeApiService } from './services/websocket.service';
 
-import { Comments } from './classes/comments';
 import { ApiService } from './api.service';
 
 @Component({

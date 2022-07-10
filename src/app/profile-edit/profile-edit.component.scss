@@ -197,6 +197,7 @@
             flex-direction: column;
             padding-left: 4vw;
             justify-content: space-between;
+            max-height: 150px;
 
             .personal_single {
                 display: flex;
@@ -343,7 +344,6 @@
 
             .text_member {
 
-                // margin-left: 40px;
 
                 p {
                     margin: 0;
@@ -351,7 +351,7 @@
                 }
 
                 .member_name {
-                    margin-top: 7px;
+                    // margin-top: 7px;
                     width: 70px;
                 }
 
