@@ -59,7 +59,7 @@ export class NotifComponent implements OnInit {
     console.log(el)
     if (el == null) return;
     if (el instanceof HTMLInputElement) {
-      el.value = "Request Sent"
+      el.value = "Accepted"
       console.log(el.id)
 
       this.api.accconreq(this.username, el.id)

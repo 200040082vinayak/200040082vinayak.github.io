@@ -70,9 +70,11 @@ export class FeedPageComponent implements OnInit {
 
 
 
+
           response.forEach(object => {
             console.log(object.id)
 
+            
             // localStorage.setItem(object.id,"post_id")
           });
         },
