@@ -176,7 +176,7 @@
 
             max-width: 40vw;
             min-width: 40vw;
-            min-height: 60px;
+            height: 30px;
 
 
             p {
@@ -194,12 +194,13 @@
             flex-direction: column;
             padding-left: 4vw;
             justify-content: space-between;
-            max-height: 150px;
+             max-height: 150px;
             
 
             .personal_single {
                 display: flex;
                 flex-direction: row;
+                max-height: 30px;
 
                 p {
                     margin: 0;
@@ -213,6 +214,16 @@
                     padding-left: 8px;
                     align-self: center;
                 }
+            }
+
+            .linkedin{
+                display: flex;
+                flex-direction: row;
+                margin-left: 38px;
+
+                
+                margin-top: 4px;
+
             }
         }
     }
