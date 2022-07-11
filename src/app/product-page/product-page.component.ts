@@ -22,6 +22,9 @@ export class ProductPageComponent implements OnInit {
    subcategory: string= "";
    category: string= "";
 
+
+   quantity!: number;
+
   
    cartid: string="";
    username: string="";
@@ -83,7 +86,7 @@ change(el: EventTarget | null) {
   if (el instanceof HTMLInputElement) {
     el.value = "Added to Cart!"
 
-    this.api.addcart(this.username, localStorage.getItem("prodid") || "", "5", this.cartid)
+    this.api.addcart(this.username, localStorage.getItem("prodid") || "", this.quantity, this.cartid)
         .subscribe(
           response => {
 

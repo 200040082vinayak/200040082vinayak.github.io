@@ -28,13 +28,22 @@
                 <div class="prod_text">
 
                     <h4>{{name}}</h4>
-                    <h6 class="firstline">Boat</h6>
+                    <h6 >Boat</h6>
                     <!-- <h4>1499 per unit</h4> -->
+
+                    <img class="firstline" width="200px" src="../../assets/Group 27.svg" alt="">
+
                     <h4>  ₹{{price}}/unit </h4>
                     <h6 class="secondline">Minimum order 20 units</h6>
 
                     <h6>Description</h6>
                     <p class="thirdline">{{descrip}}</p>
+
+                    <div class="same">
+                    <h6 style="margin-top: 4px;">Quantity:</h6>
+                    <textarea style="margin-left: 14px;" [defaultValue]="" [(ngModel)]="quantity" name="content" class="textarea"
+                    id="area_text" type="text" placeholder="" cols="8" rows="1"> </textarea>
+                    </div>
 
                     <input type="button" class="cart" value="Add to Cart" (click)="change($event.target)">
 
@@ -50,7 +59,21 @@
 
                 <h3>Customer Reviews</h3>
 
-                <img src="../../assets/Frame 32.svg" alt="">
+            <div style="display: flex; flex-direction: row;" class="together">
+                <img src="../../assets/Group 28.svg" alt="">
+                <h3 style="padding-left: 20px;">4/5</h3>
+
+            </div>
+                <br>
+                <br>
+
+                
+                <textarea [defaultValue]="" name="content" class="textarea"
+                                    id="area_text" type="text" placeholder="" cols="55" rows="4"></textarea>
+
+                <img style="margin-left: 30px; margin-bottom: 22px;" onclick="" src="../../assets/Frame 32.svg" alt="">
+
+
             </div>
 
         </div>

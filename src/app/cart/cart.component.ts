@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
 
   cartid: string= "";
   username: string="";
+  multiply: number= 0;
 
   cart_product_data: [Cart_product_api] | undefined;
 
@@ -34,9 +35,18 @@ export class CartComponent implements OnInit {
       console.log(response);
         
 
+      
+      for (let i=0;i<100; i++){
+
+         this.multiply += response[i].quantity* response[i].product.price;
+
+        console.log(response[i].product.price)
+        console.log(this.multiply)
+      }
+
       // var multiply=  this.cart_product_data?.find(item => (item.product.price)*(item.quantity)== )
 
-      //  var multiply = response[0].quantity* response[0].product.price
+        // var multiply = response[0].quantity* response[0].product.price
 
       //  this.marketdata.forEach(element => {
 

@@ -96,7 +96,7 @@ export class ApiService {
   }
 
 
-  addcart(username: string, pid: string, quantity: string, id:string){
+  addcart(username: string, pid: string, quantity: number, id:string){
 
     return this.http.post<any>(
       this.BASE_URL + "/cart/update/" + id + "/",

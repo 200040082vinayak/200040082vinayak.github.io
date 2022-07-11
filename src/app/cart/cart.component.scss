@@ -1,4 +1,8 @@
 
+.forads{
+    display: flex;
+    flex-direction: row;
+}
 
 .whole{
 
@@ -130,7 +134,7 @@ margin-bottom: 30px;
     flex-direction: row;
 
      .picture{
-        margin-left: 500px;
+        margin-left: 400px;
      }
    }
 }

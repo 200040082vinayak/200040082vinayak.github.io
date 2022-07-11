@@ -34,6 +34,9 @@
 
             <app-connections> </app-connections>
 
+            <br>
+            <app-ads></app-ads>
+
         </div>
 
         <!-- sidebar section has ended
@@ -58,7 +61,11 @@
 
                                 <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
 
+                                
                             </div>
+
+                            <textarea style="margin-top: 20px;" [defaultValue]="" name="content" 
+                            id="area_text" type="text" cols="54" placeholder="If you want to share a LinkedIn post or Youtube Video, paste the 'embed link' here" ></textarea>
 
                         </form>
                     </div>
@@ -213,7 +220,12 @@
         <!-- here the main feed has ended -->
         <!-- we will be adding the news section next -->
 
+        <div class="fixed">
        <app-trendingnews topic="News"></app-trendingnews>
+
+       <!-- <app-ads style="margin-top: 300px ; margin-left: 900px;"></app-ads> -->
+
+        </div>
 
 
     </div>

@@ -5,7 +5,7 @@ export interface Products_cart{
     user: string
     name: string
     file: string
-    price: string
+    price: number
 }
 
 

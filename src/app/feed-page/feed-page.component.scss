@@ -380,3 +380,8 @@ p{
     margin-left: 20px;
 }
 
+.fixed{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}

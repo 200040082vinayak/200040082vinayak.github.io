@@ -1,5 +1,6 @@
 <app-header></app-header>
 
+<div class="forads">
 <div class="whole">
     <h3>My Cart</h3>
 
@@ -25,7 +26,7 @@
                         <div class="inrow">
 
                             <h4>Qty: {{pro.quantity}}</h4>
-                            <h4>{{pro.product.price}} per unit </h4>
+                            <h4>₹{{pro.product.price}} per unit </h4>
 
 
 
@@ -49,12 +50,17 @@
 
 
         <div class="checkout">
-            <h4>Cart Subtotal:</h4>
+            <h4>Cart Subtotal: ₹ {{multiply}}.00  </h4>
+           
 
             <img style="cursor: pointer;" (click)="redirect()" class="picture" src="../../assets/Frame 18.svg" alt="">
         </div>
 
     </div>
+</div>
+
+ <app-ads style="margin-left: 100px; margin-top: 150px;"></app-ads>
+
 </div>
 
     <app-footer></app-footer>

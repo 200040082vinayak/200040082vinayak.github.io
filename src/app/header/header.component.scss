@@ -89,7 +89,7 @@
 
         .header_icon {
 
-            padding-top: 14px;
+            padding-top: 7px;
 
             :hover{
                 // background-color: rgba(#f26522,0.2);
@@ -124,7 +124,7 @@
 
         .header_hover{
 
-            padding-top: 14px;
+            padding-top: 7px;
             
             :hover{
                 // background-color: rgba(#f26522,0.2);;
@@ -156,7 +156,8 @@
             .header_image{
 
                 img{
-                    margin-bottom: 28px;
+                    // margin-bottom: 28px;
+                     margin-top: 2px;
                 }
             }
 
@@ -200,6 +201,7 @@
                      img{
                         width: 10px;
                         padding-left: 7px;
+                        margin-top: 5px;
                         //  height: 5px;
                         //  margin-bottom: 25px;
                      }

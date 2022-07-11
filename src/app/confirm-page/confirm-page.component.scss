@@ -24,7 +24,7 @@
                 background-color: #162B75;
                 padding-left: 20px;
                 padding-right: 20px;
-                width: 100px;
+                width: 120px;
                 height: 40px;
                 color: white;
                 margin-left: 30vw;
@@ -33,4 +33,9 @@
 
         }
     }
+}
+
+.withads{
+    display: flex;
+    flex-direction: row;
 }
