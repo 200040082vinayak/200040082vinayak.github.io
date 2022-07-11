@@ -3,11 +3,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin-left: 20px;
     // background-color: red;
 
     .mssg_container {
         position: relative;
-         width: 70vw;
+         width: 50vw;
         height: 80vh;
         max-width: 100%;
         background-color: white;
@@ -18,7 +19,7 @@
 
         .leftside {
             position: relative;
-            width: 20vw;
+            width: 30vw;
             display: flex;
             flex-direction: column;
 
@@ -103,7 +104,7 @@
 
         .rightside {
             position: relative;
-            width: 50vw;
+            width: 40vw;
             background: white;
             border-left: 2px solid #d9d9d9;
 
@@ -180,7 +181,7 @@
                  }
 
                     .right{
-                        margin-left: 600px;
+                        margin-left: 400px;
                         width: 100px;
                     }
 
@@ -202,7 +203,7 @@
 
 
                 .txtarea{
-                    width: 40vw;
+                    width: 30vw;
                     background-color: white;
                     // border: solid black;
                     // padding: 4px;
@@ -229,4 +230,10 @@
 
 
     }
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
 }

@@ -11,33 +11,52 @@
         flex-direction: column;
 
 
-        .onecomponent{
-            margin-top: 10px;
-            display: flex;
-            flex-direction: row;
-
-            p{
-                margin: 0;
-                width: 200px;
-            }
-
-            input{
-                margin-left: 10px;
-            }
-        }
+        
     }
 
     .show{
         display: flex;
         flex-direction: row;
+        margin-bottom: 0;
+        
 
+        h4{
+            width: 180px;
+            // margin-bottom: 0;
+        }
         h5{
-          margin-right: 40vw;
-          width: 150px;
+          margin-right: 20vw;
+          width: 190px;
+          margin-left: 50px;
         }
 
-        h6{
+        h3{
             color: blue;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 20px;
         }
+    }
+}
+
+.withads{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.onecomponent{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+
+    p{
+        margin: 0;
+        width: 200px;
+    }
+
+    input{
+        margin-left: 10px;
     }
 }

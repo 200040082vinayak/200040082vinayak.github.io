@@ -5,6 +5,18 @@
     margin-right: 10vw;
     margin-bottom: 8vh;
 
+    .onecomp{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        input{
+            margin-left: 25px;
+            height: 25px;
+            
+        }
+    }
+
 
     .middle{
         margin-top: 100px;
