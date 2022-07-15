@@ -9,9 +9,9 @@ import { ApiService } from '../api.service';
 })
 export class ForgotPassResetPasswordComponent implements OnInit {
 
-  username: string = "";
-  password: string = "";
-
+  pass1: string = "";
+  pass2: string = "";
+  email: string = "";
 
   constructor(private api: ApiService, private router: Router) { }
 
@@ -21,36 +21,35 @@ export class ForgotPassResetPasswordComponent implements OnInit {
 
   submitted() {
 
+    this.email = localStorage.getItem("email") || "";
+    console.log(this.pass1);
+    if (this.pass1 == this.pass2) {
 
-    console.log(this.username);
+      this.api.reset_password(this.email, this.pass1)
+        .subscribe(
+          response => {
+            console.log("here comes the response");
 
-    this.api.login(this.username, "lol")
-      .subscribe(
-        response => {
-          console.log("here comes the response");
 
-          if (response.message == 'username or password doesnt exist'
-          ) {
-            alert('Invalid User')
+            if (response.message == 'password reset'
+            ) {
+              alert('Success')
+              this.router.navigate(['login'])
+              // 
+            }
+
+            // console.log(response);
+            // this.employees = [response];
+          },
+          error => {
+            console.log(error);
+
           }
-
-          else { console.log("ghost") }
-
-
-          if (response.message == 'login sucessfull'
-          ) {
-            this.router.navigate(['profile'])
-            // alert('Success')
-          }
-
-          // console.log(response);
-          // this.employees = [response];
-        },
-        error => {
-          console.log(error);
-
-        }
-      )
+        )
+    }
+    else {
+      alert("passwords do not match")
+    }
 
 
   }

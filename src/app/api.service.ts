@@ -51,6 +51,15 @@ export class ApiService {
     )
   }
 
+  reset_password(email: string, new_password: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/resetpassword/", {
+      "email": email,
+      "new_password": new_password
+    }
+    )
+  }
+
 
   login(username: string, password: string) {
     return this.http.post<any>(
