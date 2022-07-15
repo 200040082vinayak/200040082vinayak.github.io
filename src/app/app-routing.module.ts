@@ -25,6 +25,8 @@ import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.co
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
 import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
+import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pass-verify-otp.component';
+import { ForgotPassResetPasswordComponent } from './forgot-pass-reset-password/forgot-pass-reset-password.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
@@ -52,6 +54,8 @@ const routes: Routes = [
   { path: 'friends', component: FriendsPageComponent },
   { path: 'user/profile', component: OtherprofilePageComponent },
   { path: 'sendotp', component: ForgotPassSendOtpComponent },
+  { path: 'verifyotp', component: ForgotPassVerifyOtpComponent },
+  { path: 'resetpassword', component: ForgotPassResetPasswordComponent },
 
 
 

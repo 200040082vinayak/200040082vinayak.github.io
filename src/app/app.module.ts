@@ -40,6 +40,7 @@ import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
 import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pass-verify-otp.component';
+import { ForgotPassResetPasswordComponent } from './forgot-pass-reset-password/forgot-pass-reset-password.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -77,7 +78,8 @@ import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pa
     OtherprofilePageComponent,
     FooterComponent,
     ForgotPassSendOtpComponent,
-    ForgotPassVerifyOtpComponent
+    ForgotPassVerifyOtpComponent,
+    ForgotPassResetPasswordComponent
   ],
   imports: [
     BrowserModule,

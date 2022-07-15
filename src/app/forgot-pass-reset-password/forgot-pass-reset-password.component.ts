@@ -3,14 +3,14 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-forgot-pass-verify-otp',
-  templateUrl: './forgot-pass-verify-otp.component.html',
-  styleUrls: ['./forgot-pass-verify-otp.component.scss']
+  selector: 'app-forgot-pass-reset-password',
+  templateUrl: './forgot-pass-reset-password.component.html',
+  styleUrls: ['./forgot-pass-reset-password.component.scss']
 })
-export class ForgotPassVerifyOtpComponent implements OnInit {
+export class ForgotPassResetPasswordComponent implements OnInit {
 
   username: string = "";
-
+  password: string = "";
 
 
   constructor(private api: ApiService, private router: Router) { }
@@ -54,6 +54,5 @@ export class ForgotPassVerifyOtpComponent implements OnInit {
 
 
   }
-
 
 }
