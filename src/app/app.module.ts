@@ -38,6 +38,8 @@ import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.co
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
+import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pass-verify-otp.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -73,7 +75,9 @@ import { FooterComponent } from './footer/footer.component';
     OrderplacedPageComponent,
     FriendsPageComponent,
     OtherprofilePageComponent,
-    FooterComponent
+    FooterComponent,
+    ForgotPassSendOtpComponent,
+    ForgotPassVerifyOtpComponent
   ],
   imports: [
     BrowserModule,

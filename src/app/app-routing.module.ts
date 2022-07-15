@@ -24,37 +24,39 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { OrderplacedPageComponent } from './orderplaced-page/orderplaced-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page.component';
+import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginPageComponent} , 
-  {path: 'reg', component: RegistrationPageComponent} ,
-  {path: 'feed', component: FeedPageComponent} ,
-  {path: 'profile', component: ProfilePageComponent},
-  {path: 'mssg', component: MessagesPageComponent},
-  {path: 'test', component: TestComponent},
-  {path: 'market' , component: MarketplacePageComponent},
-  {path: 'product', component: ProductPageComponent},
-  {path: 'know', component: KnowledgePageComponent},
-  {path: 'news', component: NewsPageComponent},
-  {path: 'vc', component:VcPageComponent},
-  {path: 'banking', component: FundingPageComponent},
-  {path: 'edit', component: ProfileEditComponent},
-  {path: 'google', component: GloginPageComponent},
-  {path: 'addpr', component: AddPrComponent},
-  {path: 'notif', component: NotifComponent},
-  {path: 'store', component: UserStoreComponent},
-  {path:'posts', component: UserPostsComponent},
-  {path:'settings', component: SettingsComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'confirm', component: ConfirmPageComponent},
-  {path: 'placed', component: OrderplacedPageComponent},
-  {path: 'friends', component: FriendsPageComponent},
-  {path: 'user/profile', component: OtherprofilePageComponent},
+  { path: 'login', component: LoginPageComponent },
+  { path: 'reg', component: RegistrationPageComponent },
+  { path: 'feed', component: FeedPageComponent },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'mssg', component: MessagesPageComponent },
+  { path: 'test', component: TestComponent },
+  { path: 'market', component: MarketplacePageComponent },
+  { path: 'product', component: ProductPageComponent },
+  { path: 'know', component: KnowledgePageComponent },
+  { path: 'news', component: NewsPageComponent },
+  { path: 'vc', component: VcPageComponent },
+  { path: 'banking', component: FundingPageComponent },
+  { path: 'edit', component: ProfileEditComponent },
+  { path: 'google', component: GloginPageComponent },
+  { path: 'addpr', component: AddPrComponent },
+  { path: 'notif', component: NotifComponent },
+  { path: 'store', component: UserStoreComponent },
+  { path: 'posts', component: UserPostsComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'confirm', component: ConfirmPageComponent },
+  { path: 'placed', component: OrderplacedPageComponent },
+  { path: 'friends', component: FriendsPageComponent },
+  { path: 'user/profile', component: OtherprofilePageComponent },
+  { path: 'sendotp', component: ForgotPassSendOtpComponent },
 
 
-  
 
-  { path: '', redirectTo: 'profile', pathMatch: 'full'}
+
+  { path: '', redirectTo: 'profile', pathMatch: 'full' }
 ];
 
 @NgModule({
