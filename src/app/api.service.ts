@@ -23,10 +23,10 @@ import Bprofile from './models/bprofile';
 export class ApiService {
 
 
-    BASE_URL = "https://bob.anujagrawal.co.in"
+    // BASE_URL = "https://bob.anujagrawal.co.in"
   // BASE_URL= "http://172.20.10.3:8000"
     // BASE_URL = "http://192.168.149.115:8000"
-
+  BASE_URL = "https://demo8434240.mockable.io"
 
 
 
