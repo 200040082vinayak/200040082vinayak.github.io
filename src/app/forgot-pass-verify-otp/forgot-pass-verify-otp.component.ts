@@ -9,8 +9,8 @@ import { ApiService } from '../api.service';
 })
 export class ForgotPassVerifyOtpComponent implements OnInit {
 
-  username: string = "";
-
+  otp: string = "";
+  email: string = "";
 
 
   constructor(private api: ApiService, private router: Router) { }
@@ -21,25 +21,25 @@ export class ForgotPassVerifyOtpComponent implements OnInit {
 
   submitted() {
 
+    this.email = localStorage.getItem("email") || "";
+    console.log(this.otp);
 
-    console.log(this.username);
-
-    this.api.login(this.username, "lol")
+    this.api.verify_otp(this.email, this.otp)
       .subscribe(
         response => {
           console.log("here comes the response");
 
-          if (response.message == 'username or password doesnt exist'
+          if (response.message == 'wrong otp'
           ) {
-            alert('Invalid User')
+            alert('Invalid OTP')
           }
 
           else { console.log("ghost") }
 
 
-          if (response.message == 'login sucessfull'
+          if (response.message == 'otp verified'
           ) {
-            this.router.navigate(['profile'])
+            this.router.navigate(['resetpassword'])
             // alert('Success')
           }
 

@@ -22,7 +22,7 @@ export class ForgotPassSendOtpComponent implements OnInit {
 
   submitted() {
 
-
+    localStorage.setItem("email", this.email);
     console.log(this.email);
 
     this.api.send_otp(this.email)

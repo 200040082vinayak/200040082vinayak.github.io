@@ -41,6 +41,16 @@ export class ApiService {
     )
   }
 
+  verify_otp(email: string, otp: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/verifyotp/",
+      {
+        "email": email,
+        "otp": otp
+      }
+    )
+  }
+
 
   login(username: string, password: string) {
     return this.http.post<any>(
