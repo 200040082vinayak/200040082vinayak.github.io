@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 export class ForgotPassSendOtpComponent implements OnInit {
 
 
-  username: string = "";
+  email: string = "";
 
 
 
@@ -23,24 +23,24 @@ export class ForgotPassSendOtpComponent implements OnInit {
   submitted() {
 
 
-    console.log(this.username);
+    console.log(this.email);
 
-    this.api.login(this.username, "lol")
+    this.api.send_otp(this.email)
       .subscribe(
         response => {
           console.log("here comes the response");
 
-          if (response.message == 'username or password doesnt exist'
+          if (response.message == 'email does not exist'
           ) {
-            alert('Invalid User')
+            alert('User Email Not Found')
           }
 
           else { console.log("ghost") }
 
 
-          if (response.message == 'login sucessfull'
+          if (response.status == 'Success'
           ) {
-            this.router.navigate(['profile'])
+            this.router.navigate(['verifyotp'])
             // alert('Success')
           }
 

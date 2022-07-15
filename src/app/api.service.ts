@@ -23,15 +23,23 @@ import Bprofile from './models/bprofile';
 export class ApiService {
 
 
-    // BASE_URL = "https://bob.anujagrawal.co.in"
+  // BASE_URL = "https://bob.anujagrawal.co.in"
   // BASE_URL= "http://172.20.10.3:8000"
-    // BASE_URL = "http://192.168.149.115:8000"
+  // BASE_URL = "http://192.168.149.115:8000"
   BASE_URL = "https://demo8434240.mockable.io"
 
 
 
   constructor(private http: HttpClient) { }
 
+  send_otp(email: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/sendotp/",
+      {
+        "email": email
+      }
+    )
+  }
 
 
   login(username: string, password: string) {
@@ -48,9 +56,9 @@ export class ApiService {
     // console.log(files);
     // console.log(username)
 
-    const formdata: FormData= new FormData()
-    if (files!= undefined){
-    formdata.append('file', files)
+    const formdata: FormData = new FormData()
+    if (files != undefined) {
+      formdata.append('file', files)
     }
     formdata.append('description', content)
     formdata.append('username', username)
@@ -64,9 +72,9 @@ export class ApiService {
   addprod(files: File | undefined, username: string, content: string, price: string, prodname: string, long: string) {
 
 
-    const formdata: FormData= new FormData()
-    if (files!= undefined){
-    formdata.append('file', files)
+    const formdata: FormData = new FormData()
+    if (files != undefined) {
+      formdata.append('file', files)
     }
 
     formdata.append('description', content)
@@ -74,10 +82,10 @@ export class ApiService {
     formdata.append('name', prodname)
     formdata.append('username', username)
     formdata.append('price', price)
-    
-    
-    
-    
+
+
+
+
     return this.http.post<any>(
       this.BASE_URL + "/createproduct/",
       formdata
@@ -96,7 +104,7 @@ export class ApiService {
   }
 
 
-  addcart(username: string, pid: string, quantity: number, id:string){
+  addcart(username: string, pid: string, quantity: number, id: string) {
 
     return this.http.post<any>(
       this.BASE_URL + "/cart/update/" + id + "/",
@@ -111,7 +119,7 @@ export class ApiService {
 
   }
 
-  like_post(username: string, post_id: string){
+  like_post(username: string, post_id: string) {
 
     return this.http.post<any>(
       this.BASE_URL + "/likes/" + post_id + "/",
@@ -123,8 +131,8 @@ export class ApiService {
 
   }
 
-  
-  comment(username: string, post_id: string, comment: string){
+
+  comment(username: string, post_id: string, comment: string) {
 
     return this.http.post<any>(
       this.BASE_URL + "/comments/" + post_id + "/",
@@ -136,7 +144,7 @@ export class ApiService {
 
   }
 
-  comments_get(post_id: string){
+  comments_get(post_id: string) {
     return this.http.get<[Comments_get_api]>(
       this.BASE_URL + "/comments/" + post_id + "/"
     )
@@ -148,13 +156,13 @@ export class ApiService {
     )
   }
 
-  user_posts(username: string){
+  user_posts(username: string) {
     return this.http.get<[Feed_get_api]>(
       this.BASE_URL + "/posts/" + username + "/"
     )
   }
 
-  cart_get(username: string){
+  cart_get(username: string) {
     return this.http.get<any>(
       this.BASE_URL + "/usercarts/",
       {
@@ -165,7 +173,7 @@ export class ApiService {
     )
   }
 
-  cart_products(id: string){
+  cart_products(id: string) {
     return this.http.get<any>(
       this.BASE_URL + "/cart/list/" + id + "/",
       {
@@ -176,7 +184,7 @@ export class ApiService {
     )
   }
 
-  user_store(username: string){
+  user_store(username: string) {
     return this.http.get<[market]>(
       this.BASE_URL + "/userproducts/" + username + "/"
     )
@@ -216,7 +224,7 @@ export class ApiService {
     )
   }
 
-  requests_get(username: string){
+  requests_get(username: string) {
     return this.http.get<[fr_req]>(
       this.BASE_URL + "/friend_requests/",
 
@@ -252,41 +260,41 @@ export class ApiService {
     )
   }
 
-  categories(){
+  categories() {
     return this.http.get<[Cat]>(
-      
+
       this.BASE_URL + "/categories/"
     )
   }
 
 
-  subcategories(category: string){
+  subcategories(category: string) {
     return this.http.get<[Subcat]>(
-      
-     this.BASE_URL + "/subcategories/" + category,
 
-    //  {
-    //   params: {
-    //     category : category
-    //   }
-    //  }
+      this.BASE_URL + "/subcategories/" + category,
+
+      //  {
+      //   params: {
+      //     category : category
+      //   }
+      //  }
     )
-    
-  
+
+
   }
 
-  market(subcategory: string){
+  market(subcategory: string) {
     return this.http.get<[market]>(
-      
+
       this.BASE_URL + "/products/" + subcategory,
     )
- 
- 
+
+
   }
 
-  product(id: string){
+  product(id: string) {
     return this.http.get<any>(
-      
+
       this.BASE_URL + "/products/",
 
       {
@@ -295,8 +303,8 @@ export class ApiService {
         }
       }
     )
- 
- 
+
+
   }
 
 
@@ -313,7 +321,7 @@ export class ApiService {
   }
 
   sendconreq(username: string, otherid: string) {
-    
+
     return this.http.get<Connectsend>(
       this.BASE_URL + "/send_friend_request/" + otherid,
 
@@ -324,11 +332,11 @@ export class ApiService {
       }
     )
 
-    
+
   }
 
   accconreq(username: string, otherid: string) {
-    
+
     return this.http.get<Connectsend>(
       this.BASE_URL + "/accept_friend_request/" + otherid,
 
@@ -339,7 +347,7 @@ export class ApiService {
       }
     )
 
-    
+
   }
 
 }
