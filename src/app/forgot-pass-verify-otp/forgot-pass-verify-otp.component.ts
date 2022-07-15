@@ -22,6 +22,7 @@ export class ForgotPassVerifyOtpComponent implements OnInit {
   submitted() {
 
     this.email = localStorage.getItem("email") || "";
+    localStorage.setItem("otp", this.otp);
     console.log(this.otp);
 
     this.api.verify_otp(this.email, this.otp)

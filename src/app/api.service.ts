@@ -51,10 +51,11 @@ export class ApiService {
     )
   }
 
-  reset_password(email: string, new_password: string) {
+  reset_password(email: string,otp: string, new_password: string) {
     return this.http.post<any>(
       this.BASE_URL + "/resetpassword/", {
       "email": email,
+      "OTP": otp,
       "new_password": new_password
     }
     )
