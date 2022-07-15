@@ -10,76 +10,55 @@ import { ApiService } from '../api.service';
 })
 
 
-export class RegistrationPageComponent implements OnInit{
+export class RegistrationPageComponent implements OnInit {
 
 
   // employees: [Employee2] | undefined;
   // // opacity = 0.5;
   username: string = "";
+  companyname: string = "";
+  website: string = "";
+  email: string = "";
+  mobile: string = "";
   password: string = "";
-  // // something = true;
+  password2: string = "";
+  checkcustomer: boolean = false;
+
 
   constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-
-    // if ((localStorage.getItem("username")))
-    // this.username = localStorage.getItem("username") || "";
-    // this.password = localStorage.getItem("password") || "";
-
-
-
   }
 
   submitted() {
+    if (this.checkcustomer == true && this.password == this.password2) {
 
-    localStorage.setItem("username", this.username);
-    localStorage.setItem("password", this.password);
-    console.log(this.username);
+      this.api.register(this.username, this.companyname, this.website, this.email, this.mobile, this.password)
+        .subscribe(
+          response => {
+            console.log("here comes the response");
 
-    console.log(this.password);
+            if (response.message == "registration success and user logged in") {
+              alert('Success')
+              this.router.navigate(['/'])
+            }
 
-
-    alert('Registered successfully')
-            this.router.navigate(['login'])
-
-    // this.api.login(this.username, this.password)
-    //   .subscribe(
-    //     response => {
-    //       console.log("here comes the response");
-
-    //        if (response.message == 'username or password doesnt exist'
-    //        ) {
-    //          alert('Invalid User')
-    //        }
-
-    //       else 
-    //         {console.log("ghost")}
-          
-
-          // if (response.message == 'login sucessfull'
-          // ) {
-          //   alert('Registered successfully')
-          //   this.router.navigate(['google'])
-
-          //   // alert('Success')
-          // }
-
-
-
-
-
-          // console.log(response);
-          // this.employees = [response];
-      //   },
-      //   error => {
-      //     console.log(error);
-          
-      //   }
-      // )
-
-
+            // console.log(response);
+            // this.employees = [response];
+          },
+          error => {
+            console.log(error);
+          }
+        )
+    }
+    else if (this.password != this.password2) {
+      alert("Passwords do not match")
+    }
+    else {
+      alert("Please click on the checkbox")
+    }
   }
+
 
 
 }

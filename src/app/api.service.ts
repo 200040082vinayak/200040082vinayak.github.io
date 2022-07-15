@@ -23,10 +23,10 @@ import Bprofile from './models/bprofile';
 export class ApiService {
 
 
-  // BASE_URL = "https://bob.anujagrawal.co.in"
+  BASE_URL = "https://bob.anujagrawal.co.in"
   // BASE_URL= "http://172.20.10.3:8000"
   // BASE_URL = "http://192.168.149.115:8000"
-  BASE_URL = "https://demo8434240.mockable.io"
+  // BASE_URL = "https://demo8434240.mockable.io"
 
 
 
@@ -51,7 +51,7 @@ export class ApiService {
     )
   }
 
-  reset_password(email: string,otp: string, new_password: string) {
+  reset_password(email: string, otp: string, new_password: string) {
     return this.http.post<any>(
       this.BASE_URL + "/resetpassword/", {
       "email": email,
@@ -61,6 +61,18 @@ export class ApiService {
     )
   }
 
+  register(username: string, companyname: string, website: string, email: string, mobile: string, password: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/register/", {
+      "full name": username,
+      "company name": companyname,
+      "company website": website,
+      "email": email,
+      "mobile": mobile,
+      "password": password
+    }
+    )
+  }
 
   login(username: string, password: string) {
     return this.http.post<any>(
