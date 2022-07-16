@@ -32,6 +32,14 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  receive_banking_solutions(username: string) {
+    return this.http.post<any>(
+      this.BASE_URL + "/banking/", {
+      "username": username
+    }
+    )
+  }
+
   send_otp(email: string) {
     return this.http.post<any>(
       this.BASE_URL + "/sendotp/",
