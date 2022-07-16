@@ -40,7 +40,7 @@ export class RegistrationPageComponent implements OnInit {
 
             if (response.message == "registration success and user logged in") {
               alert('Success')
-              this.router.navigate(['/'])
+              this.router.navigate(['/login'])
             }
 
             // console.log(response);
