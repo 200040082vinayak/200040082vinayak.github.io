@@ -31,8 +31,8 @@ export class RegistrationPageComponent implements OnInit {
   }
 
   submitted() {
-    if (this.checkcustomer == true && this.password == this.password2) {
-
+    // if (this.checkcustomer == true && this.password == this.password2) {
+    if (this.password == this.password2) {
       this.api.register(this.username, this.companyname, this.website, this.email, this.mobile, this.password)
         .subscribe(
           response => {
