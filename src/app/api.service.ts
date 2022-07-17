@@ -32,6 +32,26 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  ktm_add(userid: number, profile_pic: File | undefined, name: string, linkedin: string, designation: string) {
+    const formdata: FormData = new FormData()
+    if (profile_pic != undefined) {
+      formdata.append('profile_pic', profile_pic)
+    }
+    formdata.append('name', name)
+    formdata.append('linkedin', linkedin)
+    formdata.append('designation', designation)
+    return this.http.post<any>(
+      this.BASE_URL + "/ktm/" + userid + "/",
+      formdata
+    )
+  }
+
+  ktm_delete(userid: number) {
+
+    return this.http.get<any>(
+      this.BASE_URL + "/ktm/delete/" + userid + "/"
+    )
+  }
   receive_banking_solutions() {
     return this.http.get<[{
       id: number,
@@ -358,6 +378,8 @@ export class ApiService {
 
 
   }
+
+
 
   market(subcategory: string) {
     return this.http.get<[market]>(

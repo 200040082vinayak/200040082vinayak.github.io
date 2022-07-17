@@ -34,7 +34,9 @@ export class ProfileEditComponent implements OnInit {
   city: string = "";
   linkedin: string = "";
   twitter: string = "";
+  id: number = -1;
   profile_pic: File | undefined;
+  presentkeymembers: Array<any> = [];
   keymembers: Array<{
     image_key_member: File | undefined,
     name: string,
@@ -45,27 +47,28 @@ export class ProfileEditComponent implements OnInit {
     "name": "",
     "position": "",
     "link": ""
-  }, {
-    "image_key_member": undefined,
-    "name": "",
-    "position": "",
-    "link": ""
-  }, {
-    "image_key_member": undefined,
-    "name": "",
-    "position": "",
-    "link": ""
-  }, {
-    "image_key_member": undefined,
-    "name": "",
-    "position": "",
-    "link": ""
-  }, {
-    "image_key_member": undefined,
-    "name": "",
-    "position": "",
-    "link": ""
-  }];
+  }]
+  // }, {
+  //   "image_key_member": undefined,
+  //   "name": "",
+  //   "position": "",
+  //   "link": ""
+  // }, {
+  //   "image_key_member": undefined,
+  //   "name": "",
+  //   "position": "",
+  //   "link": ""
+  // }, {
+  //   "image_key_member": undefined,
+  //   "name": "",
+  //   "position": "",
+  //   "link": ""
+  // }, {
+  //   "image_key_member": undefined,
+  //   "name": "",
+  //   "position": "",
+  //   "link": ""
+  // }];
 
   ngOnInit(): void {
 
@@ -92,7 +95,8 @@ export class ProfileEditComponent implements OnInit {
           console.log('api is working');
 
           console.log(response);
-
+          this.id = <number><unknown>response.id;
+          console.log("ii", this.id)
           this.data = response;
           // localStorage.setItem("industry", this.indusname);
 
@@ -128,6 +132,7 @@ export class ProfileEditComponent implements OnInit {
           this.website = this.businessdata.website
           this.linkedin = this.businessdata.linkedin
           this.twitter = this.businessdata.twitter
+          this.presentkeymembers = response.keymembers
 
           this.operational = this.businessdata.operational_since.split('T')[0]
           this.city = this.businessdata.city
@@ -181,6 +186,30 @@ export class ProfileEditComponent implements OnInit {
 
   }
 
+  add_member() {
+    //alert("f")
+    // userid: number, profile_pic: File | undefined, name: string, linkedin: string, designation: string
+    this.api.ktm_add(this.id, this.keymembers[0].image_key_member, this.keymembers[0].name,
+      this.keymembers[0].link, this.keymembers[0].position).subscribe(
+        response => {
+          alert("Successfully added")
+        },
+        error => {
+          console.log('Error' + error)
+        }
+      )
+  }
+  delete(id: number) {
+    //alert(id)
+    this.api.ktm_delete(id).subscribe(
+      response => {
+        alert("Successfully deleted")
+      },
+      error => {
+        console.log('Error' + error)
+      }
+    )
+  }
 
 
 }
