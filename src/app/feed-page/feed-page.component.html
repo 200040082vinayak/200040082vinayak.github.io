@@ -61,11 +61,12 @@
 
                                 <!-- <textarea [defaultValue]="" name="" id="" cols="30" rows="10"></textarea> -->
 
-                                
+
                             </div>
 
-                            <textarea style="margin-top: 20px;" [defaultValue]="" name="content" 
-                            id="area_text" type="text" cols="54" placeholder="If you want to share a LinkedIn post or Youtube Video, paste the 'embed link' here" ></textarea>
+                            <textarea style="margin-top: 20px;" [defaultValue]="" name="content" id="area_text"
+                                type="text" cols="54"
+                                placeholder="If you want to share a LinkedIn post or Youtube Video, paste the 'embed link' here"></textarea>
 
                         </form>
                     </div>
@@ -76,8 +77,8 @@
 
                         <div onclick="document.getElementById('file-input1').click()" class="inputicons_show">
 
-                            <input  type="file" (change)="changed($event)" id="file-input1" accept="image/jpg, image/jpeg, image/png"
-                            >
+                            <input type="file" (change)="changed($event)" id="file-input1"
+                                accept="image/jpg, image/jpeg, image/png">
 
                             <!-- (change)="handleFileInput($event.target.files)"  -->
 
@@ -96,8 +97,8 @@
                         </div> -->
 
 
-                        <img style="width: 70px;" src="../../assets/BoB Startup Portal (2)/Home page/Frame 25.svg" (click)="posts()"
-                            class="inputicons">
+                        <img style="width: 70px;" src="../../assets/BoB Startup Portal (2)/Home page/Frame 25.svg"
+                            (click)="posts()" class="inputicons">
 
                     </div>
                 </div>
@@ -116,7 +117,8 @@
                         <div class="post_headerleft">
 
 
-                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}" class="image_circ" (click)="taketouser(post.user.username)" >
+                            <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + post.user.profile_pic + ')'}"
+                                class="image_circ" (click)="taketouser(post.user.username)">
 
                             </div>
 
@@ -146,31 +148,31 @@
 
                     <div class="post_inputicons">
 
-                        <div class="inputicon" (click)="retrieve(post.id)" >
+                        <div class="inputicon" (click)="retrieve(post.id)">
                             <!-- [style.color]="content.isSelected ? '#3DA2DA' : 'FFFFFF'"   -->
 
                             <!-- onclick="localStorage.setItem(post.id,post_id)" -->
-                            
-                           <!-- <img class="imagelike" src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt=""> -->
-                           <div [class]="likestate()">
-                            <!-- <i class="material-symbols-outlined">
+
+                            <!-- <img class="imagelike" src="../../assets/BoB Startup Portal (1)/Home page/ant-design_like-twotone.svg" alt=""> -->
+                            <div [class]="likestate()">
+                                <!-- <i class="material-symbols-outlined">
                                 thumb_up
                             </i> -->
-                            <p>Like</p>
-                        </div>
+                                <p>Like</p>
+                            </div>
                         </div>
 
 
-                        <div class="inputicon" (click)="obtain(post.id, post.mycomment)" >
+                        <div class="inputicon" (click)="obtain(post.id, post.mycomment)">
                             <img src="../../assets/BoB Startup Portal (1)/Home page/fa_comment-o.svg" alt="">
                             <p>Comment</p>
                         </div>
-                        
 
-                        
+
+
 
                         <div class="inputicon">
-                            
+
                             <img src="../../assets/BoB Startup Portal (1)/Home page/ci_share-outline.svg" alt="">
                             <p>Share</p>
                         </div>
@@ -182,48 +184,48 @@
 
                     <textarea [defaultValue]="" [(ngModel)]="post.mycomment" name="content" class="textarea_new"
                         id="com_area" type="text" placeholder="Comment...">
-                    
-                    
+
+
                     </textarea>
 
                     <div class="numberlc">
-                    <div class="view_com" style="cursor:pointer ;" (click)="comments_get(post.id)">
+                        <div class="view_com" style="cursor:pointer ;" (click)="comments_get(post.id)">
 
-                        {{post.comments_count}} Comments
+                            {{post.comments_count}} Comments
 
-                        
-                      
-                    </div>
-                    
 
-                 <p>   {{post.likes_count}} Likes </p>
+
+                        </div>
+
+
+                        <p> {{post.likes_count}} Likes </p>
 
                     </div>
 
                     <div *ngIf="post.comments">
                         <div *ngFor="let comment of post.comments">
-               
+
                             <div class="seperatebox">
-                          <h5 style="color: blue; margin-top: 3px; width: 100px;"> {{comment.username}}: </h5>
-                           <p style="margin-top: 1px;">  {{comment.comment}} </p>
-                           <!-- <h6> {{comment.comment_date}} </h6> -->
+                                <h5 style="color: blue; margin-top: 3px; width: 100px;"> {{comment.username}}: </h5>
+                                <p style="margin-top: 1px;"> {{comment.comment}} </p>
+                                <!-- <h6> {{comment.comment_date}} </h6> -->
+                            </div>
                         </div>
-                </div>
                     </div>
 
                 </div>
             </div>
 
 
-             </div>
+        </div>
 
         <!-- here the main feed has ended -->
         <!-- we will be adding the news section next -->
 
         <div class="fixed">
-       <app-trendingnews topic="News"></app-trendingnews>
+            <app-trendingnews topic="News"></app-trendingnews>
 
-       <!-- <app-ads style="margin-top: 300px ; margin-left: 900px;"></app-ads> -->
+            <!-- <app-ads style="margin-top: 300px ; margin-left: 900px;"></app-ads> -->
 
         </div>
 

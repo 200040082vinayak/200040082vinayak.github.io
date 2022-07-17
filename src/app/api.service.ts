@@ -32,11 +32,14 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  receive_banking_solutions(username: string) {
-    return this.http.post<any>(
-      this.BASE_URL + "/banking/", {
-      "username": username
-    }
+  receive_banking_solutions() {
+    return this.http.get<[{
+      id: number,
+      file: string,
+      date_created: string,
+      link: string
+    }]>(
+      this.BASE_URL + "/bs/"
     )
   }
 
@@ -107,6 +110,39 @@ export class ApiService {
       formdata
     )
 
+  }
+
+  edit_profile(
+    profile_pic: File | undefined,
+    fullname: string,
+    legal_name_of_startup: string,
+    aboutus: string,
+    location: string,
+    linkedin: string,
+    twitter: string,
+    keymembers: Array<{
+      image_key_member: File | undefined,
+      name: string,
+      position: string,
+      link: string
+    }>
+  ) {
+    const formdata: FormData = new FormData()
+    if (profile_pic != undefined) {
+      formdata.append('profile_pic', profile_pic)
+    }
+    formdata.append('username', fullname)
+    formdata.append('legal_name_of_startup', legal_name_of_startup)
+    formdata.append('desc', aboutus)
+    formdata.append('city', location)
+    formdata.append('linkedin', linkedin)
+    formdata.append('twitter', twitter)
+    // formdata.append('keymembers', JSON.stringify(keymembers))
+    return this.http.post<any>(
+      this.BASE_URL + "/profile/edit/",
+      formdata
+    )
+    //TODO
   }
 
   addprod(files: File | undefined, username: string, content: string, price: string, prodname: string, long: string) {

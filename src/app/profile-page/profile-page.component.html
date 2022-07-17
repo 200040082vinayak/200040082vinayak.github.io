@@ -33,7 +33,7 @@
                     <div class="edit">
                         <!-- <p class="industry_name">{{startup_name}}</p> -->
 
-                   <p class="industry_name">     Veztige </p>
+                        <p class="industry_name"> Veztige </p>
                         <a href="edit"><button class="editing" type="input">Edit Profile</button></a>
                     </div>
 
@@ -64,7 +64,8 @@
             <br>
             <!-- <p>{{aboutus}} </p> -->
 
-          <p>  Student at Indian Institute of Technology Bombay with great enthusiasm in innovative technologies which has the potential to become the next multi-billion dollar idea.</p>
+            <p> Student at Indian Institute of Technology Bombay with great enthusiasm in innovative technologies which
+                has the potential to become the next multi-billion dollar idea.</p>
             <!-- <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda officia, magni, dolores debitis dolore quo non tempora commodi error sint dolorem velit modi distinctio a voluptates accusantium excepturi voluptatum. Hic autem numquam at repellat neque recusandae cumque dignissimos! Esse nam nihil, deserunt numquam veritatis, blanditiis enim soluta obcaecati aperiam eum dolor maiores provident mollitia voluptates est assumenda reiciendis consequuntur officia voluptate molestias ab voluptatibus sequi libero! Sint eligendi placeat totam nobis temporibus rem, assumenda libero pariatur explicabo nulla ipsa! Nostrum molestiae architecto maxime aut reprehenderit aspernatur, facere minus possimus assumenda omnis, cupiditate voluptatum dolor nulla suscipit magni alias doloremque expedita a nihil rem? Numquam nisi quas adipisci, ipsam iusto id accusamus repellendus excepturi repudiandae quis sequi quasi facere, expedita dicta error. Odio, itaque aspernatur voluptate laborum eum officiis esse dolorem incidunt, iste iure facere sequi quos ratione blanditiis enim quasi? Repellat, sed dolor voluptatum eius suscipit omnis sit vero nostrum, autem ratione, facilis dolore odit minus aut molestiae quia corporis pariatur? Maiores distinctio voluptates error aut, eos deleniti laboriosam, odit voluptatum consequuntur repellendus consequatur? Iure dignissimos iusto porro eveniet impedit recusandae provident ipsum. Repellat molestiae magni totam exercitationem, nemo rerum nisi maxime amet voluptatum praesentium esse consequuntur unde? Harum labore rerum quae quam a nobis dolor asperiores dolorum totam perferendis quis veniam, id consequatur. Excepturi odit totam debitis omnis a rerum impedit? Minima cupiditate dolore velit dolores qui! Minima et dicta quo aspernatur cum, odio sit voluptatibus possimus optio odit est quis obcaecati repellat in facere esse perferendis quos, commodi nulla placeat iusto dolores vel. Delectus laboriosam rerum reprehenderit nesciunt laborum officia veritatis modi? Quod blanditiis vitae qui expedita iure magni sapiente est. Vero quam ea culpa voluptate distinctio quis minima non amet, et, maiores nulla ullam cum atque sapiente unde dolor dolores molestias pariatur consectetur illo, porro eius hic. </p> -->
         </div>
 
@@ -88,17 +89,20 @@
                 <a href="https://veztige.com" target="_blank">veztige.com</a>
             </div>
 
-            
+
             <div class="personal_single">
                 <img style="margin-left: 2px;" src="../../assets/Buildings.svg" alt="">
                 <p>{{city}}</p>
             </div>
 
             <div class="linkedin">
-              <a href="https://www.linkedin.com/in/anuj-agrawal-1a85b5169/" target="_blank">  <img style="cursor: pointer;" width="30px" src="../../assets/unnamed.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/anuj-agrawal-1a85b5169/" target="_blank"> <img
+                        style="cursor: pointer;" width="30px" src="../../assets/unnamed.png" alt=""></a>
 
 
-              <a href="https://twitter.com/AnujAgr90416790" target="_blank">   <img style="margin-left:30px; margin-top: 4px; cursor: pointer;" width="30px" src="../../assets/twitter.png" alt=""> </a>
+                <a href="https://twitter.com/AnujAgr90416790" target="_blank"> <img
+                        style="margin-left:30px; margin-top: 4px; cursor: pointer;" width="30px"
+                        src="../../assets/twitter.png" alt=""> </a>
             </div>
 
         </div>
@@ -128,7 +132,7 @@
             <h6> {{employee_count}} </h6>
         </div>
 
-<!-- 
+        <!-- 
         <div class="onefield">
         <h5>Are you associated with any incubators or investors?</h5>
         <h6> {{vc}} </h6>
@@ -155,18 +159,26 @@
 
     <div class="team">
 
+        <div *ngFor="let keymember of keymembers">
+            <div class="total_member">
+                <div class="team_member">
+                    <img src="https://bob.anujagrawal.co.in{{keymember.profile_pic}}" alt="Avatar" class="avatar">
+                    <!-- <div [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + keymember.profile_pic+ ')'}"
+                            class="disp_img">
 
-        <div class="total_member">
-            <div class="team_member image1"> </div>
-            <div class="text_member">
-                <p class="member_name">Roma</p>
-                <p class="member_post">Designer</p>
-                <p><a href="https://www.linkedin.com/home" target="_blank" style="color: unset;"> Linkedin </a></p>
+
+                        </div> -->
+
+                </div>
+                <div class="text_member">
+                    <p class="member_name">{{keymember.name}}</p>
+                    <p class="member_post">{{keymember.designation}}</p>
+                    <p><a href="{{keymember.linkedin}}" target="_blank" style="color: unset;"> Linkedin </a></p>
+                </div>
+
             </div>
-
         </div>
-
-        <div class="total_member">
+        <!-- <div class="total_member">
             <div class="team_member image2"> </div>
             <div class="text_member">
                 <p class="member_name">Narsimha</p>
@@ -184,7 +196,7 @@
                 <p><a href="https://www.linkedin.com/home" target="_blank" style="color: unset;"> Linkedin </a></p>
             </div>
 
-        </div>
+        </div> -->
     </div>
 
 
@@ -199,16 +211,18 @@
         <div *ngIf="marketdata">
             <div *ngFor="let prod of marketdata">
 
-                <div class="oneimg" (click)="redirect(prod.id, prod.price, prod.file, prod.name, prod.description, prod.long_description, prod.user.username, prod.user.profile_pic, prod.subcategory.name, prod.subcategory.category.name)">
-                    <div class="img" [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + prod.file + ')'}"> 
-                    <div class="writeup">
-                        <p>{{prod.name}}</p>
-                        <p>₹{{prod.price}}/unit</p>
+                <div class="oneimg"
+                    (click)="redirect(prod.id, prod.price, prod.file, prod.name, prod.description, prod.long_description, prod.user.username, prod.user.profile_pic, prod.subcategory.name, prod.subcategory.category.name)">
+                    <div class="img"
+                        [ngStyle]="{backgroundImage: 'url(https://bob.anujagrawal.co.in' + prod.file + ')'}">
+                        <div class="writeup">
+                            <p>{{prod.name}}</p>
+                            <p>₹{{prod.price}}/unit</p>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
         </div>
         <!-- <div class="oneimg">
             <img src="../../assets/download.headphones.jpg" alt="">
@@ -255,7 +269,7 @@
 </div>
 
 <div class="connections">
-<app-connections> </app-connections>
-<br>
-<app-ads></app-ads>
+    <app-connections> </app-connections>
+    <br>
+    <app-ads></app-ads>
 </div>

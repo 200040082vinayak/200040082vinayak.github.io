@@ -13,19 +13,19 @@ export class FundingPageComponent implements OnInit {
   solutions = [
     {
       "link": "",
-      "image": ""
+      "file": ""
     }
   ];
 
   constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-    this.api.receive_banking_solutions(this.username)
+    this.api.receive_banking_solutions()
       .subscribe(
         response => {
-          if (response.solutions) {
-            this.solutions = response.solutions;
-            console.log(this.solutions)
+          if (response[0]) {
+            this.solutions = response;
+            console.log("ww", this.solutions)
 
           }
         },
