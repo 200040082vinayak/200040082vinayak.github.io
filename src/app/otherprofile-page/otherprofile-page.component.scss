@@ -93,27 +93,27 @@
                     // margin-right: 10px;
                 }
 
-                .edit{
+                .edit {
                     display: flex;
                     flex-direction: row;
-                
 
-                .industry_name {
-                    font-size: 15px;
-                    margin: 0;
-                    margin-right: 10px;
+
+                    .industry_name {
+                        font-size: 15px;
+                        margin: 0;
+                        margin-right: 10px;
+                    }
+
+                    .editing {
+                        border-radius: 20px;
+                        background-color: #162B75;
+                        border: white;
+                        padding: 6px;
+                        color: white;
+                        cursor: pointer;
+                    }
+
                 }
-
-                .editing{
-                    border-radius: 20px;
-                    background-color: #162B75;
-                    border: white;
-                    padding: 6px;
-                    color: white;
-                    cursor: pointer;
-                }
-
-            }
 
             }
         }
@@ -195,7 +195,7 @@
             padding-left: 4vw;
             justify-content: space-between;
             max-height: 150px;
-            
+
 
             .personal_single {
                 display: flex;
@@ -266,37 +266,37 @@
 
     }
 
-    .extrainfo{
+    .extrainfo {
 
         margin-top: 20px;
         margin-left: 15px;
 
-        .onefield{
+        .onefield {
 
             display: flex;
             flex-direction: row;
             margin-bottom: 10px;
 
-            input{
+            input {
                 border-top: none;
                 border-left: none;
                 border-right: none;
             }
-            
-        h5{
-            margin: 0;
-            // margin-top: 8px;
-            margin-right: 70px;
-            justify-content: right;
-            width: 125px;
-        }
 
-        h6{
-            margin: 0;
-            font-size: 15px;
-            text-decoration: underline;
+            h5 {
+                margin: 0;
+                // margin-top: 8px;
+                margin-right: 70px;
+                justify-content: right;
+                width: 125px;
+            }
+
+            h6 {
+                margin: 0;
+                font-size: 15px;
+                text-decoration: underline;
+            }
         }
-    }
     }
 
 
@@ -358,50 +358,50 @@
         }
     }
 
-    .market_header{
+    .market_header {
         margin-left: 15px;
 
-        h3{
+        h3 {
             margin-top: 0;
 
-            a{
+            a {
                 text-decoration: none;
                 color: unset;
             }
         }
     }
 
-    
-.prof_market {
-    display: grid;
-    flex-wrap: nowrap;
-    
-   
-    margin-top: 20px;
-    padding-bottom: 20px;
-    // margin-bottom: 3px;
-    margin-right: 10vw;
-    margin-left: 20px;
-    
-    grid-template-columns: auto auto auto auto;
+
+    .prof_market {
+        display: grid;
+        flex-wrap: nowrap;
 
 
-    .oneimg {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        // margin-bottom: 3px;
+        margin-right: 10vw;
+        margin-left: 20px;
 
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #c4c4c4;
-        margin-left: 3px;
-        margin-right: 10px;
+        grid-template-columns: auto auto auto auto;
 
-        margin-bottom: 20px;
-        cursor: pointer;
 
-        width: 198px;
-        align-items: center;
+        .oneimg {
 
-            .img{
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #c4c4c4;
+            margin-left: 3px;
+            margin-right: 10px;
+
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            width: 198px;
+            align-items: center;
+
+            .img {
                 height: 224px;
                 width: 198px;
                 // position: relative;
@@ -412,17 +412,17 @@
                 background-repeat: no-repeat;
             }
 
-            .choosefile{
+            .choosefile {
                 display: none;
             }
         }
 
-        
+
 
         .writeup {
 
             border-top: 1px solid #c4c4c4;
-            background-color: rgba( #f26522 , 0.15);
+            background-color: rgba(#f26522, 0.15);
             width: 198px;
             margin-top: 188px;
 
@@ -441,7 +441,7 @@
 
     }
 
-    
+
 }
 
 
@@ -451,10 +451,30 @@
 
 .connections {
     position: fixed;
-     right: 9vw;
+    right: 9vw;
     // padding-bottom: 300px;
     top: 10vh;
     // width: 200px;
     // bottom: 20vh;
-    
+
+}
+
+.addkeyteam {
+    margin: inherit;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.member_name,
+.member_post {
+    width: fit-content !important;
+}
+
+#total-member {
+    margin-top: 20px;
 }
