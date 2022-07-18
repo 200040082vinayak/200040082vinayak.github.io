@@ -27,9 +27,9 @@
         z-index: 10;
         //  left: 10vw;
 
-        .firstimg{
+        .firstimg {
 
-            img{
+            img {
                 width: 60vw;
                 height: 30vh;
             }
@@ -45,7 +45,7 @@
 
             display: flex;
             flex-direction: row;
-            
+
             // opacity: 0.5;
             /* left: 15vw; */
             // padding-bottom: 50px;
@@ -85,25 +85,25 @@
                 // clip-path: circle();
                 /* border: 2px solid black; */
 
-                
 
-                img{
+
+                img {
                     width: 50px;
                 }
 
             }
 
-                .disp_img_other{
+            .disp_img_other {
 
-                    opacity: 1;
-                    // margin-right: -100%;
-                    position: relative;
-                    margin-top: 13px;
-                    margin-left: 13px;
-                }
+                opacity: 1;
+                // margin-right: -100%;
+                position: relative;
+                margin-top: 13px;
+                margin-left: 13px;
+            }
 
 
-            
+
 
             .except_image {
                 display: flex;
@@ -123,7 +123,7 @@
                     width: 220px;
                 }
 
-                
+
 
                 .industry_name {
                     font-size: 15px;
@@ -276,54 +276,55 @@
 
     }
 
-    .extrainfo{
+    .extrainfo {
 
         margin-top: 20px;
         margin-left: 15px;
 
-        .onefield{
+        .onefield {
 
             display: flex;
             flex-direction: row;
             margin-bottom: 10px;
 
-            input{
+            input {
                 border-top: none;
                 border-left: none;
                 border-right: none;
             }
-            
-        h5{
-            margin: 0;
-            // margin-top: 8px;
-            margin-right: 70px;
-            justify-content: right;
-            width: 120px;
-        }
 
-        h6{
-            margin: 0;
-            font-size: 15px;
-            text-decoration: underline;
+            h5 {
+                margin: 0;
+                // margin-top: 8px;
+                margin-right: 70px;
+                justify-content: right;
+                width: 120px;
+            }
+
+            h6 {
+                margin: 0;
+                font-size: 15px;
+                text-decoration: underline;
+            }
         }
     }
-    }
-    
+
     .keyteam {
         margin: 0;
         padding-top: 4vh;
-         padding-left: 10px;
+        padding-left: 10px;
         // padding-bottom: 10vh;
     }
 
     .team {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         padding-top: 3vh;
         justify-content: space-between;
         max-width: 30vw;
         padding-bottom: 7vh;
-         margin-left: 15px;
+        margin-left: 15px;
 
         .total_member {
 
@@ -365,17 +366,17 @@
                     width: 70px;
                 }
 
-                .member_post{
+                .member_post {
                     width: 80px;
                 }
             }
         }
     }
 
-    .market_header{
+    .market_header {
         margin-left: 15px;
 
-        h3{
+        h3 {
             margin-top: 0;
         }
     }
@@ -399,22 +400,22 @@
             margin-right: 3px;
 
 
-            .plus{
-                
-                cursor: pointer;
-                background-color:  rgba( #f26522 , 0.15);
+            .plus {
 
-                img{
+                cursor: pointer;
+                background-color: rgba(#f26522, 0.15);
+
+                img {
                     height: 224px;
                 }
             }
 
-            
+
 
             .writeup {
 
                 border-top: 1px solid #c4c4c4;
-                background-color: rgba( #f26522 , 0.15);
+                background-color: rgba(#f26522, 0.15);
 
                 p {
                     margin: 0;
@@ -433,16 +434,16 @@
     }
 
 
-    .expand{
+    .expand {
 
-        
+
         display: grid;
         grid-template-columns: auto auto auto auto;
         // visibility: hidden;
         max-width: 49vw;
         margin-left: 15px;
-        
-        
+
+
 
 
         .oneimg {
@@ -456,12 +457,12 @@
             margin-bottom: 15px;
 
 
-            
+
 
             .writeup {
 
                 border-top: 1px solid #c4c4c4;
-                background-color: rgba( #f26522 , 0.15);
+                background-color: rgba(#f26522, 0.15);
 
                 p {
                     margin: 0;
@@ -477,10 +478,10 @@
             }
 
         }
-    
-}
 
-    .moreexpand{
+    }
+
+    .moreexpand {
         display: flex;
         flex-direction: row;
         margin-top: 5px;
@@ -488,13 +489,13 @@
         margin-left: 45vw;
         cursor: pointer;
 
-        p{
+        p {
             margin: 0;
-            margin-right: 5px ;
-            
+            margin-right: 5px;
+
         }
 
-        img{
+        img {
             height: 10px;
             margin-top: 5px;
 
@@ -509,14 +510,75 @@
 
 .connections {
     position: fixed;
-     right: 5vw;
+    right: 5vw;
     // padding-bottom: 300px;
     top: 10vh;
     // bottom: 20vh;
-    
+
 }
 
-a{
+a {
     text-decoration: none;
     color: unset;
+}
+
+//-----------------------------------------------------
+.feed_inputicons {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+
+.inputicons_show {
+    display: flex;
+    padding: 2px;
+    cursor: pointer;
+
+}
+
+.inputicons {
+    display: flex;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#profile-pic-input,
+#profile-pic-input1,
+#profile-pic-input2,
+#profile-pic-input3,
+#profile-pic-input4,
+#profile-pic-input0,
+#file-input2 {
+    display: none;
+}
+
+// #keymembers {
+//     width: 72px;
+// }
+
+.addkeyteam {
+    margin: inherit;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.member_name,
+.member_post {
+    width: fit-content !important;
+}
+
+#total-member {
+    margin-top: 20px;
 }

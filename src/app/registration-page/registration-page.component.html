@@ -2,106 +2,91 @@
 <!-- it will later on be changed and turned into a carousel. this is just for 17 May presentation -->
 <div class="main">
 
-    <div style="background-image: url(../../assets/Rectangle\ 2.svg);" class="carousel">
-      <!-- <img src="../../assets/orange_bg.jpg" alt=""> -->
-      <!-- <img src="../../assets/BOB-Logo 1.svg" alt=""> -->
-      <div class="illus">
+  <div style="background-image: url(../../assets/Rectangle\ 2.svg);" class="carousel">
+    <!-- <img src="../../assets/orange_bg.jpg" alt=""> -->
+    <!-- <img src="../../assets/BOB-Logo 1.svg" alt=""> -->
+    <div class="illus">
       <img width="200px" src="../../assets/BOB-Logo 1 (1).svg" alt="">
       <img style="height: 500px;" src="../../assets/3343947_Mesa de trabajo 1 1.svg" alt="">
-        <img style="margin-left: 115px; margin-top: 20px;" width="500px" src="../../assets/Welcome to Bank of Baroda’s StartUP Portal!.svg" alt="">
-      </div>
+      <img style="margin-left: 115px; margin-top: 20px;" width="500px"
+        src="../../assets/Welcome to Bank of Baroda’s StartUP Portal!.svg" alt="">
     </div>
-  
-  
-    <div class="container">
-  
+  </div>
+
+
+  <div class="container">
+
     <div class="right_images">
-  
+
       <div class="image1">
         <img src="../../assets/CRN 126 Orbit Startup portal logo_c2c.jpg" alt="BoB 1" height="100">
       </div>
-  
+
       <!-- <div class="image2">
         <img src="../../assets/Logo.png" alt="BoB 2" height="100">
       </div> -->
-  
-  
+
+
     </div>
-      <form action="#">
-  
-  
-        <div class="titletext">
-            <h2>Register Here</h2>
-        </div>
-        <!-- <div class="gsignin">
-        <img src="../../assets/google-signin-button-1024x260.png" alt="">
-        </div>
-        <div class="title">Login</div>
-  
-  
-        <p class="or">OR</p> -->
-  
-
-        <div class="input-box underline">
-            <input type="text"placeholder="Full Name" name="username" required>
-    
-          </div>
-          <div class="input-box underline">
-            <input type="text" placeholder="Company Name" name="companyname" required>
-    
-          </div>
-
-          <div class="input-box underline">
-            <input type="text" placeholder="Company Website (if any)" name="companywebsite">
-    
-          </div>
-
-          <div class="input-box underline">
-            <input type="text"  placeholder="Email" name="email" required>
-    
-          </div>
-
-          <div class="input-box underline">
-            <input type="number" placeholder="Phone Number" name="phonenumber" required>
-    
-          </div>
-
-        <!-- <div class="input-box underline">
-          <input type="text" [(ngModel)]="username" placeholder="Username" name="username" required>
-  
-        </div> -->
-        
-        <div class="input-box underline">
-            <input type="password" [(ngModel)]="password" placeholder="Password" name="password1" required>
-    
-          </div>
-          <div class="input-box underline">
-            <input type="password" placeholder="Confirm Password" name="password2" required>
-    
-          </div>
-
-          <div style="margin-top: 15px;" class="check">
-            <input type="checkbox"> I am a customer of Bank of Baroda
+    <form action="#">
 
 
-          </div>
-         
-  
-        <!-- <div *ngIf="employees" class="div-employee" >
-          <div *ngFor="let employee of employees">
-            
-          </div>
-        </div> -->
-        <button (click)="submitted()" class="nextBtn"  >
-          <!-- <span onclick="submit()" class="btnText"> <a href="feed">Continue </a></span> -->
-          Get Started !
-        </button>
-  
-        <br>
-        
-  
-     
-      </form>
-    </div>
-  
+      <div class="titletext">
+        <h2>Register Here</h2>
+      </div>
+
+      <div class="input-box underline">
+        <input type="text" [(ngModel)]="username" placeholder="Full Name" name="username" required>
+
+      </div>
+      <div class="input-box underline">
+        <input type="text" [(ngModel)]="companyname" placeholder="Company Name" name="companyname" required>
+
+      </div>
+
+      <div class="input-box underline">
+        <input type="text" [(ngModel)]="website" placeholder="Company Website (if any)" name="companywebsite">
+
+      </div>
+
+      <div class="input-box underline">
+        <input type="text" [(ngModel)]="email" placeholder="Email" name="email" required>
+
+      </div>
+
+      <div class="input-box underline">
+        <input type="number" [(ngModel)]="mobile" placeholder="Phone Number" name="phonenumber" required>
+
+      </div>
+
+      <div class="input-box underline">
+        <input type="password" [(ngModel)]="password" placeholder="Password" name="password1" required>
+
+      </div>
+      <div class="input-box underline">
+        <input type="password" [(ngModel)]="password2" placeholder="Confirm Password" name="password2" required>
+
+      </div>
+
+      <div style="margin-top: 15px;" class="check">
+        <input [checked]="checkcustomer" (change)="checkcustomer=!checkcustomer" type="checkbox"> I am a customer of
+        Bank of Baroda
+
+
+      </div>
+
+
+
+      <button (click)="submitted()" class="nextBtn">
+
+        Get Started !
+      </button>
+
+      <br>
+
+
+
+    </form>
   </div>
+
+</div>

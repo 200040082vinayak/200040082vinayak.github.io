@@ -13,8 +13,8 @@ import Prof_get_api from '../models/prof_get_api';
 export class OtherprofilePageComponent implements OnInit {
 
   // pictureuser: string= "";
-  username: string= "";
-  indusname: string= "";
+  username: string = "";
+  indusname: string = "";
 
 
   data: Prof_get_api | undefined;
@@ -24,23 +24,24 @@ export class OtherprofilePageComponent implements OnInit {
 
   // the below are for bprofile only
 
-  aboutus: string= "";
-  phone: string= "";
-  email: string= "";
-  website: string= "";
-  employee_count: string= "";
-  interest: string= "";
-  startup_name: string= "";
-  vc: string="";
-  operational: string= "";
-  city: string= "";
-  pic: string= "";
+  aboutus: string = "";
+  phone: string = "";
+  email: string = "";
+  website: string = "";
+  employee_count: string = "";
+  interest: string = "";
+  startup_name: string = "";
+  vc: string = "";
+  operational: string = "";
+  city: string = "";
+  pic: string = "";
+  presentkeymembers: Array<any> = [];
 
   constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
-    this.username= localStorage.getItem("otheruser")||'';
+    this.username = localStorage.getItem("otheruser") || '';
 
 
     // localStorage.setItem("industry", this.indusname);
@@ -50,58 +51,59 @@ export class OtherprofilePageComponent implements OnInit {
     // }
 
     this.api.prof_get(this.username)
-    .subscribe(
-      response => {
+      .subscribe(
+        response => {
 
-        
 
-      console.log('api is working');
-      
-      console.log(response);
-      
-        this.data = response;
-        
 
-        // this.pictureuser = localStorage.getItem("profilepic")||"";
+          console.log('api is working');
 
-      },
+          console.log(response);
 
-      error=>{
-             console.log('Error')
-  }
-    )
+          this.data = response;
+
+
+          // this.pictureuser = localStorage.getItem("profilepic")||"";
+
+        },
+
+        error => {
+          console.log('Error')
+        }
+      )
 
 
     this.api.bprofile(this.username)
-    .subscribe(
-      response => {
+      .subscribe(
+        response => {
 
-      console.log('api is working');
-      
-      console.log(response);
-      
-        this.businessdata = response;
-        
-        this.aboutus=this.businessdata.desc
-        this.employee_count=this.businessdata.employee_count 
-        this.interest=this.businessdata.interest 
+          console.log('api is working');
 
-        this.startup_name=this.businessdata.legal_name_of_startup 
-        this.phone=this.businessdata.mobile
-        this.email=this.businessdata.startup_email 
-        this.website=this.businessdata.website 
-        this.vc= this.businessdata.vc
-        this.pic = this.businessdata.profile_pic
+          console.log(response);
 
-        this.operational = this.businessdata.operational_since.split('T')[0]
-        this.city = this.businessdata.city
+          this.businessdata = response;
 
-      },
+          this.aboutus = this.businessdata.desc
+          this.employee_count = this.businessdata.employee_count
+          this.interest = this.businessdata.interest
 
-      error=>{
-             console.log('Error')
-  }
-    )
+          this.startup_name = this.businessdata.legal_name_of_startup
+          this.phone = this.businessdata.mobile
+          this.email = this.businessdata.startup_email
+          this.website = this.businessdata.website
+          this.vc = this.businessdata.vc
+          this.pic = this.businessdata.profile_pic
+
+          this.operational = this.businessdata.operational_since.split('T')[0]
+          this.city = this.businessdata.city
+          this.presentkeymembers = response.keymembers
+
+        },
+
+        error => {
+          console.log('Error')
+        }
+      )
 
 
     this.api.user_store(this.username)
@@ -117,7 +119,7 @@ export class OtherprofilePageComponent implements OnInit {
           // response.forEach(object => {
           //   console.log(object.id)
 
-           
+
           // });
         },
 
@@ -126,33 +128,33 @@ export class OtherprofilePageComponent implements OnInit {
         }
       )
 
-    
-
-}
 
 
-redirect(id: string, price: string, file: string, name: string, description: string, long_description: string, seller: string, sellerpic: string, subcategoryname: string, categoryname: string) {
+  }
 
-  localStorage.setItem("prodid", id)
-  localStorage.setItem("prodprice", price)
-  localStorage.setItem("prodfile", file)
-  localStorage.setItem("prodname", name)
-  localStorage.setItem("proddescrip", description)
-  localStorage.setItem("prodlong", long_description)
-  localStorage.setItem("sellername", seller)
-  localStorage.setItem("sellerimg", sellerpic)
-  localStorage.setItem("prodsub", subcategoryname)
-  localStorage.setItem("prodcat", categoryname)
-  
-  //  this.router.navigate(['product?id='+id])
+
+  redirect(id: string, price: string, file: string, name: string, description: string, long_description: string, seller: string, sellerpic: string, subcategoryname: string, categoryname: string) {
+
+    localStorage.setItem("prodid", id)
+    localStorage.setItem("prodprice", price)
+    localStorage.setItem("prodfile", file)
+    localStorage.setItem("prodname", name)
+    localStorage.setItem("proddescrip", description)
+    localStorage.setItem("prodlong", long_description)
+    localStorage.setItem("sellername", seller)
+    localStorage.setItem("sellerimg", sellerpic)
+    localStorage.setItem("prodsub", subcategoryname)
+    localStorage.setItem("prodcat", categoryname)
+
+    //  this.router.navigate(['product?id='+id])
     // this.router.navigate(['product'])
 
-    var newsite = window.location.href= window.location.href.split('/')[0]+ '/product?id=' + id;
+    var newsite = window.location.href = window.location.href.split('/')[0] + '/product?id=' + id;
 
-    this.router.navigate ([newsite])
+    this.router.navigate([newsite])
 
-  
- }
+
+  }
 
 
 }

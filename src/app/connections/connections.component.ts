@@ -32,7 +32,7 @@ export class ConnectionsComponent implements OnInit {
         response => {
 
           console.log('api is working')
-          console.log(response);
+          console.log("sus", response);
           this.connectdata = response;
 
           //  this.friendid = this.connectdata.id;
@@ -113,10 +113,10 @@ export class ConnectionsComponent implements OnInit {
     //   }
   }
 
-  taketouser(user: string){
+  taketouser(user: string) {
 
     localStorage.setItem("otheruser", user);
-    this.router.navigate (['user/profile'])
+    this.router.navigate(['user/profile'])
   }
 
 
