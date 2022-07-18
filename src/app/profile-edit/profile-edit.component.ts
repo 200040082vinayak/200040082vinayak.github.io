@@ -153,7 +153,7 @@ export class ProfileEditComponent implements OnInit {
     // console.log(this.keymembers)
 
     this.api.edit_profile(this.profile_pic,
-      this.username, this.startup_name, this.aboutus, this.city, this.linkedin, this.twitter, this.keymembers).subscribe(
+      this.username, this.startup_name, this.aboutus, this.city, this.linkedin, this.twitter, this.phone, this.email, this.website, this.interest, this.operational, this.employee_count, this.keymembers).subscribe(
         response => {
           alert("Successfully edited")
         },

@@ -140,6 +140,12 @@ export class ApiService {
     location: string,
     linkedin: string,
     twitter: string,
+    phone: string,
+    email: string,
+    website: string,
+    interest: string,
+    operational: string,
+    employee_count: string,
     keymembers: Array<{
       image_key_member: File | undefined,
       name: string,
@@ -157,6 +163,12 @@ export class ApiService {
     formdata.append('city', location)
     formdata.append('linkedin', linkedin)
     formdata.append('twitter', twitter)
+    formdata.append('mobile', phone)
+    formdata.append('website', website)
+    formdata.append('startup_email', email)
+    formdata.append('interest', interest)
+    formdata.append('operational_since', operational)
+    formdata.append('employee_count', employee_count)
     // formdata.append('keymembers', JSON.stringify(keymembers))
     return this.http.post<any>(
       this.BASE_URL + "/profile/edit/",
