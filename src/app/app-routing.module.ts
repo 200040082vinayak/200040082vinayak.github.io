@@ -27,6 +27,10 @@ import { OtherprofilePageComponent } from './otherprofile-page/otherprofile-page
 import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
 import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pass-verify-otp.component';
 import { ForgotPassResetPasswordComponent } from './forgot-pass-reset-password/forgot-pass-reset-password.component';
+import { CookieComponent } from './cookie/cookie.component';
+import { TermsComponent } from './terms/terms.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
@@ -56,6 +60,10 @@ const routes: Routes = [
   { path: 'sendotp', component: ForgotPassSendOtpComponent },
   { path: 'verifyotp', component: ForgotPassVerifyOtpComponent },
   { path: 'resetpassword', component: ForgotPassResetPasswordComponent },
+  { path: 'cookie', component: CookieComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'disclaimer', component: DisclaimerComponent },
+  { path: 'privacy', component: PrivacyComponent },
 
 
 

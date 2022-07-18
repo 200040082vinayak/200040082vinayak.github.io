@@ -41,6 +41,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ForgotPassSendOtpComponent } from './forgot-pass-send-otp/forgot-pass-send-otp.component';
 import { ForgotPassVerifyOtpComponent } from './forgot-pass-verify-otp/forgot-pass-verify-otp.component';
 import { ForgotPassResetPasswordComponent } from './forgot-pass-reset-password/forgot-pass-reset-password.component';
+import { CookieComponent } from './cookie/cookie.component';
+import { TermsComponent } from './terms/terms.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 // import { freeApiService } from './services/freeapi.service';
 
 @NgModule({
@@ -79,7 +83,11 @@ import { ForgotPassResetPasswordComponent } from './forgot-pass-reset-password/f
     FooterComponent,
     ForgotPassSendOtpComponent,
     ForgotPassVerifyOtpComponent,
-    ForgotPassResetPasswordComponent
+    ForgotPassResetPasswordComponent,
+    CookieComponent,
+    TermsComponent,
+    DisclaimerComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
